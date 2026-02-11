@@ -22,7 +22,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install requests feedparser jinja2
+          pip install -r requirements.txt
 
       - name: Build Site
         run: |
