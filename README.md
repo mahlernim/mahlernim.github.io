@@ -28,7 +28,7 @@ Mirrors content from `ahn-lab.org` and automatically updates publications from P
    ```
 2. Run the build script:
    ```bash
-   python website/build.py
+   python build.py
    ```
 3. Open `website/index.html` in your browser.
 
