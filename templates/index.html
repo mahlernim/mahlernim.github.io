@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ author.name }} - {{ author.title }}</title>
+    <meta name="description" content="{{ author.title }} - {{ author.affiliation }}">
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- JSON-LD for Bots -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "{{ author.name }}",
+      "description": "{{ author.magic_bio }}",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "{{ author.affiliation }}"
+      },
+      "url": "https://ahn-lab.org",
+      "sameAs": [
+        "{{ author.orcid }}",
+        "{{ author.scholar }}"
+      ]
+    }
+    </script>
+    <!-- {{ author.magic_bio }} -->
+</head>
+
+<body>
+    <header class="hero compact-hero">
+        <div class="container">
+            <h1 class="name">{{ author.name }}</h1>
+            <p class="title">{{ author.title }}</p>
+
+            <div class="profile-section single-column">
+                <h3>연구분야 (Research Interests)</h3>
+                <ul>
+                    {% for item in author.research_interests %}
+                    <li>{{ item }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+            <div class="profile-section single-column">
+                <h3>학력 (Education)</h3>
+                <ul>
+                    {% for item in author.education %}
+                    <li>{{ item }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+            <div class="profile-section single-column">
+                <h3>참고 (Links)</h3>
+                <div class="social-links-compact">
+                    <a href="{{ author.scholar }}" target="_blank">Google Scholar</a>
+                    <a href="{{ author.orcid }}" target="_blank">ORCID</a>
+                    <a href="{{ author.youtube }}" target="_blank">YouTube</a>
+                    <a href="#" class="email-obfuscate" data-user="sangzinahn" data-domain="gmail.com">Copy Email</a>
+                </div>
+                <div class="announcement-box">
+                    <p>{{ author.announcement }}</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const emailLinks = document.querySelectorAll('.email-obfuscate');
+            emailLinks.forEach(link => {
+                link.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const user = this.getAttribute('data-user');
+                    const domain = this.getAttribute('data-domain');
+                    const email = user + '@' + domain;
+
+                    navigator.clipboard.writeText(email).then(function () {
+                        alert('Email copied to clipboard: ' + email);
+                    }, function (err) {
+                        prompt("Copy email manually:", email);
+                    });
+                });
+                link.title = "Click to copy email address";
+            });
+
+            // Filter Logic
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const pubItems = document.querySelectorAll('.pub-item');
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // Update active button
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+
+                    const filter = btn.getAttribute('data-filter');
+
+                    pubItems.forEach(item => {
+                        if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                            item.style.display = 'flex';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+
+    <main class="container">
+
+
+
+        {% if videos %}
+        <section class="videos">
+            <h2>Youtube 최근 영상</h2>
+            <div class="video-grid">
+                {% for video in videos[:3] %}
+                <div class="video-card">
+                    <a href="{{ video.link }}" target="_blank">
+                        <img src="{{ video.thumbnail }}" alt="{{ video.title }}">
+                        <h3>{{ video.title }}</h3>
+                    </a>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+        {% endif %}
+
+        <section class="publications">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h2>논문 (Publications)</h2>
+                <div class="filter-controls">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="Medical AI & Data Science">Medical AI</button>
+                    <button class="filter-btn" data-filter="Pharmacology & Precision Med.">Pharmacology</button>
+                    <button class="filter-btn" data-filter="Neuroscience">Neuroscience</button>
+                    <button class="filter-btn" data-filter="Education & Public Health">Edu & Public</button>
+                </div>
+            </div>
+
+            <div class="pub-list">
+                {% for pub in publications %}
+                <article class="pub-item" data-category="{{ pub.theme }}">
+                    <span class="year">{{ pub.year }}</span>
+                    <div class="pub-details">
+                        <h3 class="pub-title">
+                            <a href="{{ pub.url }}" target="_blank">{{ pub.title }}</a>
+                        </h3>
+                        <p class="pub-authors">{{ pub.authors | safe }}</p>
+                        <p class="pub-meta">{{ pub.journal }}</p>
+                    </div>
+                </article>
+                {% endfor %}
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; {{ last_updated[:4] }} {{ author.name }}. Last updated: {{ last_updated }}</p>
+        </div>
+    </footer>
+</body>
+
+</html>
