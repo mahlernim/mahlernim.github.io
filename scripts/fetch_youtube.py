@@ -3,42 +3,47 @@ import json
 import re
 
 PLAYLIST_ID = "PL0TnWnPQhDj2-TOwiz_ZhY2Sdurimss2Q"
-RSS_URL = f"https://www.youtube.com/feeds/videos.xml?playlist_id={PLAYLIST_ID}"
+# Use Web URL for yt-dlp, not RSS
+VIDEO_URL = f"https://www.youtube.com/playlist?list={PLAYLIST_ID}"
+
+import requests
+import time
+
+import yt_dlp
 
 def fetch_videos():
     print(f"Fetching YouTube playlist: {PLAYLIST_ID}...")
+    
+    ydl_opts = {
+        'quiet': True,
+        'extract_flat': True,
+        'dump_single_json': True,
+        'playlist_items': '1-3' # Fetch top 3 only
+    }
+
     try:
-        feed = feedparser.parse(RSS_URL)
-        videos = []
-        
-        for entry in feed.entries:
-            # Entry structure:
-            # title, link, published, yt_videoid, media_thumbnail
+        with yt_dlp.YoutubeDL(ydl_opts) as ydl:
+            result = ydl.extract_info(VIDEO_URL, download=False)
             
-            video_id = getattr(entry, 'yt_videoid', None)
-            if not video_id:
-                # Try simple regex on link if attribute missing
-                match = re.search(r'v=([^&]+)', entry.link)
-                if match:
-                    video_id = match.group(1)
-            
-            term = f"https://img.youtube.com/vi/{video_id}/hqdefault.jpg" if video_id else ""
-            
-            # Prefer using media_group for higher res if available, but constructed URL is safer/standard
-            
-            videos.append({
-                "title": entry.title,
-                "link": entry.link,
-                "published": entry.published,
-                "video_id": video_id,
-                "thumbnail": term
-            })
-            
-        print(f"Fetched {len(videos)} videos.")
-        return videos
-        
+            if 'entries' in result:
+                videos = []
+                for entry in result['entries']:
+                    videos.append({
+                        "title": entry['title'],
+                        "link": f"https://www.youtube.com/watch?v={entry['id']}",
+                        "published": "", # yt-dlp flat extraction might not have date, skipping
+                        "video_id": entry['id'],
+                        "thumbnail": f"https://img.youtube.com/vi/{entry['id']}/hqdefault.jpg"
+                    })
+                
+                print(f"Fetched {len(videos)} videos using yt-dlp.")
+                return videos
+            else:
+                print("No entries found in playlist.")
+                return []
+
     except Exception as e:
-        print(f"Exception fetching YouTube: {e}")
+        print(f"Error fetching YouTube with yt-dlp: {e}")
         return []
 
 if __name__ == "__main__":
