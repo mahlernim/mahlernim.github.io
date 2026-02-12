@@ -47,7 +47,7 @@
             </div>
 
             <div class="profile-section single-column">
-                <h3>학력 (Education)</h3>
+                <h3>학력 및 경력 (Education & Career)</h3>
                 <ul>
                     {% for item in author.education %}
                     <li>{{ item }}</li>
@@ -61,11 +61,12 @@
                     <a href="{{ author.scholar }}" target="_blank" class="link-btn">Google Scholar</a>
                     <a href="{{ author.orcid }}" target="_blank" class="link-btn">ORCID</a>
                     <a href="{{ author.youtube }}" target="_blank" class="link-btn">YouTube</a>
+                    <a href="{{ author.blog }}" target="_blank" class="link-btn">Blog</a>
                     <a href="#" class="link-btn email-obfuscate" data-user="sangzinahn" data-domain="gmail.com">Copy
                         Email</a>
                 </div>
                 <div class="announcement-box">
-                    <p>{{ author.announcement }}</p>
+                    <p>{{ author.announcement | safe }}</p>
                 </div>
             </div>
         </div>

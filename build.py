@@ -35,14 +35,16 @@ def build_site():
                 "의학연구에서 대형언어모델 적용 (LLM application in Medical Research)"
             ],
             "education": [
+                "2016.03-현재: 인제대학교 의과대학 약리학교실 교수",
                 "2009.03-2016.02: 의학박사 - 서울대학교 의과학과 약리학 전공(석박통합과정)",
                 "2003.03-2009.02: 의학사 - 서울대학교 의과대학"
             ],
-            "announcement": "정말 죄송하게도 경남 일대를 제외한 지역은 오가면서 낭비되는 시간, 체력적인 부담, 지방 연자를 위한 배려가 부족한 강연료 규정 등의 여러 이유로 현장강의를 고사하고 있습니다. 부디 너그러운 양해 부탁드립니다.",
+            "announcement": "정말 죄송하게도 <u>경남 일대를 제외한 지역</u>은 오가면서 낭비되는 시간, 체력적인 부담, 지방 연자를 위한 배려가 부족한 강연료 규정 등의 여러 이유로 <u>현장강의를 고사</u>하고 있습니다. 부디 너그러운 양해 부탁드립니다.",
             "email": "sangzinahn@gmail.com",
             "scholar": "https://scholar.google.com/citations?hl=ko&user=Xe825ZgAAAAJ&view_op=list_works&sortby=pubdate",
             "orcid": "https://orcid.org/0000-0003-2749-0014",
-            "youtube": "https://youtube.com/playlist?list=PL0TnWnPQhDj2-TOwiz_ZhY2Sdurimss2Q&si=AwUfSKzzw1Oq_PdE"
+            "youtube": "https://youtube.com/playlist?list=PL0TnWnPQhDj2-TOwiz_ZhY2Sdurimss2Q&si=AwUfSKzzw1Oq_PdE",
+            "blog": "https://largelearningmodel.wordpress.com/"
         }
     }
     
