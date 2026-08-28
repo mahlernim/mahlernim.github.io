@@ -1,0 +1,5 @@
+# Search crawling is allowed. Cloudflare may prepend separate content-signal comments.
+User-agent: *
+Allow: /
+
+Sitemap: https://ahn-lab.org/sitemap.xml
