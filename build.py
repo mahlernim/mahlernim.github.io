@@ -26,8 +26,8 @@ AUTHOR = {
         "Cardiovascular and Metabolic Diseases Medical Research Center, Inje University College of Medicine, Busan, Korea",
     ],
     "research_interests": [
+        "대형언어모델의 의학 지식 표현 및 추론 평가 (Evaluation of Medical Knowledge Representation and Reasoning in LLMs)",
         "의학교육에서 대형언어모델 활용 (LLMs in Medical Education)",
-        "의학연구에서 대형언어모델 적용 (LLM Applications in Medical Research)",
     ],
     "education": [
         "2016.03-현재: 인제대학교 의과대학 약리학교실 교수",
@@ -42,16 +42,16 @@ AUTHOR = {
 }
 
 PROJECTS = [
-    {"name": "Google Timeline Visualizer", "url": "/google-timeline-visualizer/", "description": "Turns a Google Maps Timeline export into a travel animation while keeping the location file in the browser."},
-    {"name": "PDF to NotebookLM", "url": "https://github.com/mahlernim/chrome-pdf-to-notebooklm", "description": "A Chrome extension for adding PDFs and web pages to NotebookLM and creating outputs."},
-    {"name": "Memori", "url": "https://memori.co.kr/", "description": "A community for collecting mnemonics and memory cues for medicine and learning."},
-    {"name": "Sakang", "url": "https://sakang.mahler83.net/", "description": "Small tools for text cleanup, clinical calculations, documents, and training records."},
-    {"name": "EduKMA", "url": "https://edukma.mahler83.net/", "description": "A finder for affordable online continuing medical education courses in Korea."},
-    {"name": "LargeLearningModel", "url": "https://largelearningmodel.wordpress.com/", "description": "Notes on language models, learning, education, and a personal archive dating to 2008."},
-    {"name": "Arithmetic Puzzle", "url": "https://arithmeticpuzzle.mahler83.net/", "description": "A generator for 4 by 4 arithmetic puzzles using natural numbers and basic operations."},
-    {"name": "Home Assistant NEIS School", "url": "https://github.com/mahlernim/ha-neis-school", "description": "Home Assistant integration for school meals, timetables, calendars, and attendance information."},
-    {"name": "Korean Twitter Activity Archive", "url": "https://tka.mahler83.net/", "description": "An anonymized public-data archive of changes in activity among Korean Twitter accounts."},
-    {"name": "Tweet Earthquake Alert Archive", "url": "https://jijin.mahler83.net/", "description": "An archive of a project that detected earthquakes through aggregate collective reactions."},
+    {"name": "Google Timeline Visualizer", "url": "/google-timeline-visualizer/", "description": "위치 파일을 브라우저 밖으로 전송하지 않고 Google 지도 타임라인의 이동 기록을 애니메이션으로 시각화하는 도구입니다."},
+    {"name": "PDF to NotebookLM", "url": "https://github.com/mahlernim/chrome-pdf-to-notebooklm", "description": "PDF와 웹페이지를 NotebookLM에 추가하고 결과물을 만드는 Chrome 확장 프로그램입니다."},
+    {"name": "Memori", "url": "https://memori.co.kr/", "description": "의학과 학습을 위한 암기법과 기억 단서를 모으는 커뮤니티입니다."},
+    {"name": "Sakang", "url": "https://sakang.mahler83.net/", "description": "텍스트 정리, 임상 계산, 문서 및 교육 기록을 위한 소규모 도구 모음입니다."},
+    {"name": "EduKMA", "url": "https://edukma.mahler83.net/", "description": "국내 온라인 보수교육 과정을 찾는 서비스입니다."},
+    {"name": "LargeLearningModel", "url": "https://largelearningmodel.wordpress.com/", "description": "언어모델, 학습, 교육에 관한 글과 2008년부터 이어진 개인 기록입니다."},
+    {"name": "Arithmetic Puzzle", "url": "https://arithmeticpuzzle.mahler83.net/", "description": "자연수와 기본 연산을 이용한 4×4 산술 퍼즐 생성기입니다."},
+    {"name": "Home Assistant NEIS School", "url": "https://github.com/mahlernim/ha-neis-school", "description": "학교 급식, 시간표, 학사일정 및 출석 정보를 제공하는 Home Assistant 연동 기능입니다."},
+    {"name": "Korean Twitter Activity Archive", "url": "https://tka.mahler83.net/", "description": "한국어 트위터 계정의 활동 변화를 익명화된 공개 데이터로 기록한 아카이브입니다."},
+    {"name": "Tweet Earthquake Alert Archive", "url": "https://jijin.mahler83.net/", "description": "다수 이용자의 집단 반응을 통해 지진을 감지했던 프로젝트의 기록입니다."},
 ]
 
 

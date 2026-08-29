@@ -163,6 +163,42 @@ def test_post_lists_are_unnumbered_and_title_first():
     assert first_item.index('<a ') < first_item.index('<time ')
 
 
+def test_profile_email_is_obfuscated_and_research_interests_are_current():
+    build.build_site(offline=True)
+    page = (ROOT / "index.html").read_text(encoding="utf-8")
+    assert "sangzinahn@gmail.com" not in page
+    assert 'class="email-copy"' in page
+    assert 'data-user="sangzinahn"' in page
+    assert 'data-domain="gmail.com"' in page
+    first = "대형언어모델의 의학 지식 표현 및 추론 평가 (Evaluation of Medical Knowledge Representation and Reasoning in LLMs)"
+    second = "의학교육에서 대형언어모델 활용 (LLMs in Medical Education)"
+    assert page.index(first) < page.index(second)
+    assert "LLM Applications in Medical Research" not in page
+
+
+def test_project_descriptions_are_korean_on_home_and_project_pages():
+    build.build_site(offline=True)
+    for path in [ROOT / "index.html", ROOT / "projects" / "index.html"]:
+        page = path.read_text(encoding="utf-8")
+        assert "위치 파일을 브라우저 밖으로 전송하지 않고" in page
+        assert "의학과 학습을 위한 암기법과 기억 단서를 모으는 커뮤니티입니다." in page
+        assert "Turns a Google Maps Timeline export" not in page
+
+
+def test_site_uses_white_background_and_accessible_link_color():
+    css = (ROOT / "static" / "css" / "style.css").read_text(encoding="utf-8")
+    assert "--paper: #fff" in css
+    assert "--accent: #245b85" in css
+    assert "background: var(--paper)" in css
+
+
+def test_site_has_no_copyright_footer():
+    build.build_site(offline=True)
+    page = (ROOT / "index.html").read_text(encoding="utf-8")
+    assert "<footer" not in page
+    assert "©" not in page
+
+
 def test_video_discovery_deduplicates_and_preserves_existing_fields(monkeypatch, tmp_path):
     class FakeYDL:
         def __init__(self, _options):
