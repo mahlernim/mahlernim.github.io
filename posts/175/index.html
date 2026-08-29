@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Difficulty of LLM Post-Training | 안상진 (Sangzin Ahn)</title>
+  <meta name="description" content="Recent examples suggest that user feedback can shape model behavior in unexpected ways, making post-training a difficult problem.">
+  <meta name="google-adsense-account" content="ca-pub-4628399954212784">
+  <link rel="canonical" href="https://ahn-lab.org/posts/175/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="The Difficulty of LLM Post-Training | 안상진 (Sangzin Ahn)">
+  <meta property="og:description" content="Recent examples suggest that user feedback can shape model behavior in unexpected ways, making post-training a difficult problem.">
+  <meta property="og:url" content="https://ahn-lab.org/posts/175/">
+  <link rel="stylesheet" href="/static/css/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "author": {"@type": "Person", "name": "\uc548\uc0c1\uc9c4 (Sangzin Ahn)"}, "dateModified": "2025-05-01T11:00:28", "datePublished": "2025-05-01T10:59:40", "description": "Recent examples suggest that user feedback can shape model behavior in unexpected ways, making post-training a difficult problem.", "headline": "The Difficulty of LLM Post-Training", "isBasedOn": "https://largelearningmodel.wordpress.com/2025/05/01/llm-post-training%ec%9d%98-%ec%96%b4%eb%a0%a4%ec%9b%80/", "mainEntityOfPage": "https://ahn-lab.org/posts/175/"}</script></head>
+<body>
+  <a class="skip-link" href="#content">본문으로 이동</a>
+  <header class="site-header">
+    <nav class="nav container" aria-label="주요 메뉴">
+      <a class="brand" href="/">ahn-lab</a>
+      <div class="nav-links">
+        <a aria-current="page" href="/posts/">글</a>
+        <a  href="/videos/">영상</a>
+        <a  href="/publications/">논문</a>
+        <a  href="/projects/">프로젝트</a>
+      </div>
+    </nav>
+  </header>
+  <main id="content" class="container"><nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/posts/">Posts</a> / The Difficulty of LLM Post-Training</nav><article class="post detail" lang="en"><header><h1>The Difficulty of LLM Post-Training</h1><time datetime="2025-05-01T10:59:40">2025-05-01</time><p class="standfirst">Recent examples suggest that user feedback can shape model behavior in unexpected ways, making post-training a difficult problem.</p></header><section><p>The recent ChatGPT sycophancy incident was explained as a case in which user feedback had been reflected too strongly during post-training. It reminded me of an interesting tweet:</p><p>“GPT model stopped speaking Croatian / Nobody could figure out why. Turns out / Croatian users were much more prone [to] downvote messages.”</p><p>There was also a phenomenon during the final training of the o3 model where, at some point, it began spelling “check” as the British “cheque.” The reason is unknown.</p></section><section><h2>When Feedback Changes Behavior</h2><p>In the early days of ChatGPT, the model reportedly stopped speaking Croatian. When the reason was investigated, it turned out that Croatian users tended to press the negative-feedback, or downvote, button more often for ChatGPT’s outputs.</p><p>From the model’s perspective, answering in other languages did not produce the same pattern, but answering in Croatian repeatedly brought negative feedback. So it was trained in the direction of avoiding that language. It is a rather funny example, but also a revealing one.</p></section><section><h2>The Risk of Organized Feedback</h2><p>It made me think that a large fandom could potentially influence a model’s behavior through coordinated voting. For example, if people wanted to encourage positive statements about BTS and consistently gave positive feedback when the model did so, enough feedback might eventually lead to a meaningful behavioral change.</p><p>In reinforcement learning, there are many examples where poorly designed rewards or reward hacking produce outcomes nobody anticipated. Thinking about those cases, LLM training—especially post-training—seems very difficult.</p></section><section><h2>The Value of Real-World Feedback</h2><p>User feedback is likely highly valuable as real-world data, similar to post-market surveillance in drug development. I am curious about how it can be incorporated more effectively in the future.</p><p>There have also been announcements about improving ways to collect and incorporate feedback more broadly. I plan to follow this with interest.</p></section><p class="source-link"><a href="https://largelearningmodel.wordpress.com/2025/05/01/llm-post-training%ec%9d%98-%ec%96%b4%eb%a0%a4%ec%9b%80/">Original post</a></p></article></main>
+  <footer><div class="container">© 2026 안상진 (Sangzin Ahn)</div></footer>
+</body>
+</html>

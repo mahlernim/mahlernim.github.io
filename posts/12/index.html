@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Estimating ChatGPT API Costs | 안상진 (Sangzin Ahn)</title>
+  <meta name="description" content="A simple way to estimate API costs is to measure the tokens in a representative prompt and response, check the model’s per-token pricing, and multiply by the expected number of records.">
+  <meta name="google-adsense-account" content="ca-pub-4628399954212784">
+  <link rel="canonical" href="https://ahn-lab.org/posts/12/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Estimating ChatGPT API Costs | 안상진 (Sangzin Ahn)">
+  <meta property="og:description" content="A simple way to estimate API costs is to measure the tokens in a representative prompt and response, check the model’s per-token pricing, and multiply by the expected number of records.">
+  <meta property="og:url" content="https://ahn-lab.org/posts/12/">
+  <link rel="stylesheet" href="/static/css/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "author": {"@type": "Person", "name": "\uc548\uc0c1\uc9c4 (Sangzin Ahn)"}, "dateModified": "2024-09-13T21:30:15", "datePublished": "2024-09-13T21:27:00", "description": "A simple way to estimate API costs is to measure the tokens in a representative prompt and response, check the model\u2019s per-token pricing, and multiply by the expected number of records.", "headline": "Estimating ChatGPT API Costs", "isBasedOn": "https://largelearningmodel.wordpress.com/2024/09/13/api-%eb%b9%84%ec%9a%a9-%ec%98%88%ec%83%81%ed%95%98%ea%b8%b0/", "mainEntityOfPage": "https://ahn-lab.org/posts/12/"}</script></head>
+<body>
+  <a class="skip-link" href="#content">본문으로 이동</a>
+  <header class="site-header">
+    <nav class="nav container" aria-label="주요 메뉴">
+      <a class="brand" href="/">ahn-lab</a>
+      <div class="nav-links">
+        <a aria-current="page" href="/posts/">글</a>
+        <a  href="/videos/">영상</a>
+        <a  href="/publications/">논문</a>
+        <a  href="/projects/">프로젝트</a>
+      </div>
+    </nav>
+  </header>
+  <main id="content" class="container"><nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/posts/">Posts</a> / Estimating ChatGPT API Costs</nav><article class="post detail" lang="en"><header><h1>Estimating ChatGPT API Costs</h1><time datetime="2024-09-13T21:27:00">2024-09-13</time><p class="standfirst">A simple way to estimate API costs is to measure the tokens in a representative prompt and response, check the model’s per-token pricing, and multiply by the expected number of records.</p></header><section><h2>1. Prepare an input prompt and output example</h2><p>First, save the input prompt and an example of the expected output.</p><ul><li>Input prompt:
+
+This is a set of categories for questions related to tuberculosis medication.
+1. Side effects
+2. Drug resistance
+3. Effectiveness
+4. Alcohol/smoking/how to take medication
+5. Interactions with other medications
+6. Infectiousness/stigma/isolation while taking medication
+7. Military service
+8. Recurrence
+9. Translation
+10. Other
+
+Instructions:
+Classify the input question into the appropriate category. Write the reasoning for your decision before stating the category. Classify it into only one most appropriate category. If it does not fall under any category, classify it as 10. Other. If it falls under 9. Translation, do not perform the actual translation. Follow the output format strictly. Begin the response with “Reasoning:”.
+
+Output format:
+Reasoning: &lt;State the basis for the category classification in one sentence&gt;
+Category: &lt;Output the single most relevant category&gt;
+
+Example
+
+Input
+Question: Since this morning, I have taken one Tubist tablet and one pyridoxine tablet for latent tuberculosis. By the afternoon, my head felt foggy, I had no energy, and I felt unwell as if I had body aches. What should I do? Can I stop taking the medicine?
+
+Output
+Reasoning: The question asks about physical abnormal reactions, including a “foggy head” and “lack of energy,” after taking medication, so it concerns side effects.
+Category: 1. Side effects</li><li>Input
+Question: Tuberculosis medicine and alcohol: Is it really not okay to drink even a single glass while taking tuberculosis medicine?
+
+Output
+Reasoning: The question asks whether alcohol consumption is permitted while taking tuberculosis medication, so it concerns alcohol/smoking/how to take medication.
+Category: 4. Alcohol/smoking/how to take medication</li></ul></section><section><h2>2. Check the token count</h2><p>Next, check how many tokens the input text is recognized as containing. This can be checked at https://platform.openai.com/tokenizer.</p><p>Although the Korean tokenizer for 4o has improved considerably and the actual count may be lower, assume conservatively that the input is 629 tokens and the output is 94 tokens.</p></section><section><h2>3. Check the price per 1 million tokens</h2><p>Pricing is available at https://openai.com/api/pricing/.</p><p>For example, when using the 4o-0806 model, the input price is $2.50 per 1 million tokens and the output price is $10 per 1 million tokens.</p></section><section><h2>4. Multiply by the expected volume</h2><p>If 40,000 records are analyzed using the prompt above, the estimated input cost is:</p><p>40,000 × 629 × $2.50 / 1,000,000 = $62.90</p><p>The estimated output cost is:</p><p>40,000 × 94 × $10 / 1,000,000 = $37.60</p><p>The total estimated cost is therefore about $100.</p><ul><li>Estimated input cost: $62.90</li><li>Estimated output cost: $37.60</li><li>Estimated total cost: about $100</li></ul></section><section><h2>Summary</h2><p>This is how to estimate the cost: obtain a representative prompt and output example, count their tokens, check the model’s token pricing, and multiply the result by the number of records to be processed.</p></section><p class="source-link"><a href="https://largelearningmodel.wordpress.com/2024/09/13/api-%eb%b9%84%ec%9a%a9-%ec%98%88%ec%83%81%ed%95%98%ea%b8%b0/">Original post</a></p></article></main>
+  <footer><div class="container">© 2026 안상진 (Sangzin Ahn)</div></footer>
+</body>
+</html>

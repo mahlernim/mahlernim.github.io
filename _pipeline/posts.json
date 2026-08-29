@@ -2337,10 +2337,74 @@
       "wordpress_id": 904090
     },
     "904092": {
-      "error_detail": "unsafe or disclosed generation text",
-      "error_type": "ValueError",
+      "generated_at": "2026-08-29T05:50:56+00:00",
+      "model": "gpt-5.6-terra",
+      "original_modified_at": "2026-07-31T15:46:39",
+      "prompt_version": "english-post-v1",
+      "published_at": "2023-09-21T17:58:46",
+      "reasoning_effort": "medium",
+      "sections": [
+        {
+          "bullets": [],
+          "heading": "Introduction",
+          "paragraphs": [
+            "The rapid advancement of artificial intelligence and the growing use of large language models (LLMs), such as ChatGPT, in academic writing have made questions of ethics, authenticity, and integrity increasingly important. Although LLMs are valued for their efficiency and potential benefits, their integration into academic settings also raises substantial ethical concerns.",
+            "This review draws on recent research to outline key ethical issues associated with LLM use in academic writing and to identify possible mitigation strategies."
+          ]
+        },
+        {
+          "bullets": [],
+          "heading": "Ethical Concerns",
+          "paragraphs": [
+            "Authenticity and credibility are central concerns. Dergaa et al. (2023) note that LLMs can generate large quantities of information at unprecedented speed, but excessive reliance on them may marginalize the human intelligence and critical thinking that are essential to academic research.",
+            "Ownership and research integrity are also at issue. Khlaif et al. (2023) emphasize possible shortcomings in transparency and accountability when AI-generated text is used, as well as questions about ownership. Unintended plagiarism and the misrepresentation of information are particular concerns.",
+            "The increasing integration of LLMs may also contribute to plagiarism and inadequate attribution. Hosseini et al. (2022) discuss the growing average number of authors per publication (INAP), observing that an increase in INAP can amplify existing ethical issues related to authorship. These issues may particularly disadvantage junior researchers and those who perform routine tasks.",
+            "Bias and lack of transparency in the generation process can further compromise academic work. Fatani (2023) identifies the possibility of bias in LLM-generated content and concerns about how such content is produced. Biased outputs may distort academic conclusions, mislead readers, and undermine trust in research.",
+            "In health professions education (HPE), Ellaway and Tolsgaard (2023) highlight the risk that LLM use could diminish the role and expertise of human authors. Without appropriate management, LLMs may produce content that lacks the context, accuracy, and ethical alignment necessary for educating healthcare professionals."
+          ]
+        },
+        {
+          "bullets": [],
+          "heading": "Mitigation Strategies",
+          "paragraphs": [
+            "Human intelligence and critical thinking should remain central to the research process. Dergaa et al. (2023) argue that this is necessary to preserve the authenticity and credibility of academic work.",
+            "Khlaif et al. (2023) suggest emphasizing research methodology, including detailed research design, tool development, and in-depth data analysis. Attention to these elements can support strong theoretical and practical implications while maintaining the depth and integrity of academic work in the AI era.",
+            "Authorship guidelines may need refinement. Hosseini et al. (2022) recommend incorporating clearer guidance into existing attribution systems, including the CRediT taxonomy and ICMJE guidelines. Changes to academic recognition and institutional promotion systems may also help ensure ethical attribution.",
+            "Academic institutions can establish clear policies governing the use of AI tools. According to Fatani (2023), such policies should emphasize originality and appropriate citation practices, alongside regular monitoring and auditing of AI-generated content.",
+            "For HPE specifically, Ellaway and Tolsgaard (2023) propose clear disclosure of LLM involvement, human control over the final product, rigorous validation and peer-review procedures, and ongoing monitoring of LLM performance."
+          ]
+        },
+        {
+          "bullets": [],
+          "heading": "Conclusion",
+          "paragraphs": [
+            "LLMs offer potentially transformative possibilities for academic writing, but they also introduce ethical concerns that require careful attention. Comprehensive mitigation strategies can help the academic community use the advantages of LLMs while preserving academic integrity, authenticity, and ethical standards."
+          ]
+        },
+        {
+          "bullets": [],
+          "heading": "References",
+          "paragraphs": [
+            "Dergaa I et al. From human writing to artificial intelligence generated text: examining the prospects and potential threats of ChatGPT in academic writing. Biol Sport. 2023;40(2):615–622. DOI: 10.5114/biolsport.2023.125623.",
+            "Khlaif ZN et al. The Potential and Concerns of Using AI in Scientific Research: ChatGPT Performance Evaluation. JMIR Med Educ. 2023;9:e47049. DOI: 10.2196/47049.",
+            "Hosseini M et al. An Ethical Exploration of Increased Average Number of Authors Per Publication. Sci Eng Ethics. 2022;28(3):25. DOI: 10.1007/s11948-021-00352-3.",
+            "Fatani B. ChatGPT for Future Medical and Dental Research. Cureus. 2023;15(4):e37285. DOI: 10.7759/cureus.37285.",
+            "Ellaway RH et al. Artificial scholarship: LLMs in health professions education research. Adv Health Sci Educ Theory Pract. 2023;28(3):659–664. DOI: 10.1007/s10459-023-10257-4."
+          ]
+        },
+        {
+          "bullets": [],
+          "heading": "Disclaimer",
+          "paragraphs": [
+            "This article was generated by ChatGPT."
+          ]
+        }
+      ],
       "source_hash": "399e99bf4ac62a1e52f12e7a5ad89144c8b51b9e459f85a25b982d52aa39e3f6",
-      "status": "generation_failed",
+      "source_url": "https://largelearningmodel.wordpress.com/2023/09/21/the-ethical-implications-of-large-language-models-in-academic-writing-challenges-and-solutions-mini-review/",
+      "standfirst": "Large language models can improve efficiency in academic writing, but their use also raises concerns about authenticity, ownership, authorship, bias, and human authority. This mini-review outlines these issues and potential approaches to addressing them.",
+      "status": "ready",
+      "title": "Ethical Challenges of Large Language Models in Academic Writing",
       "wordpress_id": 904092
     },
     "904098": {
@@ -2716,10 +2780,79 @@
       "wordpress_id": 904143
     },
     "904152": {
-      "error_detail": "unsafe or disclosed generation text",
-      "error_type": "ValueError",
+      "generated_at": "2026-08-29T05:51:04+00:00",
+      "model": "gpt-5.6-terra",
+      "original_modified_at": "2026-07-31T15:46:39",
+      "prompt_version": "english-post-v1",
+      "published_at": "2023-10-24T12:54:18",
+      "reasoning_effort": "medium",
+      "sections": [
+        {
+          "bullets": [],
+          "heading": "Why Guidance Is Necessary",
+          "paragraphs": [
+            "Tools with a high degree of freedom need guidance. The internet and YouTube, for example, can be misused, so children need support in learning how to use them appropriately. AI chatbots can do many things, but that also makes them difficult to use well.",
+            "Change is happening so quickly that public education has not yet been able to cover it adequately. For now, parents need to take on this role. Today’s children are not merely IT natives; they are AI natives. They are exposed to AI from the period when their thinking is still developing, so guidance is needed to ensure that their thinking ability is not hindered.",
+            "They will live in a time when AI is used throughout every process. This makes the ability to use AI well an important capability to develop."
+          ]
+        },
+        {
+          "bullets": [
+            "How to give AI effective tasks, or prompting",
+            "How to break work into stages",
+            "How to use AI in ways that promote thinking"
+          ],
+          "heading": "Three Key Areas of Guidance",
+          "paragraphs": [
+            "There are three main points to focus on:"
+          ]
+        },
+        {
+          "bullets": [
+            "Instruction: Explain the task, role, objective, or other work to be performed.",
+            "Context: Provide the information that can be used to carry out the task.",
+            "Guideline: Specify details, output format, and constraints to follow while doing the work."
+          ],
+          "heading": "1. Giving Effective Instructions",
+          "paragraphs": [
+            "A prompt is the user’s input that leads a language model to produce an answer: in effect, a kind of instruction. To receive the result you want, you need to communicate what you want accurately.",
+            "A useful prompt should provide three things: instruction, context, and guidelines."
+          ]
+        },
+        {
+          "bullets": [],
+          "heading": "2. Working in Stages",
+          "paragraphs": [
+            "Even for a simple task, dividing the work into stages creates more opportunities to organize your thoughts and provide input along the way. This gives you better steerability.",
+            "For writing, the process might involve gathering material, creating an outline, making the outline more detailed, and then writing the piece.",
+            "For project development, it might involve gathering ideas, selecting ideas, comparing the selected ideas, and writing the specific project details.",
+            "You can also discuss with an AI chatbot how a task itself might best be divided into stages."
+          ]
+        },
+        {
+          "bullets": [],
+          "heading": "3. Using AI to Promote Thinking",
+          "paragraphs": [
+            "There is a risk that children may depend on AI rather than think for themselves, or accept its output uncritically. Interactive learning is more effective than a one-sided lecture that is not engaging, so questions should be used actively.",
+            "Instead of asking, “Give me 10 ideas,” ask, “Ask me 10 questions that will help me come up with ideas.” Instead of asking, “Explain XX,” ask, “Ask me a sequence of questions that will help me learn about XX.”",
+            "Another useful activity is to critique AI-generated results. Discuss what is good about a piece of writing (Plus), what could be improved (Minus), and what is interesting (Interesting). You can also compare outputs from two models, such as ChatGPT and Claude, or compare two separate generations."
+          ]
+        },
+        {
+          "bullets": [],
+          "heading": "Additional Considerations",
+          "paragraphs": [
+            "GPT-3.5, the free version, only knows information up to September 2021, so it is not appropriate for asking about current information. GPT-4 with Web Browsing, New Bing Chat, You.com, and Perplexity.ai provide answers based on search results.",
+            "Children should be taught that AI chatbots can contain incorrect information, often called hallucination, and can give different answers each time because of randomness. Education about personal information, internet etiquette, and plagiarism should accompany AI education.",
+            "Parents should begin by using AI as much as possible in everyday life themselves. Learning through experience and developing an intuitive feel for its use are necessary."
+          ]
+        }
+      ],
       "source_hash": "8242efca21402a28e4647567dad35433c2b67d52b2ea3f8e94280aab6f1429d7",
-      "status": "generation_failed",
+      "source_url": "https://largelearningmodel.wordpress.com/2023/10/24/%ec%95%84%ec%9d%b4%ec%9d%98-chatgpt-%ed%99%9c%ec%9a%a9-%ec%a7%80%eb%8f%84%ed%95%98%ea%b8%b0/",
+      "standfirst": "AI chatbots offer broad freedom and many possibilities, but children need guidance to use them well without weakening their own thinking.",
+      "status": "ready",
+      "title": "Guiding Children’s Use of ChatGPT",
       "wordpress_id": 904152
     },
     "904159": {
@@ -3217,10 +3350,64 @@
       "wordpress_id": 904237
     },
     "904245": {
-      "error_detail": "unsafe or disclosed generation text",
-      "error_type": "ValueError",
+      "generated_at": "2026-08-29T05:51:14+00:00",
+      "model": "gpt-5.6-terra",
+      "original_modified_at": "2026-07-31T15:46:36",
+      "prompt_version": "english-post-v1",
+      "published_at": "2024-03-18T11:08:16",
+      "reasoning_effort": "medium",
+      "sections": [
+        {
+          "bullets": [],
+          "heading": "The study",
+          "paragraphs": [
+            "The paper, “Monitoring AI-Modified Content at Scale: A Case Study on the Impact of ChatGPT on AI Conference Peer Reviews,” proposes a method for detecting AI-generated text based on the adjectives and adverbs preferred by AI systems. When the authors applied it to machine-learning paper reviews, they found a substantial estimated share of LLM use.",
+            "The authors frame their method against three existing approaches to AI-text detection. Zero-shot methods are difficult to improve in a setting dominated by closed models. Training-based methods can overfit and are vulnerable to adversarial attacks and bias. Watermarking requires service providers to implement the feature, and adding a watermark may reduce output quality."
+          ]
+        },
+        {
+          "bullets": [],
+          "heading": "Method",
+          "paragraphs": [
+            "The researchers collected human-written reviews. They also gave an AI system papers and reviewer instructions, asking it to produce reviews, thereby constructing human and AI corpora.",
+            "For each adjective, they calculated its frequency in human writing, P(token), and in AI writing, Q(token). If a corpus is mixed at a ratio of α, the probability that a given adjective appears in a sampled document is (1 − α)P + αQ. Using multiple tokens and documents, they estimated α through maximum likelihood estimation.",
+            "They first validated whether the estimate matched the known proportion in synthetic data, then applied the method to real-world data."
+          ]
+        },
+        {
+          "bullets": [],
+          "heading": "Findings",
+          "paragraphs": [
+            "The estimated proportion of AI-generated content increased after ChatGPT was released. The study estimates that approximately 7–15% of machine-learning conference reviews involved LLM use. It found no such evidence in Nature reviews.",
+            "The estimated α value did not change substantially when reviewers used ChatGPT only for proofreading. The method also detected text as generated in a setting where a person prepared an outline and an LLM turned it into full sentences. This makes it difficult to state exactly how much a reviewer relied on generation, rather than merely whether generated phrasing was present.",
+            "LLM use was estimated to be higher for reviews submitted during the final three days before a deadline. Reviews containing “et al.” had lower α values, possibly because they more often discussed references, an area in which LLMs are weak.",
+            "Reviewers who posted more replies during the review-discussion stage had lower α values. Higher estimated AI use was also associated with greater agreement among reviewers. The concern is that, rather than receiving diverse human judgments, authors may receive similar LLM-mediated feedback. This could reduce the input of creative ideas into peer review and, if such text is reused as training data, may further reduce diversity.",
+            "The conferences in the study required reviewers to report a confidence score. When reviews were divided into low-confidence scores of 1–2 and higher-confidence scores of 3–5, the higher-confidence group had lower α values. It is unclear whether reviewers with low confidence seek more LLM assistance, or whether relying more heavily on LLMs lowers their confidence."
+          ]
+        },
+        {
+          "bullets": [],
+          "heading": "What the paper does and does not claim",
+          "paragraphs": [
+            "The study finds higher estimated LLM use in situations that have plausible explanations, and it identifies a possible risk of reduced diversity as LLM use becomes more common in peer review. It does not attempt to judge whether LLM use in reviews is inherently good or bad.",
+            "Its results also raise an interpretive problem. If a reviewer creates the substance of a review as an outline and asks an LLM only to turn it into prose, the text can still be detected as generated. Detection alone therefore cannot settle the question of how much of the intellectual work was delegated."
+          ]
+        },
+        {
+          "bullets": [],
+          "heading": "My view",
+          "paragraphs": [
+            "This is a timely warning in a period when more papers may be written with LLMs and more reviews may be produced with them as well. One strength of the study is that it examines how the estimated α value changes across several independent variables, addressing many of the questions readers are likely to have.",
+            "Is it acceptable for a human to prepare an outline and use an LLM only to turn it into sentences? For a paper itself, I think this raises at least a mild ethical issue, and I am not sure that increasing the writer’s dependence on such tools is desirable. A paper also has value as writing produced by its author; the selection and arrangement of words are part of the identity of the work.",
+            "A review is different. Its value lies less in the prose itself than in its role as a means of epistemic communication. Writing a review in bullet points and having an LLM convert it into sentences could help both the writer and the reader. This seems especially relevant when reviewers are unpaid and there is a chronic shortage of reviewers."
+          ]
+        }
+      ],
       "source_hash": "30e7c8a823fdc78bc037026a5285ff55412700c58cae7895ded71dfea91d70b1",
-      "status": "generation_failed",
+      "source_url": "https://largelearningmodel.wordpress.com/2024/03/18/%ed%94%bc%ec%96%b4%eb%a6%ac%eb%b7%b0%ec%97%90-llm%ec%9d%b4-%ec%96%bc%eb%a7%88%eb%82%98-%ec%82%ac%ec%9a%a9%eb%90%a0%ea%b9%8c-%ec%83%88-ai-%ec%83%9d%ec%84%b1-%ed%85%8d%ec%8a%a4%ed%8a%b8-%ea%b0%90/",
+      "standfirst": "A study estimates the use of AI-generated text in machine-learning conference reviews by examining adjectives and adverbs that appear disproportionately often in LLM-written writing.",
+      "status": "ready",
+      "title": "How Much Are LLMs Being Used in Peer Review?",
       "wordpress_id": 904245
     },
     "904258": {
