@@ -154,6 +154,15 @@ def test_public_posts_do_not_present_the_authors_work_as_derived():
     assert '"isBasedOn"' not in page
 
 
+def test_post_lists_are_unnumbered_and_title_first():
+    build.build_site(offline=True)
+    page = (ROOT / "posts" / "index.html").read_text(encoding="utf-8")
+    assert '<ul class="post-list">' in page
+    assert '<ol class="post-list">' not in page
+    first_item = page.split('<li>', 1)[1].split('</li>', 1)[0]
+    assert first_item.index('<a ') < first_item.index('<time ')
+
+
 def test_video_discovery_deduplicates_and_preserves_existing_fields(monkeypatch, tmp_path):
     class FakeYDL:
         def __init__(self, _options):
