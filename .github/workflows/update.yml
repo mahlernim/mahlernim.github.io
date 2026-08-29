@@ -1,42 +1,91 @@
-name: Update Website Content
+name: Update academic hub
 
 on:
   schedule:
-    - cron: '0 0 * * 0' # Run every Sunday at midnight
-  workflow_dispatch: # Allow manual trigger
+    - cron: "20 0 * * *"
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: Content generation mode
+        required: true
+        default: acceptance
+        type: choice
+        options:
+          - acceptance
+          - daily
+          - backfill
+      effort:
+        description: Reasoning effort
+        required: true
+        default: medium
+        type: choice
+        options:
+          - medium
+          - low
+
+concurrency:
+  group: academic-hub-content
+  cancel-in-progress: false
 
 jobs:
   build:
     runs-on: ubuntu-latest
     permissions:
-      contents: write # Needed to commit changes
-      
+      contents: write
+    env:
+      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
         with:
-          python-version: '3.10'
-
-      - name: Install dependencies
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: Discover source metadata
         run: |
-          pip install -r requirements.txt
-
-      - name: Build Site
+          python -m scripts.fetch_youtube > /dev/null
+          python -m scripts.fetch_pubmed > /dev/null
+      - name: Read approved production configuration
+        id: config
+        shell: bash
         run: |
-          python build.py
-
-      - name: Commit and Push changes
+          python - <<'PY'
+          import json, os
+          config = json.load(open("prompts/approval.json", encoding="utf-8"))
+          with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as out:
+              out.write(f"approved={str(config['approved']).lower()}\n")
+              out.write(f"effort={config['reasoning_effort']}\n")
+          PY
+      - name: Generate acceptance samples
+        if: github.event_name == 'workflow_dispatch' && inputs.mode == 'acceptance'
+        run: python -m scripts.generate_summaries --mode acceptance --effort "${{ inputs.effort }}"
+      - name: Upload acceptance samples
+        if: github.event_name == 'workflow_dispatch' && inputs.mode == 'acceptance'
+        uses: actions/upload-artifact@v4
+        with:
+          name: acceptance-${{ inputs.effort }}
+          path: data/acceptance_samples.json
+          retention-days: 14
+      - name: Generate production content
+        if: >-
+          (github.event_name == 'schedule' && steps.config.outputs.approved == 'true') ||
+          (github.event_name == 'workflow_dispatch' && inputs.mode != 'acceptance' && steps.config.outputs.approved == 'true')
+        run: python -m scripts.generate_summaries --mode "${{ github.event_name == 'schedule' && 'daily' || inputs.mode }}" --effort "${{ steps.config.outputs.effort }}"
+      - name: Build static pages
+        run: python build.py --offline
+      - name: Validate
+        run: pytest -q
+      - name: Commit production output
+        if: >-
+          github.event_name == 'schedule' ||
+          (github.event_name == 'workflow_dispatch' && inputs.mode != 'acceptance')
         run: |
-          git config --global user.name 'github-actions[bot]'
-          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          git add index.html
-          # Check if there are changes before committing
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/videos_cache.json data/publications_cache.json data/generated_content.json index.html videos publications projects sitemap.xml
           if git diff --staged --quiet; then
-            echo "No changes to commit."
+            echo "No changes to publish"
           else
-            git commit -m "Auto-update: Publications/Videos [skip ci]"
+            git commit -m "Update academic hub content"
             git push
           fi

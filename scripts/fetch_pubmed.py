@@ -3,6 +3,7 @@ import xml.etree.ElementTree as ET
 import time
 import os
 import json
+import hashlib
 from datetime import datetime
 
 # Combined search for variations
@@ -102,6 +103,13 @@ def fetch_details(ids):
         for article in root.findall(".//PubmedArticle"):
             # ... (extraction logic) ...
             title = article.findtext(".//ArticleTitle")
+            abstract_parts = []
+            for abstract in article.findall(".//Abstract/AbstractText"):
+                label = abstract.get("Label")
+                text = "".join(abstract.itertext()).strip()
+                if text:
+                    abstract_parts.append(f"{label}: {text}" if label else text)
+            abstract_text = "\n".join(abstract_parts)
             
             # year
             pub_date = article.find(".//PubDate")
@@ -145,6 +153,9 @@ def fetch_details(ids):
                 "doi": doi,
                 "pmid": pmid,
                 "category": category
+                ,"abstract": abstract_text
+                ,"source_hash": hashlib.sha256(" ".join(abstract_text.split()).encode("utf-8")).hexdigest() if abstract_text else ""
+                ,"source_url": f"https://pubmed.ncbi.nlm.nih.gov/{pmid}/"
             })
             
     except Exception as e:
@@ -160,6 +171,21 @@ def fetch_works():
     if ids:
         # Update cache with any new findings
         fetch_details_with_cache(ids)
+
+    # Older cache records predate abstract provenance. Refresh recent records once
+    # so summaries are based on primary source text rather than titles alone.
+    cache = load_cache()
+    refresh_ids = [
+        pmid for pmid, work in cache.items()
+        if int(work.get("year", 0)) >= 2023 and not work.get("abstract")
+    ]
+    for start in range(0, len(refresh_ids), 50):
+        for work in fetch_details(refresh_ids[start:start + 50]):
+            existing = cache.get(work["pmid"], {})
+            existing.update(work)
+            cache[work["pmid"]] = existing
+    if refresh_ids:
+        save_cache(cache)
     
     # Return ALL papers from cache, not just the recent search results
     cache = load_cache()

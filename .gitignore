@@ -7,5 +7,8 @@ venv/
 .env
 .DS_Store
 Thumbs.db
-data/
+data/*
 !data/publications_cache.json
+!data/videos_cache.json
+!data/generated_content.json
+!data/acceptance_samples.json
