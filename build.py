@@ -63,7 +63,19 @@ def environment():
         lstrip_blocks=True,
     )
     env.filters["from_json"] = json.loads
+    env.globals["breadcrumb_schema"] = breadcrumb_schema
     return env
+
+
+def breadcrumb_schema(items):
+    return {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": position, "name": name, "item": f"{BASE_URL}{path}"}
+            for position, (name, path) in enumerate(items, start=1)
+        ],
+    }
 
 
 def summary_for(content, key):
@@ -115,6 +127,8 @@ def build_site(offline=False):
 
     for item in videos:
         item["generated"] = summary_for(content, f"video:{item['video_id']}")
+        summary = item["generated"].get("summary", {}).get("ko", {}).get("overview", "")
+        item["seo_description"] = summary or f"{item['title']} 강의 영상과 내용 요약"
     for item in publications:
         item["generated"] = summary_for(content, f"publication:{item['pmid']}")
 
@@ -133,11 +147,14 @@ def build_site(offline=False):
 
 
 def write_sitemap(videos, publications, posts):
-    routes = ["/", "/posts/", "/videos/", "/publications/", "/projects/", "/google-timeline-visualizer/"]
-    routes += [f"/posts/{item['wordpress_id']}/" for item in posts]
-    routes += [f"/videos/{item['video_id']}/" for item in videos]
-    routes += [f"/publications/{item['pmid']}/" for item in publications]
-    body = "\n".join(f"  <url><loc>{BASE_URL}{route}</loc></url>" for route in routes)
+    routes = [(route, "") for route in ["/", "/posts/", "/videos/", "/publications/", "/projects/", "/google-timeline-visualizer/"]]
+    routes += [(f"/posts/{item['wordpress_id']}/", item.get("original_modified_at", "")[:10]) for item in posts]
+    routes += [(f"/videos/{item['video_id']}/", item.get("upload_date", "")[:10]) for item in videos]
+    routes += [(f"/publications/{item['pmid']}/", "") for item in publications]
+    body = "\n".join(
+        f"  <url><loc>{BASE_URL}{route}</loc>{f'<lastmod>{lastmod}</lastmod>' if lastmod else ''}</url>"
+        for route, lastmod in routes
+    )
     (ROOT / "sitemap.xml").write_text(
         '<?xml version="1.0" encoding="UTF-8"?>\n'
         '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'

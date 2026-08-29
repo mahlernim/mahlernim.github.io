@@ -11,7 +11,7 @@ from scripts.fetch_wordpress import clean_html, fetch_posts
 from scripts.generate_posts import validate_generated
 from scripts.generate_summaries import needs_generation
 from scripts.content_model import THEMES, source_hash, validate_summary
-from scripts.fetch_youtube import _clean_caption, fetch_gemini_video_evidence, fetch_videos
+from scripts.fetch_youtube import _clean_caption, _verified_upload_date, fetch_gemini_video_evidence, fetch_videos
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -56,6 +56,12 @@ def test_caption_cleaner_removes_timing_markup_and_duplicates():
     assert _clean_caption(vtt) == "안녕하세요 연구 요약"
 
 
+def test_youtube_upload_date_requires_verified_timestamp():
+    assert _verified_upload_date({"timestamp": 1704067200}) == "2024-01-01T00:00:00+00:00"
+    assert _verified_upload_date({"upload_date": "20240101"}) == ""
+    assert _verified_upload_date({"timestamp": "1704067200"}) == ""
+
+
 def test_offline_build_preserves_support_files_and_generates_routes():
     protected = ["CNAME", "robots.txt", "ads.txt", "app-ads.txt"]
     before = {name: (ROOT / name).read_bytes() for name in protected}
@@ -76,6 +82,63 @@ def test_generated_pages_have_canonical_and_no_secret_marker():
         assert '<link rel="canonical"' in text
         assert "OPENAI_API_KEY" not in text
         assert "sk-proj-" not in text
+
+
+def test_detail_pages_have_breadcrumb_structured_data():
+    build.build_site(offline=True)
+    pages = [
+        next((ROOT / "posts").glob("*/index.html")),
+        next((ROOT / "videos").glob("*/index.html")),
+        next((ROOT / "publications").glob("*/index.html")),
+        ROOT / "projects" / "index.html",
+    ]
+    for page in pages:
+        text = page.read_text(encoding="utf-8")
+        assert '"@type": "BreadcrumbList"' in text
+        assert '"position": 1' in text
+        assert '"item": "https://ahn-lab.org/' in text
+
+
+def test_video_schema_is_emitted_only_with_verified_upload_date():
+    env = build.environment()
+    base = {
+        "title": "강의 제목",
+        "video_id": "abc",
+        "thumbnail": "https://img.youtube.com/vi/abc/hqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=abc",
+        "seo_description": "강의 설명",
+        "generated": {"status": "pending_source"},
+    }
+    context = {"author": build.AUTHOR, "base_url": build.BASE_URL, "page": "videos", "themes": THEMES, "build_year": 2026}
+    without_date = env.get_template("video_detail.html").render(video=base, **context)
+    assert '"@type": "VideoObject"' not in without_date
+    with_date = env.get_template("video_detail.html").render(video={**base, "upload_date": "2024-01-01T00:00:00+00:00"}, **context)
+    assert '"@type": "VideoObject"' in with_date
+    for field in ["name", "description", "thumbnailUrl", "uploadDate", "url", "embedUrl"]:
+        assert f'"{field}"' in with_date
+
+
+def test_index_pages_have_distinct_descriptions():
+    build.build_site(offline=True)
+    pages = [ROOT / "index.html", ROOT / "posts" / "index.html", ROOT / "videos" / "index.html", ROOT / "publications" / "index.html", ROOT / "projects" / "index.html"]
+    descriptions = []
+    for page in pages:
+        text = page.read_text(encoding="utf-8")
+        match = __import__("re").search(r'<meta name="description" content="([^"]+)', text)
+        assert match
+        descriptions.append(match.group(1))
+    assert len(set(descriptions)) == len(pages)
+
+
+def test_sitemap_uses_source_dates_and_preserves_route_count():
+    build.build_site(offline=True)
+    sitemap = (ROOT / "sitemap.xml").read_text(encoding="utf-8")
+    post = next(iter(json.loads((ROOT / "_pipeline" / "posts.json").read_text(encoding="utf-8"))["items"].values()))
+    route = f"https://ahn-lab.org/posts/{post['wordpress_id']}/"
+    entry = sitemap.split(f"<loc>{route}</loc>", 1)[1].split("</url>", 1)[0]
+    assert f"<lastmod>{post['original_modified_at'][:10]}</lastmod>" in entry
+    assert sitemap.count("<url>") == 164
+    assert "build_year" not in sitemap
 
 
 def test_data_files_are_valid_json():

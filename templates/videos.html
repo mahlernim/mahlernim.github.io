@@ -1,2 +1,2 @@
-{% extends "base.html" %}{% block title %}강의 영상 | {{ author.name }}{% endblock %}{% block canonical %}{{ base_url }}/videos/{% endblock %}
+{% extends "base.html" %}{% block title %}강의 영상 | {{ author.name }}{% endblock %}{% block description %}대형언어모델, 의학교육, 의학 연구에 관한 안상진의 강의 영상과 한국어 및 영어 요약{% endblock %}{% block canonical %}{{ base_url }}/videos/{% endblock %}
 {% block content %}<nav class="breadcrumbs" aria-label="경로"><a href="/">홈</a> / 영상</nav><header class="page-head"><p class="eyebrow">Video library</p><h1>강의 영상</h1><p>의학 연구, 교육, 대형언어모델 활용에 관한 강의와 실습 영상입니다.</p></header><div class="card-grid">{% for video in videos %}{% include "video_card.html" %}{% endfor %}</div>{% endblock %}
