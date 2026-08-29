@@ -3,7 +3,7 @@ import json
 from datetime import datetime, timezone
 
 
-PROMPT_VERSION = "academic-hub-v1"
+PROMPT_VERSION = "academic-hub-v2"
 MODEL_ID = "gpt-5.6-luna"
 THEMES = {
     "medical-ai-data-science": {
@@ -65,6 +65,9 @@ def validate_summary(summary):
             raise ValueError(f"{language}.key_points must contain exactly three items")
         if any(not isinstance(point, str) or not point.strip() for point in points):
             raise ValueError(f"invalid {language}.key_points")
+    serialized = json.dumps(summary, ensure_ascii=False)
+    if any("\u0e00" <= char <= "\u0e7f" for char in serialized):
+        raise ValueError("unexpected Thai character in bilingual summary")
     return summary
 
 

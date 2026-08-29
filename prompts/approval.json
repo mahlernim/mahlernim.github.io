@@ -1,6 +1,6 @@
 {
   "approved": true,
   "model": "gpt-5.6-luna",
-  "prompt_version": "academic-hub-v1",
+  "prompt_version": "academic-hub-v2",
   "reasoning_effort": "medium"
 }
