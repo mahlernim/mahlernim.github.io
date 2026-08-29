@@ -12,6 +12,7 @@
   <meta property="og:description" content="{{ self.description()|striptags }}">
   <meta property="og:url" content="{{ self.canonical()|striptags }}">
   <link rel="stylesheet" href="/static/css/style.css">
+  <script src="/static/js/site.js" defer></script>
   {% block structured_data %}{% endblock %}
 </head>
 <body>
@@ -28,6 +29,5 @@
     </nav>
   </header>
   <main id="content" class="container">{% block content %}{% endblock %}</main>
-  <footer><div class="container">© {{ build_year }} {{ author.name }}</div></footer>
 </body>
 </html>
