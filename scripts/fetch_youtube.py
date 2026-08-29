@@ -140,7 +140,13 @@ def fetch_gemini_video_evidence(video_id):
 
 def fetch_videos():
     cache = load_json(CACHE_FILE, {})
-    options = {"quiet": True, "extract_flat": True, "dump_single_json": True}
+    options = {
+        "quiet": True,
+        "extract_flat": True,
+        "dump_single_json": True,
+        "http_headers": {"Accept-Language": "ko-KR,ko;q=0.9,en;q=0.5"},
+        "extractor_args": {"youtube": {"lang": ["ko"]}},
+    }
     try:
         with yt_dlp.YoutubeDL(options) as ydl:
             result = ydl.extract_info(VIDEO_URL, download=False)
@@ -172,6 +178,7 @@ def fetch_videos():
                 "thumbnail": f"https://img.youtube.com/vi/{video_id}/hqdefault.jpg",
                 "playlist_position": position,
                 "metadata_checked_at": utc_now(),
+                "title_language": "ko",
             })
             cache[video_id] = existing
         save_json(CACHE_FILE, cache)

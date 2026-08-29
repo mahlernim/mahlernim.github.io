@@ -169,6 +169,25 @@ def test_video_discovery_deduplicates_and_preserves_existing_fields(monkeypatch,
     assert len(items) == 1
     assert items[0]["title"] == "New title"
     assert items[0]["caption_status"] == "available"
+    assert items[0]["title_language"] == "ko"
+
+
+def test_video_discovery_requests_korean_youtube_metadata(monkeypatch, tmp_path):
+    captured = {}
+    class FakeYDL:
+        def __init__(self, options):
+            captured.update(options)
+        def __enter__(self):
+            return self
+        def __exit__(self, *_args):
+            return False
+        def extract_info(self, *_args, **_kwargs):
+            return {"entries": []}
+    monkeypatch.setattr("scripts.fetch_youtube.CACHE_FILE", tmp_path / "videos.json")
+    monkeypatch.setattr("scripts.fetch_youtube.yt_dlp.YoutubeDL", FakeYDL)
+    fetch_videos()
+    assert captured["extractor_args"]["youtube"]["lang"] == ["ko"]
+    assert captured["http_headers"]["Accept-Language"].startswith("ko-KR")
 
 
 def test_pending_source_does_not_replace_ready_record():
