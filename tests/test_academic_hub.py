@@ -147,6 +147,13 @@ def test_generation_disclaimer_section_is_not_rendered():
     assert [section["heading"] for section in cleaned["sections"]] == ["Findings"]
 
 
+def test_public_posts_do_not_present_the_authors_work_as_derived():
+    build.build_site(offline=True)
+    page = next((ROOT / "posts").glob("*/index.html")).read_text(encoding="utf-8")
+    assert "Original post" not in page
+    assert '"isBasedOn"' not in page
+
+
 def test_video_discovery_deduplicates_and_preserves_existing_fields(monkeypatch, tmp_path):
     class FakeYDL:
         def __init__(self, _options):
