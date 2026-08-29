@@ -72,7 +72,7 @@ def generate_one(client, source):
                 input=f"Original title: {source['original_title']}\nOriginal article:\n{source['source_text']}",
                 text={"format": {"type": "json_schema", "name": "english_post", "strict": True, "schema": POST_SCHEMA}},
             )
-            minimum = min(120, max(10, len(source["source_text"].split()) // 2))
+            minimum = min(60, max(10, len(source["source_text"].split()) // 2))
             return validate_generated(json.loads(response.output_text), min_words=minimum)
         except Exception as exc:
             last_error = exc
