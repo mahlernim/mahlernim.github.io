@@ -21,7 +21,7 @@ from scripts.fetch_youtube import fetch_caption_text, fetch_gemini_video_evidenc
 ROOT = Path(__file__).resolve().parents[1]
 PUBLICATIONS = ROOT / "data" / "publications_cache.json"
 VIDEOS = ROOT / "data" / "videos_cache.json"
-CONTENT = ROOT / "data" / "generated_content.json"
+CONTENT = ROOT / "_pipeline" / "generated_content.json"
 ACCEPTANCE = ROOT / "data" / "acceptance_samples.json"
 ACCEPTANCE_VIDEOS = [
     "5j2estMEg-U", "8wHq_Eg5Fwg", "Qp4U6XlBOLs",

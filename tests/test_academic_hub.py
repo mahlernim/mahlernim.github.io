@@ -7,6 +7,8 @@ from pathlib import Path
 import pytest
 
 import build
+from scripts.fetch_wordpress import clean_html, fetch_posts
+from scripts.generate_posts import validate_generated
 from scripts.generate_summaries import needs_generation
 from scripts.content_model import THEMES, source_hash, validate_summary
 from scripts.fetch_youtube import _clean_caption, fetch_gemini_video_evidence, fetch_videos
@@ -61,6 +63,7 @@ def test_offline_build_preserves_support_files_and_generates_routes():
     assert (ROOT / "videos" / "index.html").exists()
     assert (ROOT / "publications" / "index.html").exists()
     assert (ROOT / "projects" / "index.html").exists()
+    assert (ROOT / "posts" / "index.html").exists()
     assert "/google-timeline-visualizer/" in (ROOT / "sitemap.xml").read_text(encoding="utf-8")
     assert before == {name: (ROOT / name).read_bytes() for name in protected}
 
@@ -76,8 +79,50 @@ def test_generated_pages_have_canonical_and_no_secret_marker():
 
 
 def test_data_files_are_valid_json():
-    for path in (ROOT / "data").glob("*.json"):
+    for path in [*(ROOT / "data").glob("*.json"), *(ROOT / "_pipeline").glob("*.json")]:
         json.loads(path.read_text(encoding="utf-8"))
+
+
+def test_wordpress_html_is_reduced_to_safe_text():
+    source = '<p>Hello <img src="x">world</p><script>bad()</script><iframe>bad</iframe><h2>Next</h2>'
+    cleaned = clean_html(source)
+    assert cleaned == "Hello world\nNext"
+    assert "bad" not in cleaned
+
+
+def test_wordpress_fetch_requires_50_unique_items(monkeypatch, tmp_path):
+    class Response:
+        def raise_for_status(self):
+            return None
+        def json(self):
+            return [{"id": index, "date": "2024-01-01T00:00:00", "modified": "2024-01-01T00:00:00", "link": f"https://example.com/{index}", "title": {"rendered": f"Post {index}"}, "content": {"rendered": "<p>" + ("source text " * 50) + "</p>"}} for index in range(50)]
+    class Session:
+        @staticmethod
+        def get(*_args, **_kwargs):
+            return Response()
+    monkeypatch.setattr("scripts.fetch_wordpress.CACHE", tmp_path / "sources.json")
+    result = fetch_posts(session=Session)
+    assert result["fixed_count"] == 50
+    assert len(result["items"]) == 50
+    assert result["items"]["0"]["published_at"] == "2024-01-01T00:00:00"
+
+
+def test_generated_post_validation_rejects_disclosure_and_html():
+    valid = {"title": "A useful title", "standfirst": "A compact introduction.", "sections": [
+        {"heading": "First", "paragraphs": ["Evidence grounded discussion " * 35], "bullets": []},
+        {"heading": "Second", "paragraphs": ["Further source grounded discussion " * 35], "bullets": []},
+    ]}
+    assert validate_generated(valid) == valid
+    invalid = copy.deepcopy(valid)
+    invalid["sections"][0]["paragraphs"][0] = "AI-generated text " * 80
+    with pytest.raises(ValueError):
+        validate_generated(invalid)
+
+
+def test_pages_config_excludes_internal_data():
+    config = (ROOT / "_config.yml").read_text(encoding="utf-8")
+    assert "_pipeline" in config
+    assert "data" in config
 
 
 def test_video_discovery_deduplicates_and_preserves_existing_fields(monkeypatch, tmp_path):

@@ -13,13 +13,17 @@ from scripts.fetch_youtube import fetch_videos
 
 ROOT = Path(__file__).resolve().parent
 DATA = ROOT / "data"
+PIPELINE = ROOT / "_pipeline"
 TEMPLATES = ROOT / "templates"
 BASE_URL = "https://ahn-lab.org"
 
 AUTHOR = {
     "name": "안상진 (Sangzin Ahn)",
     "title": "인제대학교 의과대학 약리학교실 부교수",
-    "affiliation": "Associate Professor, Department of Pharmacology, Inje University College of Medicine",
+    "affiliations": [
+        "Department of Pharmacology, Inje University College of Medicine, Busan, Korea",
+        "Cardiovascular and Metabolic Diseases Medical Research Center, Inje University College of Medicine, Busan, Korea",
+    ],
     "research_interests": [
         "의학교육에서 대형언어모델 활용 (LLMs in Medical Education)",
         "의학연구에서 대형언어모델 적용 (LLM Applications in Medical Research)",
@@ -35,6 +39,19 @@ AUTHOR = {
     "youtube": "https://youtube.com/playlist?list=PL0TnWnPQhDj2-TOwiz_ZhY2Sdurimss2Q",
     "blog": "https://largelearningmodel.wordpress.com/",
 }
+
+PROJECTS = [
+    {"name": "Google Timeline Visualizer", "url": "/google-timeline-visualizer/", "description": "Turns a Google Maps Timeline export into a travel animation while keeping the location file in the browser."},
+    {"name": "PDF to NotebookLM", "url": "https://github.com/mahlernim/chrome-pdf-to-notebooklm", "description": "A Chrome extension for adding PDFs and web pages to NotebookLM and creating outputs."},
+    {"name": "Memori", "url": "https://memori.co.kr/", "description": "A community for collecting mnemonics and memory cues for medicine and learning."},
+    {"name": "Sakang", "url": "https://sakang.mahler83.net/", "description": "Small tools for text cleanup, clinical calculations, documents, and training records."},
+    {"name": "EduKMA", "url": "https://edukma.mahler83.net/", "description": "A finder for affordable online continuing medical education courses in Korea."},
+    {"name": "LargeLearningModel", "url": "https://largelearningmodel.wordpress.com/", "description": "Notes on language models, learning, education, and a personal archive dating to 2008."},
+    {"name": "Arithmetic Puzzle", "url": "https://arithmeticpuzzle.mahler83.net/", "description": "A generator for 4 by 4 arithmetic puzzles using natural numbers and basic operations."},
+    {"name": "Home Assistant NEIS School", "url": "https://github.com/mahlernim/ha-neis-school", "description": "Home Assistant integration for school meals, timetables, calendars, and attendance information."},
+    {"name": "Korean Twitter Activity Archive", "url": "https://tka.mahler83.net/", "description": "An anonymized public-data archive of changes in activity among Korean Twitter accounts."},
+    {"name": "Tweet Earthquake Alert Archive", "url": "https://jijin.mahler83.net/", "description": "An archive of a project that detected earthquakes through aggregate collective reactions."},
+]
 
 
 def environment():
@@ -77,7 +94,10 @@ def build_site(offline=False):
         publications = fetch_works()
         videos = fetch_videos()
     publications.sort(key=lambda item: (item.get("year", 0), item.get("pmid", "")), reverse=True)
-    content = load_json(DATA / "generated_content.json", {"schema_version": 1, "items": {}})
+    content = load_json(PIPELINE / "generated_content.json", {"schema_version": 1, "items": {}})
+    posts = list(load_json(PIPELINE / "posts.json", {"items": {}}).get("items", {}).values())
+    posts = [post for post in posts if post.get("status") == "ready"]
+    posts.sort(key=lambda item: item.get("published_at", ""), reverse=True)
     env = environment()
 
     for item in videos:
@@ -85,19 +105,23 @@ def build_site(offline=False):
     for item in publications:
         item["generated"] = summary_for(content, f"publication:{item['pmid']}")
 
-    render(env, "index.html", ROOT / "index.html", page="home", videos=videos[:3], publications=publications[:6])
+    render(env, "index.html", ROOT / "index.html", page="home", posts=posts[:5], videos=videos[:3], publications=publications[:6], projects=PROJECTS[:5])
+    render(env, "posts.html", ROOT / "posts" / "index.html", page="posts", posts=posts)
+    for item in posts:
+        render(env, "post_detail.html", ROOT / "posts" / str(item["wordpress_id"]) / "index.html", page="posts", post=item)
     render(env, "videos.html", ROOT / "videos" / "index.html", page="videos", videos=videos)
     for item in videos:
         render(env, "video_detail.html", ROOT / "videos" / item["video_id"] / "index.html", page="videos", video=item)
     render(env, "publications.html", ROOT / "publications" / "index.html", page="publications", publications=publications)
     for item in publications:
         render(env, "publication_detail.html", ROOT / "publications" / item["pmid"] / "index.html", page="publications", publication=item)
-    render(env, "projects.html", ROOT / "projects" / "index.html", page="projects")
-    write_sitemap(videos, publications)
+    render(env, "projects.html", ROOT / "projects" / "index.html", page="projects", projects=PROJECTS)
+    write_sitemap(videos, publications, posts)
 
 
-def write_sitemap(videos, publications):
-    routes = ["/", "/videos/", "/publications/", "/projects/", "/google-timeline-visualizer/"]
+def write_sitemap(videos, publications, posts):
+    routes = ["/", "/posts/", "/videos/", "/publications/", "/projects/", "/google-timeline-visualizer/"]
+    routes += [f"/posts/{item['wordpress_id']}/" for item in posts]
     routes += [f"/videos/{item['video_id']}/" for item in videos]
     routes += [f"/publications/{item['pmid']}/" for item in publications]
     body = "\n".join(f"  <url><loc>{BASE_URL}{route}</loc></url>" for route in routes)
