@@ -85,7 +85,7 @@ def test_video_discovery_deduplicates_and_preserves_existing_fields(monkeypatch,
             ]}
 
     cache = tmp_path / "videos.json"
-    cache.write_text(json.dumps({"abc": {"video_id": "abc", "caption_status": "available"}}), encoding="utf-8")
+    cache.write_text(json.dumps({"abc": {"video_id": "abc", "caption_status": "available", "canonical_title_checked_at": "now"}}), encoding="utf-8")
     monkeypatch.setattr("scripts.fetch_youtube.CACHE_FILE", cache)
     monkeypatch.setattr("scripts.fetch_youtube.yt_dlp.YoutubeDL", FakeYDL)
     items = fetch_videos()

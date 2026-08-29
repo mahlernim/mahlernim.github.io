@@ -58,23 +58,23 @@ Primary source text:\n{source_text}
 
 
 def generate(client, kind, item, source_text, effort):
-    response = client.responses.create(
+    completion = client.chat.completions.create(
         model=MODEL_ID,
-        reasoning={"effort": effort},
-        input=[
+        reasoning_effort=effort,
+        messages=[
             {"role": "system", "content": SYSTEM_PROMPT},
             {"role": "user", "content": build_user_prompt(kind, item, source_text)},
         ],
-        text={
-            "format": {
-                "type": "json_schema",
+        response_format={
+            "type": "json_schema",
+            "json_schema": {
                 "name": "academic_content_summary",
                 "strict": True,
                 "schema": SUMMARY_JSON_SCHEMA,
             }
         },
     )
-    return validate_summary(json.loads(response.output_text))
+    return validate_summary(json.loads(completion.choices[0].message.content))
 
 
 def needs_generation(existing, item):

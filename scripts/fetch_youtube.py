@@ -5,6 +5,8 @@ import tempfile
 from pathlib import Path
 
 import yt_dlp
+import requests
+from youtube_transcript_api import YouTubeTranscriptApi
 
 from scripts.content_model import load_json, save_json, source_hash, utc_now
 
@@ -30,6 +32,22 @@ def _clean_caption(text):
 
 
 def fetch_caption_text(video_id):
+    # This endpoint is lighter and less prone to rate limiting than media extraction.
+    try:
+        transcript = YouTubeTranscriptApi().fetch(video_id, languages=["ko", "en"])
+        caption = " ".join(snippet.text.strip() for snippet in transcript if snippet.text.strip())
+        if caption:
+            return caption, {
+                "caption_status": "available",
+                "caption_language": transcript.language_code,
+                "caption_generated": transcript.is_generated,
+                "caption_checked_at": utc_now(),
+                "source_hash": source_hash(caption),
+            }
+    except Exception:
+        pass
+
+    # Retain yt-dlp as a bounded fallback for environments where it can access tracks.
     with tempfile.TemporaryDirectory() as temp_dir:
         output = str(Path(temp_dir) / "caption")
         options = {
@@ -72,9 +90,23 @@ def fetch_videos():
                 continue
             seen.add(video_id)
             existing = cache.get(video_id, {})
+            title = entry.get("title") or existing.get("title") or video_id
+            if not existing.get("canonical_title_checked_at"):
+                try:
+                    response = requests.get(
+                        "https://www.youtube.com/oembed",
+                        params={"url": f"https://www.youtube.com/watch?v={video_id}", "format": "json"},
+                        timeout=15,
+                    )
+                    response.raise_for_status()
+                    response.encoding = "utf-8"
+                    title = response.json().get("title") or title
+                    existing["canonical_title_checked_at"] = utc_now()
+                except Exception:
+                    pass
             existing.update({
                 "video_id": video_id,
-                "title": entry.get("title") or existing.get("title") or video_id,
+                "title": title,
                 "url": f"https://www.youtube.com/watch?v={video_id}",
                 "thumbnail": f"https://img.youtube.com/vi/{video_id}/hqdefault.jpg",
                 "playlist_position": position,
