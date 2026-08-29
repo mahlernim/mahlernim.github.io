@@ -1,0 +1,1 @@
+<article class="publication-row"><div class="year">{{ publication.year }}</div><div><h3><a href="/publications/{{ publication.pmid }}/">{{ publication.title }}</a></h3><p>{{ publication.authors | safe }}</p><p class="meta">{{ publication.journal }}{% if publication.doi %} · DOI {{ publication.doi }}{% endif %}</p></div></article>

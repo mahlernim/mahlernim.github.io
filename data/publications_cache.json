@@ -8,7 +8,10 @@
     "doi": "10.3946/kjme.2025.351",
     "pmid": "41035206",
     "category": "Original Article",
-    "theme": "Education & Public Health"
+    "theme": "Education & Public Health",
+    "abstract": "",
+    "source_hash": "",
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/41035206/"
   },
   "40874384": {
     "title": "Barriers and opportunities in biobank utilization: insights from a 3-year repeated cross-sectional survey of the Female Breast and Genital Disease with Microbiome Biobank Network in South Korea.",
@@ -19,7 +22,10 @@
     "doi": "10.12701/jyms.2025.42.46",
     "pmid": "40874384",
     "category": "Original Article",
-    "theme": "Education & Public Health"
+    "theme": "Education & Public Health",
+    "abstract": "BACKGROUND: This study aimed to document the patterns, challenges, and opportunities for biobank utilization within the Female Breast and Genital Disease with Microbiome Biobank Network (FDMNet) in South Korea. Annual surveys (2022-2024) assessed researcher awareness, utilization patterns, barriers to access, research requirements, and interest in microbiome research.\nMETHODS: Online questionnaires were distributed to staff members at five university hospitals participating in FDMNet. Data from 155 respondents across 3 years were analyzed using descriptive statistics for quantitative data. Qualitative feedback was examined using Uniform Manifold Approximation and Projection and natural language processing to identify the thematic clusters of user challenges.\nRESULTS: Despite high engagement with biobank resources (76% of the respondents), declining participation rates and interinstitutional collaborations were observed, particularly in 2024, amid the nationwide healthcare crisis. The major barriers to utilization included complex access procedures (31.0%), lack of process knowledge (23.9%), and concerns about Institutional Review Board approval (11.6%). Breast neoplasms (12.3%) and female genital neoplasms (11.0%) were the primary research interests, with blood (24.5%) and tissue (23.9%) samples being the most requested specimens. Most respondents (66.5%) expressed interest in microbiome research but reported insufficient knowledge.\nCONCLUSION: These findings highlight the need for streamlined access procedures, improved researcher education, enhanced clinical data integration, and stronger governance structures to overcome existing barriers to biobank utilization. These insights can guide strategic improvements in biobank operations and resource allocation to serve the evolving needs of the research community better.",
+    "source_hash": "59c3b8bbe74e9fda5b2eab24772b4755425d478ea75e008b9abcc248548652fd",
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/40874384/"
   },
   "40840934": {
     "title": "Public Perceptions and Barriers to Tuberculosis Treatment in Korea: A Large Language Model-Based Analysis of Naver Knowledge-iN Data from 2002 to 2024.",
@@ -30,7 +36,10 @@
     "doi": "10.4258/hir.2025.31.3.263",
     "pmid": "40840934",
     "category": "Original Article",
-    "theme": "Medical AI & Data Science"
+    "theme": "Medical AI & Data Science",
+    "abstract": "OBJECTIVES: This study was conducted to investigate public perceptions and concerns surrounding tuberculosis (TB) treatment in Korea through an analysis of online queries about antitubercular medications. Additionally, it evaluated the effectiveness of large language models (LLMs) as analytical tools for processing unstructured healthcare data.\nMETHODS: Using LLMs, this study analyzed 44,174 questions that mentioned TB from Naver Knowledge-iN (2002-2024). Questions referencing antitubercular medications were extracted and thematically categorized. Side effects were analyzed through parallel approaches examining general and medication-specific effects. Questions about infectivity and social implications were further analyzed using text embedding, dimensionality reduction, and clustering. The performance of LLMs was evaluated against human researchers and traditional methods.\nRESULTS: Among questions mentioning specific medications (n = 919), rifampin (31.8%) and isoniazid (31.6%) were most frequently referenced. Of the 10,044 questions regarding antitubercular medication, management challenges represented the largest category (44.8%). Analysis of infectivity and social implications (n = 583) revealed previously unidentified concerns about blood donation and immigration eligibility. Employment-related concerns constituted the largest distinct subgroup (20.6%). Hepatotoxicity, dermatosis, and vomiting were the most frequently reported side effects. LLMs outperformed keyword matching in data processing and offered cost advantages over human analysis, with finetuning further reducing processing costs.\nCONCLUSIONS: This study produced novel insights into public concerns regarding TB treatment and demonstrated the effectiveness of combining social media platform data with LLM-based analysis, providing a systematic framework for future healthcare research using unstructured public data and LLMs.",
+    "source_hash": "933ad702cda44d191928271207e6cd9ea05ccf1a37ed1a22ebb07bf064fbc7e1",
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/40840934/"
   },
   "40808217": {
     "title": "Large Language Model Advances in Transfusion Medicine: From Answering Questions to Supporting Clinical Decisions.",
@@ -41,7 +50,10 @@
     "doi": "10.3343/alm.2025.0422",
     "pmid": "40808217",
     "category": "Editorial",
-    "theme": "Medical AI & Data Science"
+    "theme": "Medical AI & Data Science",
+    "abstract": "",
+    "source_hash": "",
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/40808217/"
   },
   "40624912": {
     "title": "A guide to evade hallucinations and maintain reliability when using large language models for medical research: a narrative review.",
@@ -52,7 +64,10 @@
     "doi": "10.6065/apem.2448278.139",
     "pmid": "40624912",
     "category": "Original Article",
-    "theme": "Medical AI & Data Science"
+    "theme": "Medical AI & Data Science",
+    "abstract": "Large language models (LLMs) are increasingly prevalent in medical research; however, fundamental limitations in their architecture create inherent reliability challenges, particularly in specialized medical contexts. These limitations stem from autoregressive prediction mechanisms and computational constraints related to undecidability, hindering perfect accuracy. Current mitigation strategies include advanced prompting techniques such as Chain-of-Thought reasoning and Retrieval-Augmented Generation (RAG) frameworks, although these approaches are insufficient to eliminate the core reliability issues. Meta-analyses of human-artificial intelligence collaboration experiments revealed that, although LLMs can augment individual human capabilities, they are most effective in specific contexts allowing human verification. Successful integration of LLMs in medical research requires careful tool selection aligned with task requirements and appropriate verification mechanisms. Evolution of the field indicates a balanced approach combining technological innovation with established expertise, emphasizing human oversight particularly in complex biological systems. This review highlights the importance of understanding the technical limitations of LLMs while maximizing their potential through thoughtful application and rigorous verification processes, ensuring high standards of scientific integrity in medical research.",
+    "source_hash": "1b539fc37149d0f9ed93bf90a6498f4fb5e5d8f2d9b75ea9e7de3dc2371c6da1",
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/40624912/"
   },
   "39659196": {
     "title": "Large language model usage guidelines in Korean medical journals: a survey using human-artificial intelligence collaboration.",
@@ -63,7 +78,10 @@
     "doi": "10.12701/jyms.2024.00794",
     "pmid": "39659196",
     "category": "Original Article",
-    "theme": "Medical AI & Data Science"
+    "theme": "Medical AI & Data Science",
+    "abstract": "BACKGROUND: Large language models (LLMs), the most recent advancements in artificial intelligence (AI), have profoundly affected academic publishing and raised important ethical and practical concerns. This study examined the prevalence and content of AI guidelines in Korean medical journals to assess the current landscape and inform future policy implementation.\nMETHODS: The top 100 Korean medical journals determined by Hirsh index were surveyed. Author guidelines were collected and screened by a human researcher and AI chatbot to identify AI-related content. The key components of LLM policies were extracted and compared across journals. The journal characteristics associated with the adoption of AI guidelines were also analyzed.\nRESULTS: Only 18% of the surveyed journals had LLM guidelines, which is much lower than previously reported in international journals. However, the adoption rates increased over time, reaching 57.1% in the first quarter of 2024. High-impact journals were more likely to have AI guidelines. All journals with LLM guidelines required authors to declare LLM tool use and 94.4% prohibited AI authorship. The key policy components included emphasizing human responsibility (72.2%), discouraging AI-generated content (44.4%), and exempting basic AI tools (38.9%).\nCONCLUSION: While the adoption of LLM guidelines among Korean medical journals is lower than the global trend, there has been a clear increase in implementation over time. The key components of these guidelines align with international standards, but greater standardization and collaboration are needed to ensure the responsible and ethical use of LLMs in medical research and writing.",
+    "source_hash": "7ae6e3a75097d5f40c4792a66f1077fad1ce0683c6dd2911d00e6571b0527b7c",
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/39659196/"
   },
   "39204140": {
     "title": "Drug-Drug Interactions between COVID-19 and Tuberculosis Medications: A Comprehensive Review of CYP450 and Transporter-Mediated Effects.",
@@ -74,7 +92,10 @@
     "doi": "10.3390/ph17081035",
     "pmid": "39204140",
     "category": "Review",
-    "theme": "Pharmacology & Precision Med."
+    "theme": "Pharmacology & Precision Med.",
+    "abstract": "Most medications undergo metabolism and elimination via CYP450 enzymes, while uptake and efflux transporters play vital roles in drug elimination from various organs. Interactions often occur when multiple drugs share CYP450-transporter-mediated metabolic pathways, necessitating a unique clinical care strategy to address the diverse types of CYP450 and transporter-mediated drug-drug interactions (DDI). The primary focus of this review is to record relevant mechanisms regarding DDI between COVID-19 and tuberculosis (TB) treatments, specifically through the influence of CYP450 enzymes and transporters on drug absorption, distribution, metabolism, elimination, and pharmacokinetics. This understanding empowers clinicians to prevent subtherapeutic and supratherapeutic drug levels of COVID medications when co-administered with TB drugs, thereby mitigating potential challenges and ensuring optimal treatment outcomes. A comprehensive analysis is presented, encompassing various illustrative instances of TB drugs that may impact COVID-19 clinical behavior, and vice versa. This review aims to provide valuable insights to healthcare providers, facilitating informed decision-making and enhancing patient safety while managing co-infections. Ultimately, this study contributes to the body of knowledge necessary to optimize therapeutic approaches and improve patient outcomes in the face of the growing challenges posed by infectious diseases.",
+    "source_hash": "b2293588546116fae97701541752775b18fe97548863a84f7f875e22a21d61b9",
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/39204140/"
   },
   "39198220": {
     "title": "The transformative impact of large language models on medical writing and publishing: current applications, challenges and future directions.",
@@ -85,7 +106,10 @@
     "doi": "10.4196/kjpp.2024.28.5.393",
     "pmid": "39198220",
     "category": "Review",
-    "theme": "Medical AI & Data Science"
+    "theme": "Medical AI & Data Science",
+    "abstract": "Large language models (LLMs) are rapidly transforming medical writing and publishing. This review article focuses on experimental evidence to provide a comprehensive overview of the current applications, challenges, and future implications of LLMs in various stages of academic research and publishing process. Global surveys reveal a high prevalence of LLM usage in scientific writing, with both potential benefits and challenges associated with its adoption. LLMs have been successfully applied in literature search, research design, writing assistance, quality assessment, citation generation, and data analysis. LLMs have also been used in peer review and publication processes, including manuscript screening, generating review comments, and identifying potential biases. To ensure the integrity and quality of scholarly work in the era of LLM-assisted research, responsible artificial intelligence (AI) use is crucial. Researchers should prioritize verifying the accuracy and reliability of AI-generated content, maintain transparency in the use of LLMs, and develop collaborative human-AI workflows. Reviewers should focus on higher-order reviewing skills and be aware of the potential use of LLMs in manuscripts. Editorial offices should develop clear policies and guidelines on AI use and foster open dialogue within the academic community. Future directions include addressing the limitations and biases of current LLMs, exploring innovative applications, and continuously updating policies and practices in response to technological advancements. Collaborative efforts among stakeholders are necessary to harness the transformative potential of LLMs while maintaining the integrity of medical writing and publishing.",
+    "source_hash": "59739053481dd33a052de01c7022acb3b78da7525f8efdd2e7d6e1652a026164",
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/39198220/"
   },
   "38974344": {
     "title": "Data science through natural language with ChatGPT's Code Interpreter.",
@@ -96,7 +120,10 @@
     "doi": "10.12793/tcp.2024.32.e8",
     "pmid": "38974344",
     "category": "Original Article",
-    "theme": "Medical AI & Data Science"
+    "theme": "Medical AI & Data Science",
+    "abstract": "Large language models (LLMs) have emerged as a powerful tool for biomedical researchers, demonstrating remarkable capabilities in understanding and generating human-like text. ChatGPT with its Code Interpreter functionality, an LLM connected with the ability to write and execute code, streamlines data analysis workflows by enabling natural language interactions. Using materials from a previously published tutorial, similar analyses can be performed through conversational interactions with the chatbot, covering data loading and exploration, model development and comparison, permutation feature importance, partial dependence plots, and additional analyses and recommendations. The findings highlight the significant potential of LLMs in assisting researchers with data analysis tasks, allowing them to focus on higher-level aspects of their work. However, there are limitations and potential concerns associated with the use of LLMs, such as the importance of critical thinking, privacy, security, and equitable access to these tools. As LLMs continue to improve and integrate with available tools, data science may experience a transformation similar to the shift from manual to automatic transmission in driving. The advancements in LLMs call for considering the future directions of data science and its education, ensuring that the benefits of these powerful tools are utilized with proper human supervision and responsibility.",
+    "source_hash": "01fbe24f753cb494f8de23a9d0e7e249135c338151f9035116237cb354e1be6a",
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/38974344/"
   },
   "38022579": {
     "title": "Alterations of lipid-related genes during anti-tuberculosis treatment: insights into host immune responses and potential transcriptional biomarkers.",
@@ -107,7 +134,10 @@
     "doi": "10.3389/fimmu.2023.1210372",
     "pmid": "38022579",
     "category": "Original Article",
-    "theme": "Pharmacology & Precision Med."
+    "theme": "Pharmacology & Precision Med.",
+    "abstract": "BACKGROUND: The optimal diagnosis and treatment of tuberculosis (TB) are challenging due to underdiagnosis and inadequate treatment monitoring. Lipid-related genes are crucial components of the host immune response in TB. However, their dynamic expression and potential usefulness for monitoring response to anti-TB treatment are unclear.\nMETHODOLOGY: In the present study, we used a targeted, knowledge-based approach to investigate the expression of lipid-related genes during anti-TB treatment and their potential use as biomarkers of treatment response.\nRESULTS AND DISCUSSION: The expression levels of 10 genes (ARPC5, ACSL4, PLD4, LIPA, CHMP2B, RAB5A, GABARAPL2, PLA2G4A, MBOAT2, and MBOAT1) were significantly altered during standard anti-TB treatment. We evaluated the potential usefulness of this 10-lipid-gene signature for TB diagnosis and treatment monitoring in various clinical scenarios across multiple populations. We also compared this signature with other transcriptomic signatures. The 10-lipid-gene signature could distinguish patients with TB from those with latent tuberculosis infection and non-TB controls (area under the receiver operating characteristic curve > 0.7 for most cases); it could also be useful for monitoring response to anti-TB treatment. Although the performance of the new signature was not better than that of previous signatures (i.e., RISK6, Sambarey10, Long10), our results suggest the usefulness of metabolism-centric biomarkers.\nCONCLUSIONS: Lipid-related genes play significant roles in TB pathophysiology and host immune responses. Furthermore, transcriptomic signatures related to the immune response and lipid-related gene may be useful for TB diagnosis and treatment monitoring.",
+    "source_hash": "61b6ab085ab3ce0c8b1736d3dab72cdaa2701ff072f0adba0b82b337bcea67ad",
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/38022579/"
   },
   "37977236": {
     "title": "Population pharmacokinetic model of rifampicin for personalized tuberculosis pharmacotherapy: Effects of SLCO1B1 polymorphisms on drug exposure.",
@@ -118,7 +148,10 @@
     "doi": "10.1016/j.ijantimicag.2023.107034",
     "pmid": "37977236",
     "category": "Original Article",
-    "theme": "Pharmacology & Precision Med."
+    "theme": "Pharmacology & Precision Med.",
+    "abstract": "BACKGROUND: Rifampicin (RIF) exhibits high pharmacokinetic (PK) variability among individuals; a low plasma concentration might result in unfavorable treatment outcomes and drug resistance. This study evaluated the contributions of non- and genetic factors to the interindividual variability of RIF exposure, then suggested initial doses for patients with different weight bands.\nMETHODS: This multicenter prospective cohort study in Korea analyzed demographic and clinical data, the solute carrier organic anion transporter family member 1B1 (SLCO1B1) genotypes, and RIF concentrations. Population PK modeling and simulations were conducted using nonlinear mixed-effect modeling.\nRESULTS: In total, 879 tuberculosis (TB) patients were divided into a training dataset (510 patients) and a test dataset (359 patients). A one-compartment model with allometric scaling for effect of body size best described the RIF PKs. The apparent clearance (CL/F) was 16.6% higher among patients in the SLCO1B1 rs4149056 wild-type group than among patients in variant group, significantly decreasing RIF exposure in the wild-type group. The developed model showed better predictive performance compared with previously reported models. We also suggested that patients with body weights of <40 kg, 40-55 kg, 55-70 kg, and >70 kg patients receive RIF doses of 450, 600, 750, and 1050 mg/day, respectively.\nCONCLUSIONS: Total body weight and SLCO1B1 rs4149056 genotypes were the most significant covariates that affected RIF CL/F variability in Korean TB patients. We suggest initial doses of RIF based on World Health Organization weight-band classifications. The model may be implemented in treatment monitoring for TB patients.",
+    "source_hash": "66dc48c501fb4776d01c3379c99f8d302599b6425240c3369abb76db65b66c89",
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/37977236/"
   },
   "37810626": {
     "title": "Transforming clinical trials: the emerging roles of large language models.",
@@ -129,7 +162,10 @@
     "doi": "10.12793/tcp.2023.31.e16",
     "pmid": "37810626",
     "category": "Review",
-    "theme": "Medical AI & Data Science"
+    "theme": "Medical AI & Data Science",
+    "abstract": "Clinical trials are essential for medical research, but they often face challenges in matching patients to trials and planning. Large language models (LLMs) offer a promising solution, signaling a transformative shift in the field of clinical trials. This review explores the multifaceted applications of LLMs within clinical trials, focusing on five main areas expected to be implemented in the near future: enhancing patient-trial matching, streamlining clinical trial planning, analyzing free text narratives for coding and classification, assisting in technical writing tasks, and providing cognizant consent via LLM-powered chatbots. While the application of LLMs is promising, it poses challenges such as accuracy validation and legal concerns. The convergence of LLMs with clinical trials has the potential to revolutionize the efficiency of clinical trials, paving the way for innovative methodologies and enhancing patient engagement. However, this development requires careful consideration and investment to overcome potential hurdles.",
+    "source_hash": "fa072830367a32c050bfabd0941d765d5cfc00abc8737cc34d7b883b9a0e2361",
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/37810626/"
   },
   "37670527": {
     "title": "A use case of ChatGPT in a flipped medical terminology course.",
@@ -140,7 +176,10 @@
     "doi": "10.3946/kjme.2023.269",
     "pmid": "37670527",
     "category": "Original Article",
-    "theme": "Education & Public Health"
+    "theme": "Education & Public Health",
+    "abstract": "",
+    "source_hash": "",
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/37670527/"
   },
   "37305528": {
     "title": "Development of a population pharmacokinetic model of pyrazinamide to guide personalized therapy: impacts of geriatric and diabetes mellitus on clearance.",
@@ -151,7 +190,10 @@
     "doi": "10.3389/fphar.2023.1116226",
     "pmid": "37305528",
     "category": "Original Article",
-    "theme": "Pharmacology & Precision Med."
+    "theme": "Pharmacology & Precision Med.",
+    "abstract": "Objectives: This study was performed to develop a population pharmacokinetic model of pyrazinamide for Korean tuberculosis (TB) patients and to explore and identify the influence of demographic and clinical factors, especially geriatric diabetes mellitus (DM), on the pharmacokinetics (PK) of pyrazinamide (PZA). Methods: PZA concentrations at random post-dose points, demographic characteristics, and clinical information were collected in a multicenter prospective TB cohort study from 18 hospitals in Korea. Data obtained from 610 TB patients were divided into training and test datasets at a 4:1 ratio. A population PK model was developed using a nonlinear mixed-effects method. Results: A one-compartment model with allometric scaling for body size effect adequately described the PK of PZA. Geriatric patients with DM (age >70 years) were identified as a significant covariate, increasing the apparent clearance of PZA by 30% (geriatric patients with DM: 5.73 L/h; others: 4.50 L/h), thereby decreasing the area under the concentration-time curve from 0 to 24 h by a similar degree compared with other patients (geriatric patients with DM: 99.87 μg h/mL; others: 132.3 μg h/mL). Our model was externally evaluated using the test set and provided better predictive performance compared with the previously published model. Conclusion: The established population PK model sufficiently described the PK of PZA in Korean TB patients. Our model will be useful in therapeutic drug monitoring to provide dose optimization of PZA, particularly for geriatric patients with DM and TB.",
+    "source_hash": "31ff5f48ed1acdfff6340c976d9cbc6ac9027bca8cc1b68ff57f8754ec22c0eb",
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/37305528/"
   },
   "37160240": {
     "title": "Recommendation of pharmacokinetics/pharmacodynamics target of ethambutol to suppress tuberculosis resistance: A population pharmacokinetics study on a large prospective cohort.",
@@ -162,7 +204,10 @@
     "doi": "10.1016/j.ijantimicag.2023.106840",
     "pmid": "37160240",
     "category": "Original Article",
-    "theme": "Pharmacology & Precision Med."
+    "theme": "Pharmacology & Precision Med.",
+    "abstract": "BACKGROUND: The ability of ethambutol (EMB) to suppress bacterial resistance has been demonstrated in a time-dependent manner. Through the development of a population pharmacokinetics (PK) model, this study aimed to suggest the PK/pharmacodynamics (PD) target and identify the significant covariates that influence interindividual variability (IIV) in the PK of EMB.\nMETHODS: In total, 837 patients from 20 medical centres across Korea were enrolled in this study. The non-linear mixed-effect method was used to establish and validate the population PK model.\nRESULTS: A two-compartment model with transit compartment absorption was sufficient to describe the PK of EMB. Body weight and renal function were identified as significant covariates that affect IIV of the apparent clearance (CL/F) of EMB. Patients with moderate renal function showed 35% and 55% lower CL/F (CL/F 89.9 L/h) compared with those with mild and normal renal function, respectively. All the renal function groups with simulated doses ranging from 800 to 1200 mg achieved area under the curve over minimum inhibitory concentration (MIC) >119, and maintained T>MIC for >23 h for MIC of 0.5 µg/mL. Based on our simulation result, it is suggested that doses of 800, 1000, and 1200 mg should obtain the T>MIC target of 4, 6, and 8 h, respectively. This model was validated internally and externally.\nCONCLUSION: This study provides insight into the PK/PD indexes of EMB for three different renal function groups and T>MIC targets for different doses. The results could be used to provide optimal-dose suggestions for EMB.",
+    "source_hash": "cf186003662b24eb413a605dd783fa1663288643ae7eb0884c644a8b2de07203",
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/37160240/"
   },
   "37128877": {
     "title": "Impact of Criterion Versus Norm-Referenced Assessment on the Quality of Life in Korean Medical Students.",
@@ -173,7 +218,10 @@
     "doi": "10.3346/jkms.2023.38.e133",
     "pmid": "37128877",
     "category": "Original Article",
-    "theme": "Education & Public Health"
+    "theme": "Education & Public Health",
+    "abstract": "BACKGROUND: Medical students are known to be subjected to immense stress under competitive curricula and have a high risk of depression, burnout, anxiety and sleep disorders. There is a global trend of switching from norm-referenced assessment (NRA) to criterion-referenced assessment (CRA), and these changes may have influenced the quality of life (QOL), sleep phase, sleep quality, stress, burnout, and depression of the medical students. We hypothesized that there is a significant difference of QOL between CRA and NRA and that sleep, stress, burnout, and depression are the main contributors.\nMETHODS: By administering an online survey regarding QOL and its contributors to Korean medical students, 365 responses from 10 medical schools were recorded. To clarify the complex relationship between the multiple factors in play, we applied nonlinear machine learning algorithms and utilized causal structure learning techniques on the survey data.\nRESULTS: Students with CRA had lower scores in stress (68.16 ± 11.29, 76.03 ± 12.38, P < 0.001), burnout (48.09 ± 11.23, 55.93 ± 13.07, P < 0.001), depression (12.77 ± 9.82, 16.44 ± 11.27, P = 0.003) and higher scores in QOL (95.79 ± 16.20, 89.65 ± 16.28, P < 0.001) compared with students with NRA. Multiple linear regression, permutation importance of the random forest model and the causal structure model showed that depression, stress and burnout are the most influential factors of QOL of medical students.\nCONCLUSION: Medical students from schools that use CRA showed higher QOL scores, as well as lower burnout, stress and depression when compared with students from schools that use NRA. These results may be used as a basis for granting justification for the transition to CRA.",
+    "source_hash": "632e1f8f6ba3b9089b68cb4f7271fd83077b80364fb08a3e2ab7f36926ba985e",
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/37128877/"
   },
   "37111350": {
     "title": "CYP2C19 Contributes to THP-1-Cell-Derived M2 Macrophage Polarization by Producing 11,12- and 14,15-Epoxyeicosatrienoic Acid, Agonists of the PPARγ Receptor.",
@@ -184,7 +232,10 @@
     "doi": "10.3390/ph16040593",
     "pmid": "37111350",
     "category": "Original Article",
-    "theme": "Pharmacology & Precision Med."
+    "theme": "Pharmacology & Precision Med.",
+    "abstract": "Although the functional roles of M1 and M2 macrophages in the immune response and drug resistance are important, the expression and role of cytochrome P450s (CYPs) in these cells remain largely unknown. Differential expression of the 12 most common CYPs (CYP1A1, 1A2, 1B1, 2B6, 2C8, 2C9, 2C19, 2D6, 2E1, 2J2, 3A4, and 3A5) were screened in THP-1-cell-derived M1 and M2 macrophages using reverse transcription PCR. CYP2C19 was highly expressed in THP-1-cell-derived M2 macrophages, but it was negligibly expressed in THP-1-cell-derived M1 macrophages at the mRNA and protein levels as analyzed by reverse transcription quantitative PCR and Western blot, respectively. CYP2C19 enzyme activity was also very high in THP-1-cell-derived M2 compared to M1 macrophages (> 99%, p < 0.01), which was verified using inhibitors of CYP2C19 activity. Endogenous levels of the CYP2C19 metabolites 11,12-epoxyeicosatrienoic acid (11,12-EET) and 14,15-EET were reduced by 40% and 50% in cells treated with the CYP2C19 inhibitor and by 50% and 60% in the culture medium, respectively. Both 11,12-EET and 14,15-EET were identified as PPARγ agonists in an in vitro assay. When THP-1-cell-derived M2 cells were treated with CYP2C19 inhibitors, 11,12- and 14,15-EETs were significantly reduced, and in parallel with the reduction of these CYP2C19 metabolites, the expression of M2 cell marker genes was also significantly decreased (p < 0.01). Therefore, it was suggested that CYP2C19 may contribute to M2 cell polarization by producing PPARγ agonists. Further studies are needed to understand the endogenous role of CYP2C19 in M2 macrophages with respect to immunologic function and cell polarization.",
+    "source_hash": "c72ab10b7b6f61d7b58b8e7f415330733ccaa2922c782406975c566de356b2dc",
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/37111350/"
   },
   "37062470": {
     "title": "Multimodal plasma metabolomics and lipidomics in elucidating metabolic perturbations in tuberculosis patients with concurrent type 2 diabetes.",
@@ -195,7 +246,10 @@
     "doi": "10.1016/j.biochi.2023.04.009",
     "pmid": "37062470",
     "category": "Original Article",
-    "theme": "Pharmacology & Precision Med."
+    "theme": "Pharmacology & Precision Med.",
+    "abstract": "Type 2 diabetes mellitus (DM) poses a major burden for the treatment and control of tuberculosis (TB). Characterization of the underlying metabolic perturbations in DM patients with TB infection would yield insights into the pathophysiology of TB-DM, thus potentially leading to improvements in TB treatment. In this study, a multimodal metabolomics and lipidomics workflow was applied to investigate plasma metabolic profiles of patients with TB and TB-DM. Significantly different biological processes and biomarkers in TB-DM vs. TB were identified using a data-driven, knowledge-based framework. Changes in metabolic and signaling pathways related to carbohydrate and amino acid metabolism were mainly captured by amide HILIC column metabolomics analysis, while perturbations in lipid metabolism were identified by the C18 metabolomics and lipidomics analysis. Compared to TB, TB-DM exhibited elevated levels of bile acids and molecules related to carbohydrate metabolism, as well as the depletion of glutamine, retinol, lysophosphatidylcholine, and phosphatidylcholine. Moreover, arachidonic acid metabolism was determined as a potentially important factor in the interaction between TB and DM pathophysiology. In a correlation network of the significantly altered molecules, among the central nodes, chenodeoxycholic acid was robustly associated with TB and DM. Fatty acid (22:4) was a component of all significant modules. In conclusion, the integration of multimodal metabolomics and lipidomics provides a thorough picture of the metabolic changes associated with TB-DM. The results obtained from this comprehensive profiling of TB patients with DM advance the current understanding of DM comorbidity in TB infection and contribute to the development of more effective treatment.",
+    "source_hash": "59a503b880d2396cb0828b14c074c45d4be6ba3cafdf478aad17f640126ef714",
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/37062470/"
   },
   "36858381": {
     "title": "The impending impacts of large language models on medical education.",
@@ -206,7 +260,10 @@
     "doi": "10.3946/kjme.2023.253",
     "pmid": "36858381",
     "category": "Original Article",
-    "theme": "Education & Public Health"
+    "theme": "Education & Public Health",
+    "abstract": "",
+    "source_hash": "",
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/36858381/"
   },
   "36841141": {
     "title": "Development of population pharmacokinetics model and Bayesian estimation of rifampicin exposure in Indonesian patients with tuberculosis.",
@@ -217,7 +274,10 @@
     "doi": "10.1016/j.tube.2023.102325",
     "pmid": "36841141",
     "category": "Original Article",
-    "theme": "Pharmacology & Precision Med."
+    "theme": "Pharmacology & Precision Med.",
+    "abstract": "BACKGROUND: Interindividual variability in the pharmacokinetics (PK) of anti-tuberculosis (TB) drugs is the leading cause of treatment failure. Herein, we evaluated the influence of demographic, clinical, and genetic factors that cause variability in RIF PK parameters in Indonesian TB patients.\nMETHODS: In total, 210 Indonesian patients with TB (300 plasma samples) were enrolled in this study. Clinical data, solute carrier organic anion transporter family member-1B1 (SLCO1B1) haplotypes *1a, *1b, and *15, and RIF concentrations were analyzed. The population PK model was developed using a non-linear mixed effect method.\nRESULTS: A one-compartment model with allometric scaling adequately described the PK of RIF. Age and SLCO1B1 haplotype *15 were significantly associated with variability in apparent clearance (CL/F). For patients in their 40s, each 10-year increase in age was associated with a 10% decrease in CL/F (7.85 L/h). Patients with the SLCO1B1 haplotype *15 had a 24% lower CL/F compared to those with the wild-type. Visual predictive checks and non-parametric bootstrap analysis indicated good model performance.\nCONCLUSION: Age and SLCO1B1 haplotype *15 were significant covariates of RIF CL/F. Geriatric patients with haplotype *15 had significantly greater exposure to RIF. The model could optimize TB pharmacotherapy through its application in therapeutic drug monitoring (clinical trial no. NCT05280886).",
+    "source_hash": "33392fff31f1d2a4537169fc5fcb6ddd08d13b09c7bf219208b65f805fd366ca",
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/36841141/"
   },
   "36836422": {
     "title": "Tumor Microenvironment and Genes Affecting the Prognosis of Temozolomide-Treated Glioblastoma.",
@@ -228,7 +288,10 @@
     "doi": "10.3390/jpm13020188",
     "pmid": "36836422",
     "category": "Original Article",
-    "theme": "Neuroscience"
+    "theme": "Neuroscience",
+    "abstract": "Glioblastoma (GBM) is the most frequent primary brain tumor in adults and has a poor prognosis due to its resistance to Temozolomide (TMZ). However, there is limited research regarding the tumor microenvironment and genes related to the prognosis of TMZ-treated GBM patients. This study aimed to identify putative transcriptomic biomarkers with predictive value in patients with GBM who were treated with TMZ. Publicly available datasets from The Cancer Genome Atlas and Gene Expression Omnibus were analyzed using CIBERSORTx and Weighted Gene Co-expression Network Analysis (WGCNA) to obtain types of highly expressed cell types and gene clusters. Differentially Expressed Genes analysis was performed and was intersected with the WGCNA results to obtain a candidate gene list. Cox proportional-hazard survival analysis was performed to acquire genes related to the prognosis of TMZ-treated GBM patients. Inflammatory microglial cells, dendritic cells, myeloid cells, and glioma stem cells were highly expressed in GBM tissue, and ACP7, EPPK1, PCDHA8, RHOD, DRC1, ZIC3, and PRLR were significantly associated with survival. While the listed genes have been previously reported to be related to glioblastoma or other types of cancer, ACP7 was identified as a novel gene related to the prognosis of GBM. These findings may have potential implications for developing a diagnostic tool to predict GBM resistance and optimize treatment decisions.",
+    "source_hash": "cd28fa35b134908a36123c5099c2a64278a6d749440d4c435ff2515d6ad5a949",
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/36836422/"
   },
   "36632078": {
     "title": "Building and analyzing machine learning-based warfarin dose prediction models using scikit-learn.",
@@ -427,5 +490,44 @@
     "pmid": "24297061",
     "category": "Original Article",
     "theme": "Neuroscience"
+  },
+  "42304602": {
+    "title": "Are artificial intelligence (AI) agents ready for medicine and biomedical research? A narrative review.",
+    "year": 2026,
+    "journal": "J Yeungnam Med Sci",
+    "authors": "<u>Ahn S</u>",
+    "url": "https://doi.org/10.12701/jyms.2026.43.40",
+    "doi": "10.12701/jyms.2026.43.40",
+    "pmid": "42304602",
+    "category": "Original Article",
+    "abstract": "Artificial intelligence (AI) agents extend large language models from single-turn text generation to systems that pursue goals through planning, retrieval, tool use, code execution, memory, feedback, and role coordination. In medicine and biomedical research, this shift is creating early systems for clinical calculations, risk prediction, oncology decision support, omics analysis, hypothesis development, laboratory automation, and research writing. However, the evidence remains uneven. Clinical examples are the most defensible when agents use validated calculators, curated clinical tools, or guideline-grounded modules under human oversight. Biomedical discovery systems exhibit broader workflow capabilities; however, many claims still rely on preprints, narrow benchmarks, simulated settings, or domain-specific demonstrations. For clinicians and biomedical researchers, the immediate challenge is not to decide whether agents will replace experts but to understand what tasks can be delegated, what evidence is needed, and what human judgment must be preserved. This narrative review explains what makes an AI system agentic, summarizes its representative clinical and discovery applications, and outlines safeguards for evaluation, reproducibility, and oversight. Biomedical readers should expect AI agents to enter medicine and research first as constrained, auditable workflow infrastructures. These infrastructures may reorganize biomedical work; however, accountability should remain with the clinicians and investigators.",
+    "source_hash": "e3060ccd030a9f2eae92dead89cc4212b1cde261c4bb6ab8f9fec2188e3ae03e",
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/42304602/"
+  },
+  "41893027": {
+    "title": "Modulation of Macrophage Inflammatory Responses by UDP-Glucuronosyltransferase-Mediated PGE",
+    "year": 2026,
+    "journal": "J Pers Med",
+    "authors": "Lee D, Cho HY, <u>Ahn S</u>, Cho YS, Kim DH, Shin JG, Lee SJ",
+    "url": "https://doi.org/10.3390/jpm16030160",
+    "doi": "10.3390/jpm16030160",
+    "pmid": "41893027",
+    "category": "Original Article",
+    "abstract": "Background/Objectives: Macrophages polarized into M1 and M2 phenotypes differentially regulate immune and drug responses. Despite their distinct functional roles, differences in UDP-glucuronosyltransferase (UGT) expression and enzymatic activity between M1 and M2 macrophages remain poorly understood. This study aimed to characterize differential UGT expression in M1 and M2 macrophages and to elucidate how UGT-mediated prostaglandin E2 (PGE2) glucuronidation modulates macrophage inflammatory responses. Methods: THP-1 cells were chemically differentiated into macrophages (M0) and subsequently polarized into M1 and M2 phenotypes. UGT expression profiles were assessed using RT-PCR, quantitative RT-PCR (qRT-PCR), and Western blot. UGT activity was compared by quantifying glucuronide metabolites derived from UGT-specific substrates using LC-MS/MS, along with measurement of free PGE2 and PGE2-glucuronide by ELISA. Pro-inflammatory cytokine expression and secretion in M1 macrophages were quantified using qRT-PCR and ELISA. Results: Expression of UGT1A1, UGT1A4, UGT1A5, UGT1A9, and UGT2B7 were markedly higher in M1 compared with M2 macrophages at both the mRNA and protein levels. Enhanced UGT activity in M1 macrophages was reflected by increased formation of estradiol-3-glucuronide and naloxone-3-glucuronide (both p < 0.01) and was attenuated in a concentration-dependent manner by diclofenac. Furthermore, PGE2 glucuronidation was more pronounced in M1 macrophages, and inhibition of UGTs with atazanavir reduced PGE2-glucuronide formation and pro-inflammatory cytokine production, including IL-1β, IL-6, and TNF-α. Conclusion: UGT-mediated PGE2 glucuronidation in M1 macrophages contributes to the regulation of pro-inflammatory cytokine production. Collectively, these findings support a role for UGTs as modulators of inflammatory signaling, with differential expression and activity between M1 and M2 macrophages.",
+    "source_hash": "a1a15b8e164096776726b4388a4178f31f5605f580cfd0e30dd9c29b33074e60",
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/41893027/"
+  },
+  "41802348": {
+    "title": "Enhancing history-taking education through GPT-4-based virtual patients and automated assessment: a study of medical student perceptions.",
+    "year": 2026,
+    "journal": "Korean J Med Educ",
+    "authors": "Byun J, Kim H, Lim J, Choi J, <u>Ahn S</u>",
+    "url": "https://doi.org/10.3946/kjme.2025.108",
+    "doi": "10.3946/kjme.2025.108",
+    "pmid": "41802348",
+    "category": "Original Article",
+    "abstract": "PURPOSE: To develop and evaluate a large language model (LLM)-based learning tool, featuring virtual patients (VPs) and virtual assessors (VAs), and to assess its impact on medical students' perceptions of history-taking education compared to conventional learning methods.\nMETHODS: A tool using the GPT-4 API was developed to provide seven clinical VP scenarios and a VA that delivered both immediate, reflective dialogue and comprehensive written feedback. First- and second-year medical students participated in a 6-day study. Pre- and post-participation surveys using a 5-point Likert scale assessed perceptions of the LLM tool versus conventional methods across usability, self-efficacy, and feedback quality domains.\nRESULTS: Twenty-one students completed the study. The LLM-based tool demonstrated statistically significant improvements over conventional methods in all assessed domains. Students reported greater comfort during practice (mean 4.57 vs. 2.95, p=0.0002). Significant gains were seen in six of eight self-efficacy measures, including confidence in handling unfamiliar cases (4.00 vs. 2.90, p=0.0002). All nine feedback quality dimensions improved significantly, with feedback perceived as more specific (4.43 vs. 3.24, p=0.0005) and personalized (4.19 vs. 3.19, p=0.0001).\nCONCLUSION: An LLM-based learning tool featuring VPs and VAs can significantly enhance medical students' perceived learning experience in history-taking education. It offers a scalable, accessible, and cost-effective complementary training method. Future research should validate these subjective improvements with objective performance metrics.",
+    "source_hash": "e349d7f33d313653ac4ed37ef3832fdf0cedbfc360bf81f031d591688f6b0e7c",
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/41802348/"
   }
 }
