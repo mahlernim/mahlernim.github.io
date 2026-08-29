@@ -15,7 +15,7 @@ from scripts.content_model import (
     utc_now,
     validate_summary,
 )
-from scripts.fetch_youtube import fetch_caption_text
+from scripts.fetch_youtube import fetch_caption_text, fetch_gemini_video_evidence
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -114,6 +114,9 @@ def run(mode, effort):
         if kind == "video":
             source_text, caption_meta = fetch_caption_text(stable_id)
             item.update(caption_meta)
+            if not source_text:
+                source_text, evidence_meta = fetch_gemini_video_evidence(stable_id)
+                item.update(evidence_meta)
         if not source_text or len(source_text.split()) < 40:
             record = {
                 "status": "pending_source",

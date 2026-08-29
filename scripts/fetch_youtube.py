@@ -1,5 +1,6 @@
 import html
 import json
+import os
 import re
 import tempfile
 from pathlib import Path
@@ -15,6 +16,7 @@ PLAYLIST_ID = "PL0TnWnPQhDj2-TOwiz_ZhY2Sdurimss2Q"
 VIDEO_URL = f"https://www.youtube.com/playlist?list={PLAYLIST_ID}"
 ROOT = Path(__file__).resolve().parents[1]
 CACHE_FILE = ROOT / "data" / "videos_cache.json"
+GEMINI_VIDEO_MODEL = "gemini-3.7-flash"
 
 
 def _clean_caption(text):
@@ -75,6 +77,65 @@ def fetch_caption_text(video_id):
             }
         except Exception:
             return "", {"caption_status": "error", "caption_checked_at": utc_now()}
+
+
+def fetch_gemini_video_evidence(video_id):
+    api_key = os.getenv("GEMINI_API_KEY")
+    if not api_key:
+        return "", {
+            "video_evidence_status": "unavailable",
+            "video_evidence_provider": "gemini_youtube",
+            "video_evidence_checked_at": utc_now(),
+        }
+
+    try:
+        from google import genai
+
+        client = genai.Client(api_key=api_key)
+        interaction = client.interactions.create(
+            model=GEMINI_VIDEO_MODEL,
+            input=[
+                {
+                    "type": "text",
+                    "text": (
+                        "Extract detailed evidence notes from this public academic video. "
+                        "Cover the main topic, methods or concepts discussed, concrete findings "
+                        "or examples, stated limitations, and intended audience. Preserve uncertainty. "
+                        "Do not add medical advice, promotional language, portfolio connections, or "
+                        "facts not present in the audio, captions, slides, or visible content. "
+                        "Return plain text evidence notes for a separate summarization model."
+                    ),
+                },
+                {
+                    "type": "video",
+                    "uri": f"https://www.youtube.com/watch?v={video_id}",
+                },
+            ],
+        )
+        evidence = (interaction.output_text or "").strip()
+        if evidence:
+            return evidence, {
+                "video_evidence_status": "available",
+                "video_evidence_provider": "gemini_youtube",
+                "video_evidence_model": GEMINI_VIDEO_MODEL,
+                "video_evidence_checked_at": utc_now(),
+                "source_hash": source_hash(evidence),
+            }
+    except Exception as exc:
+        return "", {
+            "video_evidence_status": "error",
+            "video_evidence_provider": "gemini_youtube",
+            "video_evidence_model": GEMINI_VIDEO_MODEL,
+            "video_evidence_checked_at": utc_now(),
+            "video_evidence_error_type": type(exc).__name__,
+        }
+
+    return "", {
+        "video_evidence_status": "unavailable",
+        "video_evidence_provider": "gemini_youtube",
+        "video_evidence_model": GEMINI_VIDEO_MODEL,
+        "video_evidence_checked_at": utc_now(),
+    }
 
 
 def fetch_videos():
