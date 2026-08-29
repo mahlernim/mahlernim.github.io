@@ -116,6 +116,7 @@ def run():
                     "wordpress_id": source["wordpress_id"],
                     "source_hash": source["source_hash"],
                     "error_type": type(exc).__name__,
+                    "error_detail": str(exc)[:160],
                 }
         save_json(OUTPUT, document)
     ready = sum(item.get("status") == "ready" for item in output.values())
