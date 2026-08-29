@@ -1,1 +1,1 @@
-<ol class="post-list">{% for post in posts %}<li><time datetime="{{ post.published_at }}">{{ post.published_at[:10] }}</time><a href="/posts/{{ post.wordpress_id }}/">{{ post.title }}</a></li>{% endfor %}</ol>
+<ul class="post-list">{% for post in posts %}<li><a href="/posts/{{ post.wordpress_id }}/">{{ post.title }}</a><time datetime="{{ post.published_at }}">{{ post.published_at[:10] }}</time></li>{% endfor %}</ul>
