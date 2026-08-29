@@ -1,2 +1,2 @@
-{% extends "base.html" %}{% block title %}논문 | {{ author.name }}{% endblock %}{% block canonical %}{{ base_url }}/publications/{% endblock %}
+{% extends "base.html" %}{% block title %}논문 | {{ author.name }}{% endblock %}{% block description %}안상진의 의학, 약리학, 대형언어모델 및 의학교육 연구 논문과 이중언어 요약{% endblock %}{% block canonical %}{{ base_url }}/publications/{% endblock %}
 {% block content %}<nav class="breadcrumbs" aria-label="경로"><a href="/">홈</a> / 논문</nav><header class="page-head"><p class="eyebrow">Publications</p><h1>논문</h1><p>PubMed 기반 서지정보와 검증 가능한 초록을 바탕으로 한 이중언어 요약입니다.</p></header><div class="stack">{% for publication in publications %}{% include "publication_card.html" %}{% endfor %}</div>{% endblock %}

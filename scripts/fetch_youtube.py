@@ -3,6 +3,7 @@ import json
 import os
 import re
 import tempfile
+from datetime import datetime, timezone
 from pathlib import Path
 
 import yt_dlp
@@ -17,6 +18,32 @@ VIDEO_URL = f"https://www.youtube.com/playlist?list={PLAYLIST_ID}"
 ROOT = Path(__file__).resolve().parents[1]
 CACHE_FILE = ROOT / "data" / "videos_cache.json"
 GEMINI_VIDEO_MODEL = "gemini-3.7-flash"
+
+
+def _verified_upload_date(info):
+    """Return an exact YouTube publication timestamp or an empty string."""
+    timestamp = info.get("timestamp") or info.get("release_timestamp")
+    if not isinstance(timestamp, (int, float)):
+        return ""
+    try:
+        return datetime.fromtimestamp(timestamp, timezone.utc).isoformat()
+    except (OverflowError, OSError, ValueError):
+        return ""
+
+
+def fetch_upload_date(video_id):
+    options = {
+        "quiet": True,
+        "no_warnings": True,
+        "skip_download": True,
+        "http_headers": {"Accept-Language": "ko-KR,ko;q=0.9,en;q=0.5"},
+    }
+    try:
+        with yt_dlp.YoutubeDL(options) as ydl:
+            info = ydl.extract_info(f"https://www.youtube.com/watch?v={video_id}", download=False)
+        return _verified_upload_date(info or {})
+    except Exception:
+        return ""
 
 
 def _clean_caption(text):
@@ -180,6 +207,14 @@ def fetch_videos():
                 "metadata_checked_at": utc_now(),
                 "title_language": "ko",
             })
+            if not existing.get("upload_date"):
+                upload_date = _verified_upload_date(entry)
+                if not upload_date:
+                    upload_date = fetch_upload_date(video_id)
+                existing["upload_date_checked_at"] = utc_now()
+                if upload_date:
+                    existing["upload_date"] = upload_date
+                    existing["upload_date_source"] = "youtube_metadata"
             cache[video_id] = existing
         save_json(CACHE_FILE, cache)
     except Exception as exc:

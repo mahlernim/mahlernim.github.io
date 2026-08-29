@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% block title %}{{ author.name }} | ahn-lab{% endblock %}
+{% block description %}안상진의 대형언어모델 의학 지식 평가, 의학교육 연구, 논문, 강의 영상 및 연구 프로젝트{% endblock %}
 {% block structured_data %}<script type="application/ld+json">{{ {"@context":"https://schema.org","@type":"Person","name":author.name,"url":base_url,"affiliation":author.affiliations,"sameAs":[author.orcid,author.scholar,author.youtube]} | tojson }}</script>{% endblock %}
 {% block content %}
 <header class="hero"><h1>{{ author.name }}</h1><p class="lead">{{ author.title }}</p>{% for affiliation in author.affiliations %}<p class="affiliation">{{ affiliation }}</p>{% endfor %}<div class="link-row"><a href="{{ author.scholar }}">Google Scholar</a><a href="{{ author.orcid }}">ORCID</a><a href="{{ author.youtube }}">YouTube</a><a href="{{ author.blog }}">Blog</a><button type="button" class="email-copy" data-user="sangzinahn" data-domain="gmail.com">이메일 복사</button><span class="sr-only" id="email-copy-status" role="status" aria-live="polite"></span></div></header>
