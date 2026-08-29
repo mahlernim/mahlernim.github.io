@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Automated Medical Quiz Generation Research: DailyMed, November 2024 | 안상진 (Sangzin Ahn)</title>
+  <meta name="description" content="A newly posted medRxiv paper describes a pipeline for automatically generating medical multiple-choice quizzes. GPT-4o received the strongest evaluation among OpenBioLLM-70B, GPT-4o, and Sonnet 3.5, with an average score of 4.6 out of 5.">
+  <meta name="google-adsense-account" content="ca-pub-4628399954212784">
+  <link rel="canonical" href="https://ahn-lab.org/posts/44/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Automated Medical Quiz Generation Research: DailyMed, November 2024 | 안상진 (Sangzin Ahn)">
+  <meta property="og:description" content="A newly posted medRxiv paper describes a pipeline for automatically generating medical multiple-choice quizzes. GPT-4o received the strongest evaluation among OpenBioLLM-70B, GPT-4o, and Sonnet 3.5, with an average score of 4.6 out of 5.">
+  <meta property="og:url" content="https://ahn-lab.org/posts/44/">
+  <link rel="stylesheet" href="/static/css/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "author": {"@type": "Person", "name": "\uc548\uc0c1\uc9c4 (Sangzin Ahn)"}, "dateModified": "2024-11-12T14:46:50", "datePublished": "2024-11-12T14:46:50", "description": "A newly posted medRxiv paper describes a pipeline for automatically generating medical multiple-choice quizzes. GPT-4o received the strongest evaluation among OpenBioLLM-70B, GPT-4o, and Sonnet 3.5, with an average score of 4.6 out of 5.", "headline": "Automated Medical Quiz Generation Research: DailyMed, November 2024", "isBasedOn": "https://largelearningmodel.wordpress.com/2024/11/12/%ec%9d%98%eb%8c%80-%ed%80%b4%ec%a6%88-%ec%9e%90%eb%8f%99%ec%83%9d%ec%84%b1-%ec%97%b0%ea%b5%ac-dailymed-2024-11/", "mainEntityOfPage": "https://ahn-lab.org/posts/44/"}</script></head>
+<body>
+  <a class="skip-link" href="#content">본문으로 이동</a>
+  <header class="site-header">
+    <nav class="nav container" aria-label="주요 메뉴">
+      <a class="brand" href="/">ahn-lab</a>
+      <div class="nav-links">
+        <a aria-current="page" href="/posts/">글</a>
+        <a  href="/videos/">영상</a>
+        <a  href="/publications/">논문</a>
+        <a  href="/projects/">프로젝트</a>
+      </div>
+    </nav>
+  </header>
+  <main id="content" class="container"><nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/posts/">Posts</a> / Automated Medical Quiz Generation Research: DailyMed, November 2024</nav><article class="post detail" lang="en"><header><h1>Automated Medical Quiz Generation Research: DailyMed, November 2024</h1><time datetime="2024-11-12T14:46:50">2024-11-12</time><p class="standfirst">A newly posted medRxiv paper describes a pipeline for automatically generating medical multiple-choice quizzes. GPT-4o received the strongest evaluation among OpenBioLLM-70B, GPT-4o, and Sonnet 3.5, with an average score of 4.6 out of 5.</p></header><section><h2>The study</h2><p>This is a study that built a pipeline for automatically generating medical multiple-choice quizzes. The paper appeared on medRxiv overnight.</p><p>paragraphs</p></section><section><h2>Generation and review pipeline</h2><p>The workflow is more detailed than simply asking a chatbot to create a good question.</p><ul><li>Topic generation.</li><li>Question generation.</li><li>Literature search and comparison against papers.</li><li>Difficulty assessment. Questions classified as easy or medium undergo work to increase their difficulty.</li><li>Improvement work. Three improvement plans are created, one is selected, and it is applied.</li><li>Validation of the question, answer choices, hint, and explanation. If the item does not pass, the process restarts from question generation; if it passes, it is stored in a database.</li><li>Human expert review. After revisions, the final version is saved.</li></ul></section><section><h2>Evaluation and cost</h2><p>The study used five evaluation criteria, which may be useful to refer back to later. Among OpenBioLLM-70B, GPT-4o, and Sonnet 3.5, GPT-4o performed best, receiving an average rating of 4.6 out of 5. This suggests that the resulting quality was sufficient.</p><p>Using GPT-4o, question generation cost 51 cents per item and took 16 seconds.</p></section><section><h2>My thoughts</h2><p>Many people may imagine that this can be done by simply telling ChatGPT, “Make a great question!” But practical results require a detailed pipeline like this, including iterative improvement and review processes.</p><p>I had wanted to try this kind of research this year, so I feel a little envious. I wonder whether Claude 3.6 is any better.</p></section><section><h2>Links</h2><p>Paper: https://www.medrxiv.org/content/10.1101/2024.11.11.24317087</p><p>The DailyMed website is also public, although registration is currently closed: https://dailymed.ai</p></section><p class="source-link"><a href="https://largelearningmodel.wordpress.com/2024/11/12/%ec%9d%98%eb%8c%80-%ed%80%b4%ec%a6%88-%ec%9e%90%eb%8f%99%ec%83%9d%ec%84%b1-%ec%97%b0%ea%b5%ac-dailymed-2024-11/">Original post</a></p></article></main>
+  <footer><div class="container">© 2026 안상진 (Sangzin Ahn)</div></footer>
+</body>
+</html>

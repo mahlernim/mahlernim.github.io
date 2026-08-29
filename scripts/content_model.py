@@ -42,6 +42,7 @@ def load_json(path, default):
 
 
 def save_json(path, value):
+    path.parent.mkdir(parents=True, exist_ok=True)
     with open(path, "w", encoding="utf-8", newline="\n") as handle:
         json.dump(value, handle, ensure_ascii=False, indent=2, sort_keys=True)
         handle.write("\n")

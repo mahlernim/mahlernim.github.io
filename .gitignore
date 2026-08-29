@@ -12,3 +12,7 @@ data/*
 !data/videos_cache.json
 !data/generated_content.json
 !data/acceptance_samples.json
+_pipeline/*
+!_pipeline/generated_content.json
+!_pipeline/posts.json
+!_pipeline/wordpress_sources.json

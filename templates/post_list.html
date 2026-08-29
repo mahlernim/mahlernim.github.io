@@ -1,0 +1,1 @@
+<ol class="post-list">{% for post in posts %}<li><time datetime="{{ post.published_at }}">{{ post.published_at[:10] }}</time><a href="/posts/{{ post.wordpress_id }}/">{{ post.title }}</a></li>{% endfor %}</ol>

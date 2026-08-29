@@ -1,7 +1,6 @@
 {% set record = generated %}
 {% if record.status == "ready" %}{% set s = record.summary %}
 <div class="theme">{{ themes[s.theme_id].ko }} · {{ themes[s.theme_id].en }}</div>
-<section lang="ko" class="summary"><h2>한국어 요약</h2><p>{{ s.ko.overview }}</p><h3>핵심 내용</h3><ul>{% for point in s.ko.key_points %}<li>{{ point }}</li>{% endfor %}</ul><dl><dt>권장 독자</dt><dd>{{ s.ko.audience }}</dd><dt>범위와 한계</dt><dd>{{ s.ko.scope_note }}</dd><dt>연구 맥락</dt><dd>{{ s.ko.research_context }}</dd></dl></section>
-<section lang="en" class="summary secondary-language"><h2>English summary</h2><p>{{ s.en.overview }}</p><h3>Key points</h3><ul>{% for point in s.en.key_points %}<li>{{ point }}</li>{% endfor %}</ul><dl><dt>Audience</dt><dd>{{ s.en.audience }}</dd><dt>Scope and limitations</dt><dd>{{ s.en.scope_note }}</dd><dt>Research context</dt><dd>{{ s.en.research_context }}</dd></dl></section>
-<p class="provenance">AI-assisted summary based on the cited primary source. Model {{ record.model }}, prompt {{ record.prompt_version }}, generated {{ record.generated_at }}.</p>
+<section lang="ko" class="summary"><h2>요약</h2><p>{{ s.ko.overview }}</p><h3>핵심 내용</h3><ul>{% for point in s.ko.key_points %}<li>{{ point }}</li>{% endfor %}</ul><dl><dt>권장 독자</dt><dd>{{ s.ko.audience }}</dd><dt>범위와 한계</dt><dd>{{ s.ko.scope_note }}</dd><dt>연구 맥락</dt><dd>{{ s.ko.research_context }}</dd></dl></section>
+<section lang="en" class="summary secondary-language"><h2>Summary</h2><p>{{ s.en.overview }}</p><h3>Key points</h3><ul>{% for point in s.en.key_points %}<li>{{ point }}</li>{% endfor %}</ul><dl><dt>Audience</dt><dd>{{ s.en.audience }}</dd><dt>Scope and limitations</dt><dd>{{ s.en.scope_note }}</dd><dt>Research context</dt><dd>{{ s.en.research_context }}</dd></dl></section>
 {% else %}<aside class="pending"><h2>요약 준비 중 <span>Summary pending</span></h2><p>검증 가능한 원문이나 자막을 확보한 뒤 요약을 제공합니다.</p></aside>{% endif %}

@@ -14,6 +14,7 @@ on:
           - acceptance
           - daily
           - backfill
+          - posts
       effort:
         description: Reasoning effort
         required: true
@@ -70,8 +71,13 @@ jobs:
       - name: Generate production content
         if: >-
           (github.event_name == 'schedule' && steps.config.outputs.approved == 'true') ||
-          (github.event_name == 'workflow_dispatch' && inputs.mode != 'acceptance' && steps.config.outputs.approved == 'true')
+          (github.event_name == 'workflow_dispatch' && inputs.mode != 'acceptance' && inputs.mode != 'posts' && steps.config.outputs.approved == 'true')
         run: python -m scripts.generate_summaries --mode "${{ github.event_name == 'schedule' && 'daily' || inputs.mode }}" --effort "${{ steps.config.outputs.effort }}"
+      - name: Generate fixed English post collection
+        if: github.event_name == 'workflow_dispatch' && inputs.mode == 'posts'
+        run: |
+          python -m scripts.fetch_wordpress
+          python -m scripts.generate_posts
       - name: Build static pages
         run: python build.py --offline
       - name: Validate
@@ -83,7 +89,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/videos_cache.json data/publications_cache.json data/generated_content.json index.html videos publications projects sitemap.xml
+          git add data/videos_cache.json data/publications_cache.json _pipeline/generated_content.json _pipeline/wordpress_sources.json _pipeline/posts.json index.html posts videos publications projects sitemap.xml
           if git diff --staged --quiet; then
             echo "No changes to publish"
           else
