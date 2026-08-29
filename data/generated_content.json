@@ -1,4 +1,1015 @@
 {
-  "items": {},
+  "items": {
+    "publication:36836422": {
+      "generated_at": "2026-08-29T02:43:19+00:00",
+      "model": "gpt-5.6-luna",
+      "prompt_version": "academic-hub-v1",
+      "reasoning_effort": "medium",
+      "source_hash": "cd28fa35b134908a36123c5099c2a64278a6d749440d4c435ff2515d6ad5a949",
+      "status": "ready",
+      "summary": {
+        "en": {
+          "audience": "This summary is intended for clinicians, researchers, and advanced students interested in GBM molecular prognosis, the tumor microenvironment, TMZ response, and precision-medicine biomarkers.",
+          "key_points": [
+            "Inflammatory microglial cells, dendritic cells, myeloid cells, and glioma stem cells were highly expressed in GBM tissue.",
+            "ACP7, EPPK1, PCDHA8, RHOD, DRC1, ZIC3, and PRLR were significantly associated with survival in TMZ-treated GBM patients.",
+            "Although the listed genes had previously been linked to glioblastoma or other cancers, ACP7 was identified as a novel candidate gene associated with GBM prognosis."
+          ],
+          "overview": "This study explored tumor-microenvironment features and transcriptomic biomarkers associated with prognosis in patients with glioblastoma (GBM) treated with temozolomide (TMZ). Public datasets from TCGA and GEO were analyzed using CIBERSORTx, weighted gene co-expression network analysis (WGCNA), differential-expression analysis, and Cox proportional-hazard survival analysis.",
+          "research_context": "The study is thematically connected to precision-medicine research that uses tumor-microenvironment and gene-expression data to investigate candidate biomarkers of treatment response and prognosis.",
+          "scope_note": "The findings are associations derived from computational analyses of publicly available TCGA and GEO datasets. Based on the supplied text, the causal roles of the candidate genes, their clinical predictive performance, and their practical utility for identifying TMZ resistance cannot be established; independent-cohort and experimental validation are needed."
+        },
+        "ko": {
+          "audience": "GBM의 분자예후, 종양미세환경, TMZ 반응 및 정밀의학적 바이오마커에 관심이 있는 임상의, 연구자, 고급 학습자를 위한 내용이다.",
+          "key_points": [
+            "GBM 조직에서 염증성 미세아교세포, 수지상세포, 골수계 세포 및 교종 줄기세포가 높은 수준으로 관찰됐다.",
+            "ACP7, EPPK1, PCDHA8, RHOD, DRC1, ZIC3, PRLR의 발현이 TMZ 치료를 받은 GBM 환자의 생존과 유의하게 연관됐다.",
+            "제시된 유전자들은 GBM 또는 다른 암과의 관련성이 보고된 바 있으나, ACP7은 GBM 예후와 관련된 새로운 후보 유전자로 제시됐다."
+          ],
+          "overview": "이 연구는 테모졸로마이드(TMZ)로 치료받은 교모세포종(GBM) 환자에서 종양미세환경과 예후 관련 전사체 바이오마커를 탐색했다. TCGA와 GEO의 공개 데이터를 CIBERSORTx, 가중 유전자 공발현 네트워크 분석(WGCNA), 차등발현유전자 분석 및 Cox 비례위험 생존분석으로 분석했다.",
+          "research_context": "종양미세환경과 유전자 발현 자료를 활용해 치료 반응 및 예후와 관련된 후보 바이오마커를 탐색하는 정밀의학 연구와 주제적으로 연결된다.",
+          "scope_note": "이 결과는 TCGA와 GEO 공개자료에 대한 계산 분석에서 도출된 연관성이다. 연구에 제시된 자료만으로는 후보 유전자의 인과적 역할, 임상적 예측 성능, TMZ 내성에 대한 실제 적용 가능성을 확정할 수 없으며 추가적인 독립 코호트 및 실험적 검증이 필요하다."
+        },
+        "theme_id": "pharmacology-precision-medicine"
+      }
+    },
+    "publication:36841141": {
+      "generated_at": "2026-08-29T02:43:13+00:00",
+      "model": "gpt-5.6-luna",
+      "prompt_version": "academic-hub-v1",
+      "reasoning_effort": "medium",
+      "source_hash": "33392fff31f1d2a4537169fc5fcb6ddd08d13b09c7bf219208b65f805fd366ca",
+      "status": "ready",
+      "summary": {
+        "en": {
+          "audience": "Clinicians, researchers, and advanced students interested in tuberculosis pharmacotherapy, population pharmacokinetics, therapeutic drug monitoring, pharmacogenomics, and precision medicine.",
+          "key_points": [
+            "Clinical data, 300 plasma samples, SLCO1B1 haplotypes *1a, *1b, and *15, and RIF concentrations were analyzed from 210 Indonesian patients with tuberculosis.",
+            "A population pharmacokinetic model was developed using a nonlinear mixed-effects method. A one-compartment model with allometric scaling adequately described RIF pharmacokinetics.",
+            "Age and the SLCO1B1 *15 haplotype were significantly associated with variability in apparent clearance (CL/F). Among patients in their 40s, each 10-year increase in age was associated with a 10% decrease in CL/F, with a reported CL/F value of 7.85 L/h for this analysis. Patients with the *15 haplotype had 24% lower CL/F than those with the wild-type haplotype."
+          ],
+          "overview": "This study developed a population pharmacokinetic model for rifampicin (RIF) in Indonesian patients with tuberculosis and evaluated the effects of age and SLCO1B1 genetic variation on RIF exposure.",
+          "research_context": "The study is thematically connected to pharmacology and precision medicine through its modeling of interindividual drug-exposure variability and integration of genetic and clinical factors into pharmacokinetic assessment. This represents a thematic connection with data-informed pharmacotherapy research relevant to Sangzin Ahn’s portfolio, without implying a contributor role.",
+          "scope_note": "This summary is based only on the supplied abstract. The abstract does not provide detailed dosing regimens, patient characteristics, the full covariate analysis, external validation, or the specific procedures for Bayesian estimation and clinical outcome assessment. Therefore, the model’s generalizability and its actual effect on treatment outcomes cannot be determined from this source alone."
+        },
+        "ko": {
+          "audience": "결핵 약물치료, 집단 약동학, 치료약물모니터링, 약물유전체학 및 정밀의학에 관심 있는 임상의와 연구자, 고급 학습자.",
+          "key_points": [
+            "총 210명의 인도네시아 결핵 환자에서 수집한 혈장 300개 샘플과 임상 자료, SLCO1B1 *1a, *1b, *15 하플로타입, RIF 농도를 분석했다.",
+            "비선형 혼합효과 방법을 사용해 집단 약동학 모델을 개발했으며, 알로메트릭 스케일링을 적용한 1구획 모델이 RIF 약동학을 적절히 설명했다.",
+            "연령과 SLCO1B1 *15 하플로타입은 겉보기 청소율(CL/F)의 변이와 유의하게 관련되었다. 40대 환자에서는 연령이 10년 증가할 때마다 CL/F가 10% 감소했으며, 기준 CL/F는 7.85 L/h로 제시되었다. 이는 제공된 원문에서 해당 분석에 제시된 값이다."
+          ],
+          "overview": "이 연구는 인도네시아 결핵 환자에서 리팜피신(rifampicin, RIF) 약동학의 개인 간 변이를 설명하는 집단 약동학 모델을 개발하고, 연령과 SLCO1B1 유전적 특성이 RIF 노출에 미치는 영향을 평가했다.",
+          "research_context": "이 연구는 개인별 약물노출 변이를 모델링하고 유전·임상 정보를 약동학 평가에 통합하는 약리학 및 정밀의학 주제와 연결된다. 이는 상진 안의 포트폴리오와 관련된 데이터 기반 약물치료 연구의 주제적 맥락으로 볼 수 있다.",
+          "scope_note": "제공된 초록만을 근거로 요약했다. 초록에는 투여 요법, 환자별 세부 특성, 전체 공변량 분석, 모델의 외부 검증, 베이지안 추정의 구체적 절차와 임상적 성과가 자세히 제시되지 않았다. 따라서 모델의 일반화 가능성과 실제 치료 개선 효과는 이 자료만으로 판단할 수 없다."
+        },
+        "theme_id": "pharmacology-precision-medicine"
+      }
+    },
+    "publication:36858381": {
+      "prompt_version": "academic-hub-v1",
+      "source_hash": "",
+      "status": "pending_source"
+    },
+    "publication:37062470": {
+      "generated_at": "2026-08-29T02:43:04+00:00",
+      "model": "gpt-5.6-luna",
+      "prompt_version": "academic-hub-v1",
+      "reasoning_effort": "medium",
+      "source_hash": "59a503b880d2396cb0828b14c074c45d4be6ba3cafdf478aad17f640126ef714",
+      "status": "ready",
+      "summary": {
+        "en": {
+          "audience": "Clinicians, researchers, and advanced students interested in TB–diabetes comorbidity, metabolomics- and lipidomics-based biomarkers, and precision-medicine approaches to disease pathophysiology.",
+          "key_points": [
+            "A data-driven, knowledge-based framework was used to identify significantly different biological processes and biomarkers between the TB-DM and TB groups.",
+            "Amide HILIC-column metabolomics primarily captured changes in pathways related to carbohydrate and amino acid metabolism, whereas C18 metabolomics and lipidomics identified perturbations in lipid metabolism.",
+            "Relative to TB, TB-DM showed higher levels of bile acids and molecules related to carbohydrate metabolism, together with depletion of glutamine, retinol, lysophosphatidylcholine, and phosphatidylcholine, as reported in the source text."
+          ],
+          "overview": "This study applied a multimodal plasma metabolomics and lipidomics workflow to characterize metabolic perturbations in patients with tuberculosis (TB) and concurrent type 2 diabetes mellitus (DM). Compared with TB alone, TB-DM was associated with differences in carbohydrate, amino acid, and lipid metabolism, including potentially important changes in arachidonic acid metabolism.",
+          "research_context": "The study is thematically connected to the integration of metabolomic and lipidomic data for biomarker discovery in comorbid disease, a topic relevant to molecular profiling of pathophysiology in pharmacology and precision medicine.",
+          "scope_note": "This summary is based only on the supplied primary-source text. The source does not provide detailed information on participant characteristics, sample size, independent validation, follow-up, statistical effect sizes, or causal inference; therefore, the reported metabolic changes cannot be interpreted from this text alone as causes of TB-DM or as evidence that treatment outcomes would improve."
+        },
+        "ko": {
+          "audience": "결핵과 당뇨병 동반질환의 병태생리, 대사체·지질체 기반 바이오마커, 정밀의학적 분석에 관심 있는 임상의, 연구자 및 고급 학습자.",
+          "key_points": [
+            "데이터 기반·지식 기반 분석으로 TB-DM군과 TB군 사이의 유의한 생물학적 과정과 바이오마커를 식별했다.",
+            "아마이드 HILIC 컬럼 대사체 분석은 주로 탄수화물 및 아미노산 대사와 관련된 대사·신호 경로 변화를 포착했으며, C18 대사체 및 지질체 분석은 지질 대사의 교란을 확인했다.",
+            "TB군과 비교해 TB-DM군에서는 담즙산과 탄수화물 대사 관련 분자의 농도가 증가했고, 글루타민·레티놀·리소포스파티딜콜린·포스파티딜콜린은 감소했다. 이는 원문에서 보고한 방향이다.⁣"
+          ],
+          "overview": "이 연구는 결핵(TB)과 제2형 당뇨병(DM)이 동반된 환자에서 발생하는 대사 교란을 규명하기 위해 혈장 멀티모달 대사체학 및 지질체학을 적용했다. TB-DM군과 TB군을 비교한 결과, 탄수화물·아미노산 대사와 지질 대사에 관련된 차이, 그리고 잠재적으로 중요한 아라키돈산 대사 변화가 확인되었다.",
+          "research_context": "이 연구는 질병 동반상태에서의 대사체·지질체 데이터 통합과 바이오마커 탐색이라는 주제와 연결되며, 약리학 및 정밀의학에서 병태생리 기반의 분자 프로파일링을 이해하는 데 관련성이 있다.",
+          "scope_note": "제공된 원문만을 바탕으로 한 요약이다. 원문에는 연구 대상자의 구체적 특성, 표본 규모, 독립 검증, 추적 관찰, 통계적 효과크기 및 인과관계에 대한 세부 정보가 제시되지 않았으므로, 보고된 대사 변화가 TB-DM의 원인인지 또는 치료 결과를 개선하는지는 이 자료만으로 판단할 수 없다."
+        },
+        "theme_id": "pharmacology-precision-medicine"
+      }
+    },
+    "publication:37111350": {
+      "generated_at": "2026-08-29T02:42:56+00:00",
+      "model": "gpt-5.6-luna",
+      "prompt_version": "academic-hub-v1",
+      "reasoning_effort": "medium",
+      "source_hash": "c72ab10b7b6f61d7b58b8e7f415330733ccaa2922c782406975c566de356b2dc",
+      "status": "ready",
+      "summary": {
+        "en": {
+          "audience": "Clinicians, researchers, and advanced students working in macrophage biology, drug metabolism, immunopharmacology, and precision medicine.",
+          "key_points": [
+            "CYP2C19 expression was assessed by reverse transcription quantitative PCR and Western blotting, and enzyme activity was verified with CYP2C19 inhibitors. CYP2C19 activity was reported to be much higher in M2 than in M1 macrophages (>99%, p<0.01).",
+            "After CYP2C19 inhibition, intracellular 11,12-EET and 14,15-EET levels decreased by 40% and 50%, respectively; levels in the culture medium decreased by 50% and 60%, respectively.",
+            "In an in vitro assay, both 11,12-EET and 14,15-EET were identified as PPARγ agonists. Inhibitor treatment reduced these metabolites and, in parallel, significantly decreased the expression of M2 macrophage marker genes (p<0.01)."
+          ],
+          "overview": "This study compared the expression and function of major cytochrome P450 (CYP) enzymes in THP-1-cell-derived M1 and M2 macrophages and suggested that CYP2C19 may contribute to M2 macrophage polarization by producing the PPARγ agonists epoxyeicosatrienoic acids (EETs). Screening of 12 CYPs by reverse transcription PCR showed high CYP2C19 expression in M2 macrophages, whereas expression was negligible in M1 macrophages at both the mRNA and protein levels.",
+          "research_context": "The study is thematically connected to pharmacology and precision medicine through its examination of how drug-metabolizing enzymes, lipid mediators, and nuclear-receptor signaling relate to immune-cell states.",
+          "scope_note": "The evidence is limited to an in vitro model using THP-1-cell-derived macrophages. The endogenous role of CYP2C19 in immune function and macrophage polarization in vivo therefore remains unresolved, and the source states that further studies are needed."
+        },
+        "ko": {
+          "audience": "대식세포 생물학, 약물대사, 면역약리학 및 정밀의학을 연구하는 임상의, 연구자, 고급 학습자.",
+          "key_points": [
+            "CYP2C19 발현은 역전사 정량 PCR과 웨스턴 블롯으로 확인했으며, 효소 활성은 억제제를 사용해 검증했다. M2 대식세포의 CYP2C19 활성은 M1 대식세포보다 매우 높게 보고되었고(>99%, p<0.01), 이는 CYP2C19 억제제에 의해 확인되었다.",
+            "CYP2C19 억제제 처리 후 세포 내 11,12-EET와 14,15-EET 농도는 각각 40%와 50%, 배양액에서는 각각 50%와 60% 감소했다.",
+            "시험관 내 분석에서 11,12-EET와 14,15-EET는 PPARγ 작용제로 확인되었다. CYP2C19 억제에 따라 이들 대사산물과 M2 대식세포 표지 유전자의 발현이 함께 유의하게 감소했다(p<0.01)."
+          ],
+          "overview": "이 연구는 THP-1 세포 유래 M1 및 M2 대식세포에서 주요 시토크롬 P450(CYP) 효소의 발현과 기능을 비교하고, CYP2C19가 PPARγ 작용제인 에폭시에이코사트리에노산(EET)을 생성하여 M2 대식세포 극성화에 관여할 가능성을 제시했다. 12개 CYP를 역전사 PCR로 선별한 결과, CYP2C19는 M2 대식세포에서 높게 발현되었으나 M1 대식세포에서는 mRNA 및 단백질 수준에서 거의 검출되지 않았다.",
+          "research_context": "이 연구는 약물대사 효소, 지질 매개체 및 핵수용체 신호를 연결해 면역세포 상태를 분석하는 약리학·정밀의학 주제와 관련된다.",
+          "scope_note": "근거는 THP-1 세포 유래 대식세포를 이용한 시험관 내 연구에 한정된다. 따라서 CYP2C19의 생체 내 면역 기능과 대식세포 극성화에서의 내인성 역할은 확립되지 않았으며, 저자들은 추가 연구가 필요하다고 제시했다."
+        },
+        "theme_id": "pharmacology-precision-medicine"
+      }
+    },
+    "publication:37128877": {
+      "generated_at": "2026-08-29T02:42:48+00:00",
+      "model": "gpt-5.6-luna",
+      "prompt_version": "academic-hub-v1",
+      "reasoning_effort": "medium",
+      "source_hash": "632e1f8f6ba3b9089b68cb4f7271fd83077b80364fb08a3e2ab7f36926ba985e",
+      "status": "ready",
+      "summary": {
+        "en": {
+          "audience": "Medical-education researchers, medical-school education administrators, researchers in student mental health and public health, and advanced learners studying educational assessment",
+          "key_points": [
+            "The study was conducted against the background that competitive medical curricula may expose medical students to stress and risks of depression, burnout, anxiety, and sleep disorders.",
+            "The survey included 365 respondents from 10 medical schools. Nonlinear machine-learning algorithms and causal structure-learning techniques were used to examine the complex relationships among the measured factors.",
+            "Compared with the NRA group, the CRA group had lower stress scores (68.16 ± 11.29 vs. 76.03 ± 12.38, P < 0.001), lower burnout scores (48.09 ± 11.23 vs. 55.93 ± 13.07, P < 0.001), and lower depression scores (12.77 ± 9.82 vs. 16.44 ± 11.27, P = 0.003). QOL scores were higher in the CRA group (95.79 ± 16.20 vs. 89.65 ± 16.28, P < 0.001). Specific results for sleep phase and sleep quality were not reported in the supplied text."
+          ],
+          "overview": "This study examined how criterion-referenced assessment (CRA) and norm-referenced assessment (NRA) were associated with quality of life (QOL) and related psychological and sleep factors among Korean medical students. In an online survey of 365 students from 10 medical schools, students at schools using CRA had higher QOL and lower stress, burnout, and depression scores than students at schools using NRA.",
+          "research_context": "The study connects thematically with assessment systems in medical education, student mental health, QOL measurement, and education and public-health data analysis.",
+          "scope_note": "The data came from an online survey comparing students from 10 medical schools, and the reported findings show associations between assessment type and the measured outcomes. The cross-sectional survey design and comparison of assessment systems at the school level do not establish that assessment type directly caused differences in QOL or mental-health outcomes; the supplied text does not provide further information on sample representativeness or potential confounding factors."
+        },
+        "ko": {
+          "audience": "의학교육 연구자, 의과대학 교육 관리자, 학생 정신건강 및 공중보건 연구자, 의학교육 평가를 공부하는 고급 학습자",
+          "key_points": [
+            "연구는 경쟁적인 의학교육과정에서 의과대학생이 스트레스, 우울, 소진, 불안 및 수면장애 위험에 노출될 수 있다는 배경에서 수행되었다.",
+            "온라인 설문에는 10개 의과대학에서 총 365명이 응답했으며, 연구진은 여러 요인 간의 복잡한 관계를 검토하기 위해 비선형 머신러닝 알고리즘과 인과 구조 학습 기법을 사용했다.",
+            "CRA군은 NRA군보다 스트레스 점수가 낮았다(68.16 ± 11.29 대 76.03 ± 12.38, P < 0.001). 소진 점수도 낮았다(48.09 ± 11.23 대 55.93 ± 13.07, P < 0.001). 우울 점수는 12.77 ± 9.82 대 16.44 ± 11.27이었다(P = 0.003). 삶의 질 점수는 CRA군에서 더 높았다(95.79 ± 16.20 대 89.65 ± 16.28, P < 0.001). 수면 단계와 수면의 질에 대한 구체적 결과는 제시되지 않았다。‌"
+          ],
+          "overview": "한국 의과대학생을 대상으로 규준참조평가(NRA)와 준거참조평가(CRA)가 삶의 질(QOL) 및 관련 심리·수면 요인과 어떻게 연관되는지 조사한 연구이다. 10개 의과대학 학생 365명의 온라인 설문자료를 분석한 결과, CRA를 사용하는 학교의 학생들은 NRA를 사용하는 학교의 학생들보다 삶의 질이 높고 스트레스, 소진, 우울 수준이 낮았다.",
+          "research_context": "의학교육 평가체계, 학생 정신건강, 삶의 질 측정 및 교육·공중보건 자료 분석이라는 주제와 연결된다.",
+          "scope_note": "자료는 10개 의과대학 학생의 온라인 설문에 기반한 비교 연구이며, 본문에 제시된 결과는 CRA와 NRA의 연관성을 보여준다. 단면적 설문자료와 학교 단위 평가체계 비교만으로 평가방식이 삶의 질이나 정신건강 결과를 직접적으로 유발한다고 확정할 수 없으며, 표본의 대표성 및 잠재적 교란요인에 관한 추가 정보는 제공되지 않았다."
+        },
+        "theme_id": "education-public-health"
+      }
+    },
+    "publication:37160240": {
+      "generated_at": "2026-08-29T02:34:00+00:00",
+      "model": "gpt-5.6-luna",
+      "prompt_version": "academic-hub-v1",
+      "reasoning_effort": "medium",
+      "source_hash": "cf186003662b24eb413a605dd783fa1663288643ae7eb0884c644a8b2de07203",
+      "status": "ready",
+      "summary": {
+        "en": {
+          "audience": "Clinicians, pharmacokinetic researchers, and advanced pharmacy or medical learners interested in tuberculosis pharmacotherapy, population pharmacokinetics, and pharmacological dose optimization.",
+          "key_points": [
+            "Patients with moderate renal function had a CL/F of 89.9 L/h, which was 35% and 55% lower than that of patients with mild and normal renal function, respectively.",
+            "In simulations, doses ranging from 800 to 1200 mg achieved AUC/MIC >119 in all renal-function groups and maintained T>MIC for more than 23 hours at an MIC of 0.5 µg/mL.",
+            "The model-based results suggested doses of 800, 1000, and 1200 mg for T>MIC targets of 4, 6, and 8 hours, respectively. The model underwent internal and external validation."
+          ],
+          "overview": "Using data from 837 patients at 20 medical centres in Korea, this study developed a population pharmacokinetic (PK) model for ethambutol (EMB) and evaluated PK/pharmacodynamic (PD) targets and major covariates explaining interindividual PK variability. EMB pharmacokinetics were adequately described by a two-compartment model with transit-compartment absorption, and body weight and renal function were identified as important covariates of apparent clearance (CL/F).",
+          "research_context": "The study is thematically connected to individualized dose optimization and precision pharmacology using patient covariates and population pharmacokinetic models.",
+          "scope_note": "The supplied source is an abstract and does not report the full inclusion criteria, renal-function classification methods, detailed validation results, simulation assumptions, or clinical outcomes. Accordingly, the proposed doses should be understood as model- and simulation-based suggestions."
+        },
+        "ko": {
+          "audience": "결핵 약물요법, 집단 약동학, 약리학적 용량 최적화에 관심이 있는 임상의, 약동학 연구자, 약학·의학 고급 학습자.",
+          "key_points": [
+            "중등도 신기능 환자의 CL/F는 89.9 L/h로, 경도 및 정상 신기능 환자보다 각각 35%와 55% 낮았다.",
+            "시뮬레이션에서 800–1200 mg 용량은 모든 신기능군에서 AUC/MIC >119를 달성했으며, MIC 0.5 µg/mL일 때 T>MIC를 23시간 초과로 유지했다.",
+            "모델 기반 결과는 T>MIC 표적 4시간, 6시간, 8시간에 대해 각각 800 mg, 1000 mg, 1200 mg을 제안했다. 이 모델은 내부 및 외부 검증을 받았다."
+          ],
+          "overview": "이 연구는 한국 20개 의료기관의 결핵 환자 837명 자료를 이용해 에탐부톨(EMB)의 집단 약동학(PK) 모델을 구축하고, 약동학·약력학(PK/PD) 표적과 개인 간 약동학 변이를 설명하는 주요 공변량을 평가했다. 에탐부톨의 약동학은 통과 구획 흡수를 포함한 2구획 모델로 적절히 설명되었으며, 체중과 신기능이 겉보기 청소율(CL/F)의 주요 공변량으로 확인되었다.",
+          "research_context": "이 내용은 환자별 공변량과 집단 약동학 모델을 활용한 약물 용량 최적화 및 정밀 약리학이라는 주제와 연결된다.",
+          "scope_note": "제공된 원문은 연구의 초록으로, 전체 연구의 포함 기준, 신기능 분류 방식, 모델 검증의 세부 결과, 시뮬레이션 가정 및 실제 임상 결과는 제시하지 않는다. 따라서 제시된 용량은 모델과 시뮬레이션에 근거한 제안으로 해석해야 한다."
+        },
+        "theme_id": "pharmacology-precision-medicine"
+      }
+    },
+    "publication:37305528": {
+      "generated_at": "2026-08-29T02:33:52+00:00",
+      "model": "gpt-5.6-luna",
+      "prompt_version": "academic-hub-v1",
+      "reasoning_effort": "medium",
+      "source_hash": "31ff5f48ed1acdfff6340c976d9cbc6ac9027bca8cc1b68ff57f8754ec22c0eb",
+      "status": "ready",
+      "summary": {
+        "en": {
+          "audience": "Clinicians, clinical pharmacologists, tuberculosis researchers, and advanced learners interested in therapeutic drug monitoring and precision dose design",
+          "key_points": [
+            "Random post-dose PZA concentrations, demographic characteristics, and clinical information were collected from 610 tuberculosis patients at 18 hospitals in Korea.",
+            "The data were divided into training and test datasets at a 4:1 ratio, and the population pharmacokinetic model was developed using a nonlinear mixed-effects method.",
+            "A one-compartment model with allometric scaling for body size adequately described PZA pharmacokinetics‌ ."
+          ],
+          "overview": "This multicenter prospective study developed a population pharmacokinetic model to describe pyrazinamide (PZA) pharmacokinetics in Korean patients with tuberculosis and evaluated the effects of geriatric age and diabetes mellitus on PZA clearance.",
+          "research_context": "The study connects with themes in Sangzin Ahn’s portfolio involving population pharmacokinetic modeling, exposure prediction based on patient characteristics, and dose optimization within pharmacology and precision medicine.",
+          "scope_note": "The study is based on Korean patients with tuberculosis and randomly timed post-dose concentration measurements. The reported findings concern the developed model and its evaluation with the external test dataset; the source text does not establish generalizability to other countries, patient populations, or sampling designs."
+        },
+        "ko": {
+          "audience": "임상의, 임상약리학자, 결핵 연구자, 약물 모니터링 및 정밀 용량설계에 관심 있는 연구자와 고급 학습자",
+          "key_points": [
+            "한국 18개 병원에서 결핵 환자 610명의 무작위 투여 후 PZA 농도, 인구학적 특성 및 임상 정보를 수집했다.",
+            "자료는 훈련 데이터와 시험 데이터로 4:1로 나누었으며, 비선형 혼합효과 방법으로 집단 약동학 모델을 구축했다.",
+            "체격 효과를 설명하는 알로메트릭 스케일링을 적용한 1구획 모델이 PZA 약동학을 적절히 설명했다‌ . Ре? Wait invalid?"
+          ],
+          "overview": "이 다기관 전향적 연구는 한국 결핵 환자의 피라진아미드(PZA) 약동학을 설명하고, 특히 고령 및 당뇨병이 PZA 청소율에 미치는 영향을 평가하기 위한 집단 약동학 모델을 개발했다.",
+          "research_context": "이 연구는 상진 안의 포트폴리오와 연결되는 약리학·정밀의학의 주제인 집단 약동학 모델링, 환자 특성에 따른 노출 예측 및 용량 최적화를 다룬다.",
+          "scope_note": "연구는 한국 결핵 환자 자료와 무작위 투여 후 농도 측정값에 기반하며, 제시된 결과는 구축된 모델과 외부 시험 데이터셋의 평가에 관한 것이다. 따라서 다른 국가나 환자군, 다른 표본추출 방식에 대한 일반화 가능성은 본문만으로 판단할 수 없다."
+        },
+        "theme_id": "pharmacology-precision-medicine"
+      }
+    },
+    "publication:37670527": {
+      "prompt_version": "academic-hub-v1",
+      "source_hash": "",
+      "status": "pending_source"
+    },
+    "publication:37810626": {
+      "generated_at": "2026-08-29T02:33:44+00:00",
+      "model": "gpt-5.6-luna",
+      "prompt_version": "academic-hub-v1",
+      "reasoning_effort": "medium",
+      "source_hash": "fa072830367a32c050bfabd0941d765d5cfc00abc8737cc34d7b883b9a0e2361",
+      "status": "ready",
+      "summary": {
+        "en": {
+          "audience": "Clinical-trial researchers, clinical pharmacologists, medical-AI and data-science researchers, and advanced students",
+          "key_points": [
+            "Five near-term application areas are identified: improving patient–trial matching, streamlining trial planning, coding and classifying free-text clinical narratives, assisting with technical writing, and providing cognizant consent through LLM-powered chatbots.",
+            "LLMs may improve clinical-trial efficiency, support innovative methodologies, and enhance patient engagement.",
+            "Important challenges include validating accuracy and addressing legal concerns. Careful consideration and investment are needed to overcome potential barriers to implementation."
+          ],
+          "overview": "This review examines the potential for large language models (LLMs) to address challenges in patient–trial matching and clinical trial planning and to transform trial operations.",
+          "research_context": "The topic aligns thematically with medical AI and data science through its focus on applying LLMs to clinical-trial design, operations, and unstructured clinical information.",
+          "scope_note": "This summary is based on the supplied review-level source text. The source does not provide detailed methods, performance metrics, implementation examples, validation procedures, or specific legal analyses."
+        },
+        "ko": {
+          "audience": "임상시험 연구자, 임상약리학자, 의료 AI 및 데이터과학 연구자, 첨단 학습자",
+          "key_points": [
+            "가까운 시일 내 활용이 예상되는 주요 영역은 환자-임상시험 매칭 개선, 임상시험 계획 간소화, 자유서술형 임상 내러티브의 코딩 및 분류, 기술 문서 작성 지원, LLM 기반 챗봇을 통한 인지적 동의 제공이다.",
+            "LLM은 임상시험의 효율성을 높이고 새로운 방법론과 환자 참여를 촉진할 가능성이 있다.",
+            "주요 과제에는 LLM 출력의 정확성 검증과 법적 쟁점이 포함된다. 이러한 기술의 도입을 위해서는 잠재적 장애를 해결하기 위한 신중한 검토와 투자가 필요하다."
+          ],
+          "overview": "이 리뷰는 대규모 언어 모델(LLM)이 임상시험의 환자-시험 매칭과 계획 수립에서 발생하는 문제를 완화하고, 임상시험 운영을 변화시킬 수 있는 잠재력을 검토한다.",
+          "research_context": "의료 AI 및 데이터과학 분야에서 LLM을 임상시험 설계·운영과 비정형 임상정보 처리에 연결하는 주제와 관련된다.",
+          "scope_note": "제공된 초록 수준의 리뷰 요약에 근거한 내용이다. 구체적인 연구 방법, 성능 수치, 실제 도입 사례, 검증 절차 및 법적 쟁점의 세부 내용은 제공된 원문에 제시되지 않았다."
+        },
+        "theme_id": "medical-ai-data-science"
+      }
+    },
+    "publication:37977236": {
+      "generated_at": "2026-08-29T02:33:39+00:00",
+      "model": "gpt-5.6-luna",
+      "prompt_version": "academic-hub-v1",
+      "reasoning_effort": "medium",
+      "source_hash": "66dc48c501fb4776d01c3379c99f8d302599b6425240c3369abb76db65b66c89",
+      "status": "ready",
+      "summary": {
+        "en": {
+          "audience": "Clinicians, researchers, and advanced students interested in rifampicin pharmacokinetics, therapeutic drug monitoring in tuberculosis, pharmacogenomics, and precision dosing",
+          "key_points": [
+            "A total of 879 patients with tuberculosis were analyzed using a training dataset of 510 patients and a test dataset of 359 patients.",
+            "A one-compartment model incorporating allometric scaling for body size best described rifampicin pharmacokinetics.",
+            "Apparent clearance (CL/F) was 16.6% higher in the SLCO1B1 rs4149056 wild-type group than in the variant group, resulting in significantly lower rifampicin exposure in the wild-type group. The developed model was reported to have better predictive performance than previously published models. The study proposed initial rifampicin doses of 450, 600, 750, and 1050 mg/day for patients weighing <40 kg, 40–55 kg, 55–70 kg, and >70 kg, respectively."
+          ],
+          "overview": "This multicenter prospective cohort study developed a population pharmacokinetic model of rifampicin in Korean patients with tuberculosis, incorporating body weight and SLCO1B1 rs4149056 genotype, and proposed initial doses for different weight bands.",
+          "research_context": "A neutral thematic connection to Sangzin Ahn’s portfolio is the use of pharmacokinetic variability, population modeling, and pharmacogenomics to support precision dosing for tuberculosis treatment.",
+          "scope_note": "The findings are based on a multicenter prospective cohort from Korea and on nonlinear mixed-effects modeling and simulations. The proposed doses are model-based initial doses; the supplied text does not establish that they improve treatment outcomes or reduce drug resistance. Because the study population was limited to Korean patients with tuberculosis, generalizability to other populations is uncertain."
+        },
+        "ko": {
+          "audience": "리팜피신 약동학, 결핵 치료 약물 모니터링, 약물유전체학 및 정밀 용량설정에 관심이 있는 임상의, 연구자, 고급 학습자",
+          "key_points": [
+            "879명의 결핵 환자를 훈련 자료(510명)와 시험 자료(359명)로 나누어 분석했다.",
+            "체중의 영향을 알로메트릭 스케일링으로 반영한 1구획 모델이 리팜피신 약동학을 가장 잘 설명했다.",
+            "SLCO1B1 rs4149056 야생형군의 겉보기 청소율(CL/F)은 변이군보다 16.6% 높았으며, 이에 따라 야생형군의 리팜피신 노출이 유의하게 낮았다. 다른 연구에서 보고된 모델보다 개발된 모델의 예측 성능이 우수했다는 결과가 제시되었다. 이 연구는 체중 40 kg 미만, 40–55 kg, 55–70 kg, 70 kg 초과 환자에게 각각 리팜피신 450, 600, 750, 1050 mg/일의 초기 용량을 제안했다."
+          ],
+          "overview": "한국 결핵 환자에서 리팜피신의 개인 간 약동학 변이를 설명하기 위해 체중과 SLCO1B1 rs4149056 유전자형을 포함한 집단 약동학 모델을 개발하고, 체중군별 초기 용량을 제안한 다기관 전향적 코호트 연구이다.",
+          "research_context": "상진 안의 포트폴리오와 연결되는 주제는 약물 노출 변이, 집단 약동학, 약물유전체학을 활용한 결핵 치료의 정밀 용량설정이다.",
+          "scope_note": "이 결과는 한국의 다기관 전향적 코호트 자료와 비선형 혼합효과모형 및 시뮬레이션에 근거한다. 제안된 용량은 모델 기반 초기 용량이며, 본문에 제시된 내용만으로 실제 치료 결과 개선이나 약물내성 감소가 입증된 것은 아니다. 연구 대상과 자료가 한국 결핵 환자에 한정되어 다른 집단에 대한 일반화에는 한계가 있다."
+        },
+        "theme_id": "pharmacology-precision-medicine"
+      }
+    },
+    "publication:38022579": {
+      "generated_at": "2026-08-29T02:33:31+00:00",
+      "model": "gpt-5.6-luna",
+      "prompt_version": "academic-hub-v1",
+      "reasoning_effort": "medium",
+      "source_hash": "61b6ab085ab3ce0c8b1736d3dab72cdaa2701ff072f0adba0b82b337bcea67ad",
+      "status": "ready",
+      "summary": {
+        "en": {
+          "audience": "Clinicians, researchers, and advanced students interested in tuberculosis immunobiology, transcriptomic biomarkers, anti-tuberculosis treatment monitoring, and precision medicine.",
+          "key_points": [
+            "Expression of 10 genes—ARPC5, ACSL4, PLD4, LIPA, CHMP2B, RAB5A, GABARAPL2, PLA2G4A, MBOAT2, and MBOAT1—changed significantly during standard anti-tuberculosis treatment.",
+            "The 10-gene signature was evaluated across multiple clinical scenarios and populations for distinguishing patients with tuberculosis from those with latent tuberculosis infection and non-tuberculosis controls; the area under the receiver operating characteristic curve was greater than 0.7 in most cases.",
+            "The signature also showed potential usefulness for monitoring response to anti-tuberculosis treatment."
+          ],
+          "overview": "This study analyzed changes in lipid-related gene expression during anti-tuberculosis treatment and assessed their potential use in tuberculosis diagnosis and treatment-response monitoring. Using a targeted, knowledge-based approach, the authors found that a 10-gene lipid-related transcriptional signature could help distinguish tuberculosis from latent tuberculosis infection and non-tuberculosis controls and might support monitoring of treatment response.",
+          "research_context": "The study connects with pharmacology and precision medicine through its focus on molecular biomarkers of host immune responses that may refine diagnosis and treatment-response monitoring in infectious disease.",
+          "scope_note": "The supplied abstract does not report sample sizes, detailed eligibility criteria, follow-up duration, external-validation design, statistical uncertainty, or criteria for clinical implementation. In addition, the new 10-gene signature did not outperform existing signatures, including RISK6, Sambarey10, and Long10."
+        },
+        "ko": {
+          "audience": "결핵 면역반응, 전사체 바이오마커, 항결핵 치료 모니터링 및 정밀의학에 관심 있는 임상의, 연구자, 고급 학습자.",
+          "key_points": [
+            "표준 항결핵 치료 중 ARPC5, ACSL4, PLD4, LIPA, CHMP2B, RAB5A, GABARAPL2, PLA2G4A, MBOAT2, MBOAT1 등 10개 유전자의 발현이 유의하게 변화했다.",
+            "10개 유전자 서명은 여러 임상 상황과 여러 모집단에서 결핵 환자와 잠복결핵감염자 및 비결핵 대조군을 구분하는 데 평가되었으며, 대부분의 경우 ROC 곡선하면적이 0.7을 초과했다.",
+            "이 서명은 항결핵 치료에 대한 반응을 모니터링하는 데에도 활용 가능성이 제시되었다ó다."
+          ],
+          "overview": "이 연구는 항결핵 치료 중 지질 관련 유전자의 발현 변화를 분석하고, 이를 결핵 진단 및 치료 반응 모니터링에 활용할 가능성을 평가했다. 표적 지식 기반 접근법을 사용한 결과, 10개 지질 관련 유전자로 구성된 전사체 서명이 결핵, 잠복결핵감염 및 비결핵 대조군을 구분하고 치료 반응을 추적하는 데 잠재적 유용성을 보였다.",
+          "research_context": "이 연구는 숙주 면역반응과 치료 반응을 반영하는 분자 바이오마커를 활용해 감염성 질환의 진단 및 치료 모니터링을 정밀화하는 약리학·정밀의학 주제와 연결된다.",
+          "scope_note": "제공된 초록에는 연구 대상자 수, 세부 모집 기준, 추적 기간, 외부 검증 설계, 통계적 불확실성 및 실제 임상 적용 기준이 제시되지 않았다. 또한 새로운 10개 유전자 서명의 성능은 RISK6, Sambarey10, Long10 등 기존 서명보다 우수하지 않았다."
+        },
+        "theme_id": "pharmacology-precision-medicine"
+      }
+    },
+    "publication:38974344": {
+      "generated_at": "2026-08-29T02:33:24+00:00",
+      "model": "gpt-5.6-luna",
+      "prompt_version": "academic-hub-v1",
+      "reasoning_effort": "medium",
+      "source_hash": "01fbe24f753cb494f8de23a9d0e7e249135c338151f9035116237cb354e1be6a",
+      "status": "ready",
+      "summary": {
+        "en": {
+          "audience": "Biomedical researchers, data scientists, medical and pharmaceutical researchers, and educators involved in data-science training.",
+          "key_points": [
+            "Large language models (LLMs) are presented as tools for biomedical research because of their ability to understand and generate human-like text.",
+            "Code Interpreter links natural-language interaction with code writing and execution, helping streamline data-analysis workflows.",
+            "Using materials from a previously published tutorial, users can conduct several types of analysis through conversation with the chatbot, including data exploration, model development and comparison, permutation feature importance, and partial dependence analysis."
+          ],
+          "overview": "This article describes the potential of ChatGPT’s Code Interpreter, which can write and execute code, to support biomedical researchers through natural-language interaction. Conversational workflows can cover data loading and exploration, model development and comparison, permutation feature importance, partial dependence plots, and additional analyses and recommendations, potentially allowing researchers to focus more on higher-level aspects of their work.",
+          "research_context": "The topic has a thematic connection to Sangzin Ahn’s portfolio through natural-language analytical tools, research data science, and the use of artificial intelligence in biomedical research.",
+          "scope_note": "The supplied text provides a general discussion of the potential uses and concerns of LLMs and ChatGPT’s Code Interpreter; it does not report a specific dataset, model-performance metrics, or quantitative comparisons. Therefore, accuracy, reproducibility, and generalizability of actual analyses cannot be assessed from this text alone. The limitations and concerns identified in the source include the need for critical thinking, privacy, security, equitable access, and appropriate human supervision and responsibility."
+        },
+        "ko": {
+          "audience": "생의학 연구자, 데이터과학자, 의학·약학 분야의 연구자와 데이터과학 교육 담당자",
+          "key_points": [
+            "대규모 언어 모델(LLM)은 인간과 유사한 텍스트를 이해하고 생성하는 능력을 바탕으로 생의학 연구를 지원하는 도구로 제시된다.",
+            "Code Interpreter는 자연어 입력을 코드 작성 및 실행과 연결하여 데이터 분석 흐름을 간소화한다.",
+            "기존 튜토리얼의 자료를 활용하면 챗봇과의 대화만으로 데이터 탐색, 예측모형 개발·비교, 순열 특성 중요도와 부분 의존성 분석 등을 수행할 수 있다. 연관성이나 인과성을 과도하게 해석하지 않도록 분석 결과에 대한 연구자의 검토가 필요하다라고 source says? Actually source doesn't say this. Don't add. Remove sentence."
+          ],
+          "overview": "이 글은 코드 작성·실행 기능을 갖춘 ChatGPT의 Code Interpreter가 자연어 상호작용을 통해 생의학 연구자의 데이터 분석 작업을 지원할 수 있는 가능성을 설명한다. 데이터 불러오기와 탐색, 모델 개발 및 비교, 순열 특성 중요도, 부분 의존성 도표, 추가 분석과 권고안 도출 등이 대화형 방식으로 수행될 수 있으며, 이를 통해 연구자는 분석의 상위 수준 측면에 더 집중할 수 있다.",
+          "research_context": "이 주제는 자연어 기반 분석 도구, 연구 데이터과학, 생의학 연구에서의 인공지능 활용과 같은 Sangzin Ahn의 포트폴리오와 연결되는 темат적 영역이다.",
+          "scope_note": "제공된 원문은 LLM과 ChatGPT Code Interpreter의 활용 가능성 및 관련 우려를 개괄적으로 서술하며, 특정 데이터셋·모형 성능·정량적 비교 결과를 제시하지 않는다. 따라서 실제 분석의 정확도, 재현성, 일반화 가능성은 이 글만으로 평가할 수 없다. 원문이 언급한 주요 제한과 우려는 비판적 사고의 필요성, 개인정보 보호, 보안, 도구에 대한 공평한 접근성, 그리고 적절한 인간의 감독과 책임이다."
+        },
+        "theme_id": "medical-ai-data-science"
+      }
+    },
+    "publication:39198220": {
+      "generated_at": "2026-08-29T02:33:09+00:00",
+      "model": "gpt-5.6-luna",
+      "prompt_version": "academic-hub-v1",
+      "reasoning_effort": "medium",
+      "source_hash": "59739053481dd33a052de01c7022acb3b78da7525f8efdd2e7d6e1652a026164",
+      "status": "ready",
+      "summary": {
+        "en": {
+          "audience": "Medical researchers, scholarly authors and reviewers, editors, medical educators, and advanced learners interested in LLM-based research and publishing tools",
+          "key_points": [
+            "Global surveys indicate a high prevalence of LLM use in scientific writing, with both potential benefits and challenges.",
+            "Reported applications include literature search, research design, writing support, quality assessment, citation generation, and data analysis.",
+            "In peer review and publication, LLMs have been used for manuscript screening, generating reviewer comments, and identifying potential biases."
+          ],
+          "overview": "This review examines the impact of large language models (LLMs) on multiple stages of medical research and scholarly publishing, with a focus on experimental evidence. LLMs are being used for literature searches, research design, writing assistance, quality assessment, citation generation, and data analysis, as well as for manuscript screening, generation of review comments, and identification of potential biases in peer review and publication. Their adoption also raises concerns about accuracy, reliability, transparency, bias, and research integrity.",
+          "research_context": "The topic has a neutral thematic connection to medical AI and data science through its focus on LLM use in research and publishing, human-AI collaboration, algorithmic bias, and scholarly integrity.",
+          "scope_note": "The supplied text is a summary of a review on LLM applications in medical writing and publishing. It does not provide the review's search strategy, eligibility criteria, study-level samples, or quantitative findings; therefore, the magnitude and quality of the reported evidence cannot be independently assessed from this excerpt. It also explicitly notes the need to address current LLM limitations and biases and to update policies and practices as the technology evolves."
+        },
+        "ko": {
+          "audience": "의학 연구자, 학술 저자와 심사자, 편집자, 의학 교육자 및 LLM 기반 연구·출판 도구에 관심 있는 고급 학습자",
+          "key_points": [
+            "세계적 설문조사에서 과학적 글쓰기에 LLM을 사용하는 비율이 높게 나타났으며, 활용에는 잠재적 이점과 과제가 함께 존재한다.",
+            "LLM의 적용 영역에는 문헌 검색, 연구 설계, 집필 보조, 품질 평가, 인용 생성, 데이터 분석이 포함된다.",
+            "동료심사와 출판에서는 원고 선별, 심사 의견 생성, 잠재적 편향 식별에 LLM이 사용되고 있다."
+          ],
+          "overview": "이 리뷰는 대규모 언어 모델(LLM)이 의학 연구와 학술 출판의 여러 단계에 미치는 영향을 실험적 근거를 중심으로 검토한다. LLM은 문헌 검색, 연구 설계, 집필 지원, 질 평가, 인용 생성, 데이터 분석뿐 아니라 원고 선별, 심사 의견 작성, 잠재적 편향 식별 등 동료심사와 출판 과정에도 활용되고 있다. 동시에 정확성, 신뢰성, 투명성, 편향 및 학술적 진실성에 관한 과제가 제기된다.",
+          "research_context": "이 내용은 의료 AI 및 데이터과학 분야에서 LLM의 연구·출판 활용, 인간-AI 협업, 알고리즘 편향과 학술적 진실성의 관계를 다루는 주제와 중립적으로 연결된다.",
+          "scope_note": "제공된 원문은 LLM의 의학적 글쓰기와 출판 활용에 관한 리뷰의 요약이다. 원문 발췌에는 문헌검색 전략, 포함 기준, 개별 연구의 표본과 정량적 결과가 제시되지 않으므로 적용 효과의 크기와 근거의 질을 독립적으로 평가할 수 없다. 또한 현재 LLM의 한계와 편향을 해결하고 기술 변화에 따라 정책과 관행을 지속적으로 갱신해야 한다는 점이 명시된다."
+        },
+        "theme_id": "medical-ai-data-science"
+      }
+    },
+    "publication:39204140": {
+      "generated_at": "2026-08-29T02:33:01+00:00",
+      "model": "gpt-5.6-luna",
+      "prompt_version": "academic-hub-v1",
+      "reasoning_effort": "medium",
+      "source_hash": "b2293588546116fae97701541752775b18fe97548863a84f7f875e22a21d61b9",
+      "status": "ready",
+      "summary": {
+        "en": {
+          "audience": "The content is intended for clinicians, pharmacology researchers, and advanced students examining drug interactions, pharmacokinetics, and precision pharmacotherapy in COVID-19 and tuberculosis coinfection.",
+          "key_points": [
+            "Most medications are metabolized and eliminated through CYP450 enzymes, while uptake and efflux transporters also contribute substantially to drug elimination in various organs.",
+            "Interactions may occur when multiple drugs share CYP450- and transporter-mediated pathways, requiring clinical management tailored to the type of interaction.",
+            "The review describes interactions between COVID-19 and TB drugs in terms of the effects of CYP450 enzymes and transporters on drug absorption, distribution, metabolism, elimination, and pharmacokinetics."
+          ],
+          "overview": "This review examines potential drug-drug interactions (DDIs) between COVID-19 and tuberculosis (TB) treatments through the roles of CYP450 enzymes and drug transporters. It considers pathways involved in absorption, distribution, metabolism, elimination, and pharmacokinetics to clarify how coadministration may lead to subtherapeutic or excessive exposure to COVID-19 medications, with the aim of informing safer medication management in patients with co-infection.",
+          "research_context": "The topic aligns thematically with research on precision pharmacotherapy for infectious diseases based on drug-metabolizing enzymes, transporters, and pharmacokinetic interactions.",
+          "scope_note": "The supplied source text summarizes the review’s purpose and thematic scope but does not provide specific drug pairs, effect sizes, study designs, or clinical results. This summary is therefore limited to the mechanistic scope and significance stated in the source."
+        },
+        "ko": {
+          "audience": "COVID-19와 결핵의 동시 감염에서 약물 상호작용, 약동학 및 정밀 약물요법을 검토하는 임상의, 약리학 연구자 및 고급 학습자를 위한 내용이다.",
+          "key_points": [
+            "대부분의 약물은 CYP450 효소를 통해 대사·배설되며, 유입 및 유출 수송체도 여러 장기에서 약물 제거에 중요한 역할을 한다.",
+            "여러 약물이 CYP450-수송체 매개 경로를 공유하면 상호작용이 발생할 수 있으므로, 상호작용 유형에 따른 개별화된 임상 관리가 필요하다.",
+            "종설은 COVID-19 치료제와 TB 치료제 사이의 상호작용을 약물의 흡수, 분포, 대사, 배설 및 약동학에 미치는 CYP450 효소와 수송체의 영향으로 설명한다."
+          ],
+          "overview": "이 종설은 COVID-19 치료제와 결핵(TB) 치료제의 병용 시 발생할 수 있는 약물-약물 상호작용(DDI)을 CYP450 효소와 약물 수송체의 관점에서 고찰한다. 약물의 흡수, 분포, 대사, 배설 및 약동학에 관여하는 경로를 검토하여 병용에 따른 COVID-19 치료제의 치료 농도 미달 또는 과도한 노출 가능성을 이해하고, 동시 감염 환자의 안전한 약물 관리에 필요한 근거를 제시하는 것을 목적으로 한다.",
+          "research_context": "약물 대사 효소·수송체와 약동학적 상호작용을 바탕으로 감염질환 치료의 정밀 약물요법을 탐색하는 연구 주제와 연결된다.",
+          "scope_note": "제공된 원문은 종설의 목적과 주제 범위를 요약한 서술이며, 구체적인 약물 조합, 상호작용의 크기, 임상 연구 설계 또는 결과를 제시하지 않는다. 따라서 이 요약은 원문에 명시된 기전적 범위와 의의에 한정된다."
+        },
+        "theme_id": "pharmacology-precision-medicine"
+      }
+    },
+    "publication:39659196": {
+      "generated_at": "2026-08-29T02:32:54+00:00",
+      "model": "gpt-5.6-luna",
+      "prompt_version": "academic-hub-v1",
+      "reasoning_effort": "medium",
+      "source_hash": "7ae6e3a75097d5f40c4792a66f1077fad1ce0683c6dd2911d00e6571b0527b7c",
+      "status": "ready",
+      "summary": {
+        "en": {
+          "audience": "Medical journal editors, researchers, authors, research-ethics and medical-AI policy professionals, and advanced students or educators",
+          "key_points": [
+            "All journals with LLM guidelines required authors to disclose their use of LLM tools, and 94.4% prohibited AI authorship.",
+            "The principal policy elements were emphasis on human responsibility (72.2%), discouragement of AI-generated content (44.4%), and exemptions for basic AI tools (38.9%).",
+            "Although adoption of LLM guidelines in Korean medical journals was lower than previously reported internationally, implementation increased clearly over time. The reported policy elements were broadly consistent with international standards, while further standardization and collaboration were identified as necessary for responsible and ethical use."
+          ],
+          "overview": "This study examined the prevalence and content of large language model (LLM) use guidelines in Korean medical journals. A human researcher and an AI chatbot reviewed the author guidelines of the top 100 Korean medical journals ranked by the Hirsh index. LLM guidelines were present in 18% of the surveyed journals. Adoption increased over time, reaching 57.1% in the first quarter of 2024, and was more common among higher-impact journals.",
+          "research_context": "The publication connects thematically with medical AI and data science through its focus on AI use in medical research and publishing, information governance, research ethics, and policy standardization.",
+          "scope_note": "This summary is based only on the supplied abstract. The sample was limited to the top 100 Korean medical journals selected by Hirsh index, and the study assessed stated author-guideline content rather than actual LLM use or compliance. The source text does not provide the details of the methods used for international comparison or the full analytical procedures."
+        },
+        "ko": {
+          "audience": "의학 학술지 편집자, 연구자, 저자, 연구윤리 및 의료 AI 정책에 관심 있는 대학원생과 교육자",
+          "key_points": [
+            "LLM 지침을 둔 모든 학술지는 저자의 LLM 도구 사용 공개를 요구했고, 94.4%는 AI의 저자 자격을 금지했다.",
+            "주요 정책 내용은 인간의 책임 강조(72.2%), AI 생성 콘텐츠 사용 억제(44.4%), 기본적인 AI 도구의 예외 인정(38.9%)이었다.",
+            "한국 의학 학술지의 LLM 지침 채택률은 국제 학술지에서 보고된 수준보다 낮았지만, 시간에 따라 뚜렷하게 증가했다는 결과가 제시되었다. 주요 정책 요소는 국제적 기준과 대체로 부합했으며, 책임 있고 윤리적인 사용을 위해 더 큰 표준화와 협력이 필요하다고 결론지었다."
+          ],
+          "overview": "이 연구는 한국 의학 학술지에서 대규모 언어모델(LLM) 사용 지침의 보급 현황과 주요 내용을 조사했다. 히르시 지수로 선정한 국내 의학 학술지 상위 100종의 저자 지침을 인간 연구자와 AI 챗봇이 검토한 결과, 조사 대상 학술지 중 18%가 LLM 지침을 포함했다. 다만 지침 채택률은 시간이 지나면서 증가해 2024년 1분기에는 57.1%에 도달했으며, 영향력이 높은 학술지에서 지침 채택 가능성이 더 높았다.",
+          "research_context": "의료 연구와 출판에서 AI 도구의 사용, 데이터·정보 거버넌스, 연구윤리 및 표준화와 관련된 의료 AI·데이터과학 주제와 연결된다.",
+          "scope_note": "이 요약은 제공된 초록에만 근거한다. 표본은 히르시 지수로 선정된 국내 의학 학술지 상위 100종에 한정되며, 학술지 저자 지침에 명시된 내용만 조사했으므로 실제 LLM 사용 행태나 지침 준수 여부를 평가하지 않는다. 또한 국제 학술지와의 비교에 사용된 근거와 세부 분석 방법은 제공된 본문에 포함되어 있지 않다."
+        },
+        "theme_id": "medical-ai-data-science"
+      }
+    },
+    "publication:40624912": {
+      "generated_at": "2026-08-29T02:32:47+00:00",
+      "model": "gpt-5.6-luna",
+      "prompt_version": "academic-hub-v1",
+      "reasoning_effort": "medium",
+      "source_hash": "1b539fc37149d0f9ed93bf90a6498f4fb5e5d8f2d9b75ea9e7de3dc2371c6da1",
+      "status": "ready",
+      "summary": {
+        "en": {
+          "audience": "Medical researchers, clinicians, medical AI and data-science researchers, and advanced students",
+          "key_points": [
+            "LLM reliability limitations arise from autoregressive prediction mechanisms and computational constraints related to undecidability, making perfect accuracy unattainable.",
+            "Chain-of-Thought prompting and Retrieval-Augmented Generation may help address hallucinations and reliability concerns but do not resolve the fundamental limitations.",
+            "Meta-analyses of human–AI collaboration experiments found that LLMs can augment individual human capabilities, but they are most effective in contexts where humans can verify the outputs."
+          ],
+          "overview": "This narrative review explains that although large language models (LLMs) are increasingly used in medical research, their autoregressive architecture and computational limitations create inherent reliability problems, particularly in specialized medical settings. Mitigation approaches such as Chain-of-Thought prompting and Retrieval-Augmented Generation (RAG) are discussed, but they do not fully remove the underlying reliability issues. Effective integration of LLMs into medical research requires task-appropriate tool selection, suitable verification procedures, and human oversight, especially for complex biological systems.",
+          "research_context": "The topic has a neutral thematic connection to Sangzin Ahn’s portfolio in medical AI and data science through its focus on AI reliability, human–AI collaboration, and verifiable use of tools and data.",
+          "scope_note": "The supplied source is a narrative review summarizing technical limitations of LLMs and principles for their use in medical research. This summary is limited to the provided text; specific search methods, included studies, meta-analytic estimates, and study-level findings are not reported."
+        },
+        "ko": {
+          "audience": "의료 연구자, 임상의, 의료 AI·데이터과학 연구자, 고급 학습자",
+          "key_points": [
+            "LLM의 신뢰성 한계는 자기회귀적 예측 메커니즘과 결정불가능성과 관련된 계산적 제약에서 비롯되며, 완벽한 정확성을 어렵게 한다.",
+            "연쇄적 사고와 검색 증강 생성은 환각과 신뢰성 문제를 줄이기 위한 접근이지만, 근본적인 한계를 해결하지는 못한다.",
+            "인간과 인공지능의 협업에 관한 메타분석에서는 LLM이 개인의 능력을 보완할 수 있으나, 인간의 결과 검증이 가능한 특정 맥락에서 가장 효과적인 것으로 나타났다ц."
+          ],
+          "overview": "이 서술적 문헌고찰은 의료 연구에서 대규모 언어 모델(LLM)의 활용이 증가하고 있지만, 자기회귀적 예측 구조와 계산적 한계로 인해 특히 전문 의료 맥락에서 신뢰성 문제가 본질적으로 발생한다고 설명한다. 연쇄적 사고(Chain-of-Thought) 프롬프트와 검색 증강 생성(RAG) 같은 완화 전략이 제시되지만 핵심적인 신뢰성 문제를 완전히 제거하지는 못한다. 의료 연구에서 LLM을 효과적으로 통합하려면 연구 과제에 맞는 도구 선택과 적절한 검증 체계, 특히 복잡한 생물학적 시스템에서의 인간 감독이 필요하다.",
+          "research_context": "이 주제는 의료 AI의 신뢰성, 인간-AI 협업, 검증 가능한 데이터·도구 활용을 다루는 Sangzin Ahn의 의료 AI 및 데이터과학 포트폴리오와 중립적으로 연결된다.",
+          "scope_note": "제공된 원문은 서술적 문헌고찰의 요약으로, LLM의 기술적 한계와 의료 연구 적용 원칙을 종합적으로 제시한다. 이 요약은 제공된 텍스트에 한정되며, 검색 전략, 포함 연구, 메타분석의 구체적 수치와 연구별 결과는 제시되지 않았다."
+        },
+        "theme_id": "medical-ai-data-science"
+      }
+    },
+    "publication:40808217": {
+      "prompt_version": "academic-hub-v1",
+      "source_hash": "",
+      "status": "pending_source"
+    },
+    "publication:40840934": {
+      "generated_at": "2026-08-29T02:32:39+00:00",
+      "model": "gpt-5.6-luna",
+      "prompt_version": "academic-hub-v1",
+      "reasoning_effort": "medium",
+      "source_hash": "933ad702cda44d191928271207e6cd9ea05ccf1a37ed1a22ebb07bf064fbc7e1",
+      "status": "ready",
+      "summary": {
+        "en": {
+          "audience": "Clinicians, public-health researchers, health data scientists, and advanced students interested in public concerns about tuberculosis treatment, online healthcare data, and LLM-based text analysis.",
+          "key_points": [
+            "Among 919 questions that mentioned specific antitubercular medications, rifampin and isoniazid were the most frequently referenced, accounting for 31.8% and 31.6%, respectively.",
+            "Among 10,044 questions about antitubercular medications, treatment and management challenges formed the largest category at 44.8%.",
+            "Analysis of 583 questions concerning infectivity and social implications identified previously unrecognized concerns about blood donation and immigration eligibility. Employment-related concerns were the largest distinct subgroup at 20.6%."
+          ],
+          "overview": "This study used large language models (LLMs) to analyze 44,174 tuberculosis-related questions posted on Naver Knowledge-iN in Korea from 2002 to 2024. It examined public perceptions and concerns about tuberculosis treatment and evaluated LLMs as tools for analyzing unstructured healthcare data.",
+          "research_context": "The study applies LLMs, text embeddings, dimensionality reduction, and clustering to unstructured online healthcare data, connecting it thematically with medical AI and data-science approaches to public-health research.",
+          "scope_note": "The dataset consisted of online questions posted on Naver Knowledge-iN and therefore cannot be assumed to represent the perceptions or experiences of the Korean population as a whole. Based on the supplied abstract, the sampling composition, detailed procedures for comparison with human researchers and traditional methods, and specific criteria used to evaluate the LLMs cannot be determined."
+        },
+        "ko": {
+          "audience": "결핵 치료에 관한 대중의 우려, 온라인 보건의료 데이터 분석, LLM 기반 텍스트 분석에 관심이 있는 임상의, 보건의료 연구자, 데이터과학자 및 고급 학습자.",
+          "key_points": [
+            "특정 항결핵제가 언급된 질문 919건에서는 리팜핀이 31.8%, 이소니아지드가 31.6%로 가장 자주 언급되었다.",
+            "항결핵제 관련 질문 10,044건 중에서는 치료·관리상의 어려움이 44.8%로 가장 큰 범주였다.",
+            "감염 가능성과 사회적 영향에 관한 질문 583건의 분석에서 헌혈과 이민 자격에 관한 기존에 확인되지 않았던 우려가 나타났으며, 고용 관련 우려가 가장 큰 독립 하위집단이었다(20.6%)."
+          ],
+          "overview": "이 연구는 2002~2024년 한국 네이버 지식iN의 결핵 관련 질문 44,174건을 대규모언어모델(LLM)로 분석하여 결핵 치료에 대한 대중의 인식과 우려를 파악하고, 비정형 보건의료 데이터 분석 도구로서 LLM의 효과를 평가했다.",
+          "research_context": "비정형 온라인 보건의료 데이터에 LLM, 텍스트 임베딩, 차원 축소 및 군집화를 적용한 연구로서 의료 AI 및 데이터과학 분야의 공중보건 데이터 분석 주제와 연결된다.",
+          "scope_note": "분석 자료는 네이버 지식iN에 게시된 온라인 질문으로, 전체 한국 인구의 인식이나 경험을 대표한다고 단정할 수 없다. 또한 제공된 초록만으로는 질문의 표본 구성, 세부적인 인간 연구자·전통적 방법과의 비교 절차, LLM 평가의 구체적 기준을 확인할 수 없다."
+        },
+        "theme_id": "medical-ai-data-science"
+      }
+    },
+    "publication:40874384": {
+      "generated_at": "2026-08-29T02:32:31+00:00",
+      "model": "gpt-5.6-luna",
+      "prompt_version": "academic-hub-v1",
+      "reasoning_effort": "medium",
+      "source_hash": "59c3b8bbe74e9fda5b2eab24772b4755425d478ea75e008b9abcc248548652fd",
+      "status": "ready",
+      "summary": {
+        "en": {
+          "audience": "Biobank managers, biomedical data researchers, clinical investigators, research-ethics and data-governance professionals, and graduate students",
+          "key_points": [
+            "Online questionnaires were administered annually from 2022 through 2024. Quantitative data were summarized descriptively, and qualitative responses were analyzed with Uniform Manifold Approximation and Projection and natural language processing to identify thematic clusters of user challenges.",
+            "Although 76% of respondents had engaged with biobank resources, participation rates and interinstitutional collaboration decreased, particularly in 2024. The study described this pattern in the context of the nationwide healthcare crisis.",
+            "The main barriers were complex access procedures (31.0%), insufficient knowledge of the process (23.9%), and concerns about Institutional Review Board approval (11.6%)."
+          ],
+          "overview": "This study used annual surveys conducted from 2022 to 2024 to examine biobank utilization patterns, access barriers, research needs, and interest in microbiome research within South Korea’s Female Breast and Genital Disease with Microbiome Biobank Network (FDMNet). Among 155 staff respondents from five participating university hospitals, biobank use was relatively high, but participation and interinstitutional collaboration declined, while complex access procedures and insufficient process knowledge were the leading barriers.",
+          "research_context": "The study connects thematically with medical AI and data science through its focus on biobank operations, biomedical data access, natural-language-processing-based analysis of qualitative feedback, and clinical data integration.",
+          "scope_note": "The study was based on an online repeated cross-sectional survey of 155 respondents from five university hospitals, which limits generalizability to other institutions or national biobank systems. Because the analyses were descriptive and thematic, the findings do not establish causal relationships between the reported barriers and changes in participation or collaboration."
+        },
+        "ko": {
+          "audience": "바이오뱅크 운영자, 생명의료 데이터 연구자, 임상연구자, 연구윤리 및 데이터 거버넌스 담당자, 대학원생",
+          "key_points": [
+            "온라인 설문은 2022~2024년에 매년 시행되었고, 정량 자료는 기술통계로 분석되었다. 정성 응답은 UMAP과 자연어처리를 이용해 연구자들이 제기한 문제의 주제 군집을 파악했다.",
+            "응답자의 76%가 바이오뱅크 자원을 이용했으나, 특히 2024년에 참여율과 기관 간 협력이 감소했다. 연구진은 이러한 변화가 전국적 의료 위기 상황에서 나타났다고 기술했다.",
+            "주요 이용 장벽은 복잡한 접근 절차(31.0%), 절차에 대한 지식 부족(23.9%), 기관생명윤리위원회(IRB) 승인에 대한 우려(11.6%)였다."
+          ],
+          "overview": "이 연구는 2022~2024년 한국 여성 유방 및 생식기 질환 마이크로바이옴 바이오뱅크 네트워크(FDMNet)의 연구자 설문을 통해 바이오뱅크 이용 양상, 접근 장벽, 연구 수요 및 마이크로바이옴 연구 관심을 조사했다. 5개 참여 대학병원 직원 155명의 자료를 분석한 결과, 바이오뱅크 자원 이용 경험은 비교적 높았지만 참여율과 기관 간 협력이 감소했으며, 복잡한 접근 절차와 절차 지식 부족이 주요 장벽으로 확인되었다.",
+          "research_context": "이 내용은 바이오뱅크 운영, 연구 데이터 접근성, 자연어처리 기반 정성자료 분석, 임상 데이터 통합과 같은 의료 AI 및 데이터과학 주제와 연결된다.",
+          "scope_note": "이 연구는 5개 대학병원 참여기관의 온라인 반복 단면 설문과 155명의 응답을 바탕으로 하므로, 결과를 다른 기관이나 국가의 바이오뱅크에 일반화하는 데 한계가 있다. 기술통계와 정성 분석에 기반하므로 장벽과 참여 변화의 인과관계를 확정할 수 없다."
+        },
+        "theme_id": "medical-ai-data-science"
+      }
+    },
+    "publication:41035206": {
+      "prompt_version": "academic-hub-v1",
+      "source_hash": "",
+      "status": "pending_source"
+    },
+    "publication:41802348": {
+      "generated_at": "2026-08-29T02:43:42+00:00",
+      "model": "gpt-5.6-luna",
+      "prompt_version": "academic-hub-v1",
+      "reasoning_effort": "medium",
+      "source_hash": "e349d7f33d313653ac4ed37ef3832fdf0cedbfc360bf81f031d591688f6b0e7c",
+      "status": "ready",
+      "summary": {
+        "en": {
+          "audience": "Medical education researchers, clinical educators, investigators evaluating medical AI learning tools, and medical students",
+          "key_points": [
+            "The tool enabled interaction with virtual patients and provided immediate reflective dialogue as well as comprehensive written feedback from the virtual assessor.",
+            "First- and second-year medical students completed pre- and post-participation surveys using 5-point Likert scales to assess usability, self-efficacy, and feedback quality.",
+            "Students reported greater comfort during practice with the LLM-based tool than with conventional methods (mean 4.57 vs. 2.95, p=0.0002). Six of eight self-efficacy measures improved significantly, including confidence in handling unfamiliar cases (4.00 vs. 2.90, p=0.0002)."
+          ],
+          "overview": "This study developed a GPT-4 API-based history-taking education tool featuring seven virtual-patient (VP) clinical scenarios and a virtual assessor (VA), and evaluated medical students’ perceptions compared with conventional learning methods. In the 6-day study, 21 students rated the LLM-based tool more favorably than conventional methods in usability, self-efficacy, and feedback quality.",
+          "research_context": "The publication is thematically connected to education and public health through its focus on using large language models, virtual patients, and automated feedback to support history-taking practice and assessment in medical education.",
+          "scope_note": "The study included 21 students and lasted 6 days. Its findings were based primarily on subjective perceptions, without validation using objective performance measures; therefore, generalizability and effects on actual history-taking performance should be interpreted cautiously."
+        },
+        "ko": {
+          "audience": "의학교육 연구자, 임상교육자, 의료 AI 기반 학습도구를 평가하는 연구자 및 의과대학생",
+          "key_points": [
+            "도구는 가상 환자와 상호작용하고, 가상 평가자로부터 즉각적인 성찰적 대화 피드백과 종합적인 서면 피드백을 받을 수 있도록 설계되었다.",
+            "연구에는 의과대학 1·2학년 학생이 참여했으며, 사전·사후 설문은 5점 리커트 척도로 사용성, 자기효능감, 피드백의 질을 평가했다.",
+            "연습 중 편안함은 LLM 기반 도구에서 기존 방법보다 높게 평가되었다(평균 4.57 대 2.95, p=0.0002). 특히 낯선 사례를 다룰 수 있다는 자신감을 포함한 8개 자기효능감 항목 중 6개에서 유의한 향상이 나타났다(4.00 대 2.90, p=0.0002)."
+          ],
+          "overview": "이 연구는 GPT-4 API를 활용해 가상 환자(VP) 7개 임상 시나리오와 가상 평가자(VA)를 제공하는 병력청취 교육 도구를 개발하고, 기존 학습 방법과 비교해 의과대학생의 인식을 평가했다. 6일간의 연구에 참여한 학생 21명은 LLM 기반 도구가 사용성, 자기효능감, 피드백의 질 측면에서 기존 방법보다 우수하다고 평가했다.",
+          "research_context": "의학교육에서 대규모 언어모델, 가상 환자, 자동화된 피드백을 활용해 병력청취 연습과 평가를 지원하는 교육·공중보건 연구 주제와 연결된다.",
+          "scope_note": "표본은 21명이었고 연구 기간은 6일이었다. 결과는 주로 학생의 주관적 인식에 기반하며, 객관적 수행 지표로 학습 효과를 검증하지 않았으므로 결과의 일반화와 실제 병력청취 수행 향상은 제한적으로 해석해야 한다."
+        },
+        "theme_id": "education-public-health"
+      }
+    },
+    "publication:41893027": {
+      "generated_at": "2026-08-29T02:43:35+00:00",
+      "model": "gpt-5.6-luna",
+      "prompt_version": "academic-hub-v1",
+      "reasoning_effort": "medium",
+      "source_hash": "a1a15b8e164096776726b4388a4178f31f5605f580cfd0e30dd9c29b33074e60",
+      "status": "ready",
+      "summary": {
+        "en": {
+          "audience": "Clinicians, researchers, and advanced students in pharmacology, inflammation biology, macrophage biology, and precision medicine.",
+          "key_points": [
+            "M1 macrophages had higher mRNA and protein expression of UGT1A1, UGT1A4, UGT1A5, UGT1A9, and UGT2B7 than M2 macrophages.",
+            "Increased formation of estradiol-3-glucuronide and naloxone-3-glucuronide supported greater UGT activity in M1 macrophages; both findings had p < 0.01.",
+            "Diclofenac reduced UGT activity in M1 macrophages in a concentration-dependent manner. The supplied text does not report the concentrations used or the magnitude of inhibition."
+          ],
+          "overview": "This study compared UDP-glucuronosyltransferase (UGT) expression and activity in M1 and M2 macrophages and evaluated how UGT-mediated prostaglandin E2 (PGE2) glucuronidation affects inflammatory responses in M1 macrophages. THP-1 cells were differentiated into macrophages (M0) and then polarized to M1 or M2 phenotypes. RT-PCR, quantitative RT-PCR, Western blotting, LC-MS/MS, and ELISA were used. UGT1A1, UGT1A4, UGT1A5, UGT1A9, and UGT2B7 mRNA and protein expression were higher in M1 than in M2 macrophages. M1 macrophages showed increased formation of the UGT-related metabolites estradiol-3-glucuronide and naloxone-3-glucuronide, which was attenuated in a concentration-dependent manner by diclofenac. PGE2 glucuronidation was also more pronounced in M1 macrophages. Inhibition of UGTs with atazanavir reduced PGE2-glucuronide formation and production of inflammatory cytokines, including IL-1β, IL-6, and TNF-α. These findings indicate that UGT-mediated PGE2 glucuronidation in M1 macrophages may contribute to the regulation of pro-inflammatory cytokine production.",
+          "research_context": "The findings relate to pharmacology and precision medicine themes concerning differential drug-metabolizing enzyme activity and its connection to inflammatory signaling.",
+          "scope_note": "The study used chemically differentiated and polarized THP-1 cells. Based on the supplied text, reproducibility in primary human macrophages or in vivo conditions, clinical significance, and longer-term effects cannot be determined. The provided summary also does not include detailed treatment concentrations and durations, all effect sizes, or information on experimental replication."
+        },
+        "ko": {
+          "audience": "약리학, 염증생물학, 대식세포 생물학 및 정밀의학을 연구하는 임상의·연구자와 고급 학습자.",
+          "key_points": [
+            "M1 대식세포는 M2 대식세포보다 UGT1A1, UGT1A4, UGT1A5, UGT1A9, UGT2B7의 mRNA 및 단백질 발현이 높았다.",
+            "M1에서 estradiol-3-glucuronide와 naloxone-3-glucuronide 생성이 증가해 UGT 활성이 더 높음을 뒷받침했으며, 두 지표 모두 p < 0.01이었다.",
+            "Diclofenac은 M1 대식세포의 UGT 활성을 농도 의존적으로 감소시켰다. 주어진 원문은 사용된 농도나 억제 정도를 제시하지 않는다."
+          ],
+          "overview": "이 연구는 M1 및 M2 대식세포에서 UDP-글루쿠론산전이효소(UGT)의 발현과 활성을 비교하고, UGT에 의한 프로스타글란딘 E2(PGE2) 글루쿠론산화가 M1 대식세포의 염증성 반응에 미치는 영향을 평가했다. THP-1 세포를 대식세포(M0)로 분화한 뒤 M1 또는 M2 표현형으로 유도했으며, RT-PCR, 정량 RT-PCR, 웨스턴 블롯, LC-MS/MS 및 ELISA를 사용했다. UGT1A1, UGT1A4, UGT1A5, UGT1A9, UGT2B7의 mRNA와 단백질 발현은 M2보다 M1에서 높았다. M1에서는 UGT 관련 대사체인 estradiol-3-glucuronide와 naloxone-3-glucuronide의 생성이 증가했으며, diclofenac에 의해 농도 의존적으로 감소했다. PGE2 글루쿠론산화도 M1에서 더 뚜렷했고, atazanavir로 UGT를 억제하면 PGE2-glucuronide 생성과 IL-1β, IL-6, TNF-α를 포함한 염증성 사이토카인 생성이 감소했다. 이러한 결과는 M1 대식세포의 UGT 매개 PGE2 글루쿠론산화가 염증성 사이토카인 생성 조절에 관여할 수 있음을 보여준다.",
+          "research_context": "약물 대사 효소의 차등적 발현과 염증 신호 조절의 연계를 다루는 약리학 및 정밀의학 연구 주제와 관련된다.",
+          "scope_note": "이 연구는 화학적으로 분화·극성화한 THP-1 세포를 이용한 실험으로, 공급된 원문만으로는 인간의 일차 대식세포나 생체 내 조건에서의 재현성, 임상적 의미 및 장기적 효과를 판단할 수 없다. 또한 제시된 요약에는 각 처리 조건의 세부 농도와 시간, 모든 효과크기 및 실험 반복에 관한 정보가 포함되어 있지 않다."
+        },
+        "theme_id": "pharmacology-precision-medicine"
+      }
+    },
+    "publication:42304602": {
+      "generated_at": "2026-08-29T02:43:26+00:00",
+      "model": "gpt-5.6-luna",
+      "prompt_version": "academic-hub-v1",
+      "reasoning_effort": "medium",
+      "source_hash": "e3060ccd030a9f2eae92dead89cc4212b1cde261c4bb6ab8f9fec2188e3ae03e",
+      "status": "ready",
+      "summary": {
+        "en": {
+          "audience": "This summary is intended for clinicians, biomedical researchers, medical AI and data-science researchers, and advanced students.",
+          "key_points": [
+            "The most defensible clinical applications are those using validated calculators, curated clinical tools, or guideline-grounded modules under human oversight.",
+            "Biomedical discovery systems support broader workflows, but many claims still depend on preprints, narrow benchmarks, simulated settings, or domain-specific demonstrations.",
+            "The immediate task is not to determine whether AI agents will replace experts, but to identify which tasks can be delegated, what evidence is required, and which forms of human judgment must be preserved."
+          ],
+          "overview": "This narrative review describes how large language models are being extended from single-turn text generation into artificial intelligence (AI) agents that pursue goals through planning, retrieval, tool use, code execution, memory, feedback, and role coordination. In medicine and biomedical research, early applications include clinical calculations, risk prediction, oncology decision support, omics analysis, hypothesis development, laboratory automation, and research writing.",
+          "research_context": "The article connects with medical AI and data science through its focus on agent-based systems in clinical and biomedical workflows, including evaluation, reproducibility, human oversight, and accountability.",
+          "scope_note": "The supplied text presents the main points of a narrative review but does not provide detailed search methods, eligibility criteria, quantitative evaluations, or full validation evidence for individual examples. Accordingly, the strength of evidence is uneven across applications, and claims concerning biomedical discovery may rely on limited forms of evidence."
+        },
+        "ko": {
+          "audience": "임상의, 생의학 연구자, 의료 AI 및 데이터과학 연구자, 고급 학습자를 위한 요약이다.",
+          "key_points": [
+            "임상 적용의 근거는 검증된 계산기, 선별된 임상 도구 또는 지침 기반 모듈을 사용하고 인간의 감독을 받는 경우에 상대적으로 더 확실하다.",
+            "생의학 발견 시스템은 더 광범위한 작업 흐름을 지원하지만, 많은 주장은 아직 프리프린트, 제한적인 벤치마크, 모의 환경 또는 특정 분야의 시연에 의존한다.",
+            "즉각적인 과제는 AI 에이전트가 전문가를 대체할지 판단하는 것이 아니라, 어떤 작업을 위임할 수 있는지, 어떤 근거가 필요한지, 어떤 인간의 판단을 보존해야 하는지 규명하는 것이다."
+          ],
+          "overview": "이 서술적 문헌고찰은 대규모 언어 모델을 단일 응답형 텍스트 생성에서 계획 수립, 정보 검색, 도구 사용, 코드 실행, 메모리, 피드백 및 역할 조정을 통해 목표를 수행하는 인공지능(AI) 에이전트로 확장하는 개념을 설명한다. 의학과 생의학 연구에서 AI 에이전트는 임상 계산, 위험 예측, 종양학 의사결정 지원, 오믹스 분석, 가설 개발, 실험실 자동화 및 연구 집필 등에 초기 단계로 적용되고 있다.",
+          "research_context": "이 내용은 의료 AI와 데이터과학에서 에이전트 기반 시스템의 임상·생의학 연구 적용, 평가 가능성, 재현성, 인간 감독 및 책임성이라는 주제와 연결된다.",
+          "scope_note": "제공된 텍스트는 서술적 문헌고찰의 요지를 제시하며, 구체적인 검색 전략, 포함 기준, 정량적 평가 결과 및 각 사례의 상세한 검증 자료를 제공하지 않는다. 따라서 근거의 강도는 적용 분야와 평가 환경에 따라 불균등하며, 특히 생의학 발견 관련 주장은 제한된 자료에 기반할 수 있다."
+        },
+        "theme_id": "medical-ai-data-science"
+      }
+    },
+    "video:-wfjO8Dw0eM": {
+      "prompt_version": "academic-hub-v1",
+      "source_hash": "",
+      "status": "pending_source"
+    },
+    "video:088c9KRVm3g": {
+      "prompt_version": "academic-hub-v1",
+      "source_hash": "",
+      "status": "pending_source"
+    },
+    "video:1kKetXopql8": {
+      "prompt_version": "academic-hub-v1",
+      "source_hash": "",
+      "status": "pending_source"
+    },
+    "video:4wZUwc0rCnQ": {
+      "prompt_version": "academic-hub-v1",
+      "source_hash": "",
+      "status": "pending_source"
+    },
+    "video:5RQZJrf9NPc": {
+      "prompt_version": "academic-hub-v1",
+      "source_hash": "",
+      "status": "pending_source"
+    },
+    "video:5j2estMEg-U": {
+      "prompt_version": "academic-hub-v1",
+      "source_hash": "",
+      "status": "pending_source"
+    },
+    "video:5w9KiIbei1c": {
+      "prompt_version": "academic-hub-v1",
+      "source_hash": "",
+      "status": "pending_source"
+    },
+    "video:6Vsbsk6WaBM": {
+      "prompt_version": "academic-hub-v1",
+      "source_hash": "",
+      "status": "pending_source"
+    },
+    "video:6Z54oLvaSIc": {
+      "prompt_version": "academic-hub-v1",
+      "source_hash": "",
+      "status": "pending_source"
+    },
+    "video:6mhd8Iga9_c": {
+      "prompt_version": "academic-hub-v1",
+      "source_hash": "",
+      "status": "pending_source"
+    },
+    "video:7ayVgzVfPxw": {
+      "prompt_version": "academic-hub-v1",
+      "source_hash": "",
+      "status": "pending_source"
+    },
+    "video:7e5ewzgYDbM": {
+      "prompt_version": "academic-hub-v1",
+      "source_hash": "",
+      "status": "pending_source"
+    },
+    "video:7eGLVl6bOaE": {
+      "prompt_version": "academic-hub-v1",
+      "source_hash": "",
+      "status": "pending_source"
+    },
+    "video:8wHq_Eg5Fwg": {
+      "prompt_version": "academic-hub-v1",
+      "source_hash": "",
+      "status": "pending_source"
+    },
+    "video:9BlZ_ik3xIY": {
+      "prompt_version": "academic-hub-v1",
+      "source_hash": "",
+      "status": "pending_source"
+    },
+    "video:AHnGH--KWFM": {
+      "prompt_version": "academic-hub-v1",
+      "source_hash": "",
+      "status": "pending_source"
+    },
+    "video:BvBgipUyQOw": {
+      "prompt_version": "academic-hub-v1",
+      "source_hash": "",
+      "status": "pending_source"
+    },
+    "video:FLaF5QQDiT8": {
+      "prompt_version": "academic-hub-v1",
+      "source_hash": "",
+      "status": "pending_source"
+    },
+    "video:FX65lQr7Ghc": {
+      "prompt_version": "academic-hub-v1",
+      "source_hash": "",
+      "status": "pending_source"
+    },
+    "video:GB2ZFQPzlTo": {
+      "prompt_version": "academic-hub-v1",
+      "source_hash": "",
+      "status": "pending_source"
+    },
+    "video:GGifzPfRpCo": {
+      "prompt_version": "academic-hub-v1",
+      "source_hash": "",
+      "status": "pending_source"
+    },
+    "video:GRgwsq7yK5I": {
+      "prompt_version": "academic-hub-v1",
+      "source_hash": "",
+      "status": "pending_source"
+    },
+    "video:Gfb3iAh3nnI": {
+      "prompt_version": "academic-hub-v1",
+      "source_hash": "",
+      "status": "pending_source"
+    },
+    "video:HVN1b3WWLVc": {
+      "prompt_version": "academic-hub-v1",
+      "source_hash": "",
+      "status": "pending_source"
+    },
+    "video:J7ZzBXBNfo4": {
+      "prompt_version": "academic-hub-v1",
+      "source_hash": "",
+      "status": "pending_source"
+    },
+    "video:K1N4cQtEKp4": {
+      "prompt_version": "academic-hub-v1",
+      "source_hash": "",
+      "status": "pending_source"
+    },
+    "video:KeLmEv3Mzvk": {
+      "prompt_version": "academic-hub-v1",
+      "source_hash": "",
+      "status": "pending_source"
+    },
+    "video:PEjkCYsZShs": {
+      "prompt_version": "academic-hub-v1",
+      "source_hash": "",
+      "status": "pending_source"
+    },
+    "video:QmlSrygTzD4": {
+      "prompt_version": "academic-hub-v1",
+      "source_hash": "",
+      "status": "pending_source"
+    },
+    "video:Qp4U6XlBOLs": {
+      "prompt_version": "academic-hub-v1",
+      "source_hash": "",
+      "status": "pending_source"
+    },
+    "video:S57eKkWm87Q": {
+      "prompt_version": "academic-hub-v1",
+      "source_hash": "",
+      "status": "pending_source"
+    },
+    "video:UrHBOn78M1c": {
+      "prompt_version": "academic-hub-v1",
+      "source_hash": "",
+      "status": "pending_source"
+    },
+    "video:VNyl7MWCenc": {
+      "prompt_version": "academic-hub-v1",
+      "source_hash": "",
+      "status": "pending_source"
+    },
+    "video:Vf4NX7MoBeI": {
+      "prompt_version": "academic-hub-v1",
+      "source_hash": "",
+      "status": "pending_source"
+    },
+    "video:VmNWM1-pvWw": {
+      "prompt_version": "academic-hub-v1",
+      "source_hash": "",
+      "status": "pending_source"
+    },
+    "video:WXBHq3VS_d0": {
+      "prompt_version": "academic-hub-v1",
+      "source_hash": "",
+      "status": "pending_source"
+    },
+    "video:WdTpmp8aY8s": {
+      "prompt_version": "academic-hub-v1",
+      "source_hash": "",
+      "status": "pending_source"
+    },
+    "video:cKLrf0WesC4": {
+      "prompt_version": "academic-hub-v1",
+      "source_hash": "",
+      "status": "pending_source"
+    },
+    "video:dmW3P6OkTK8": {
+      "prompt_version": "academic-hub-v1",
+      "source_hash": "",
+      "status": "pending_source"
+    },
+    "video:eWMzDhwN6hk": {
+      "prompt_version": "academic-hub-v1",
+      "source_hash": "",
+      "status": "pending_source"
+    },
+    "video:eWw5c3X__wI": {
+      "prompt_version": "academic-hub-v1",
+      "source_hash": "",
+      "status": "pending_source"
+    },
+    "video:ebNaoNI1tVM": {
+      "prompt_version": "academic-hub-v1",
+      "source_hash": "",
+      "status": "pending_source"
+    },
+    "video:eq3OCRmqjA4": {
+      "prompt_version": "academic-hub-v1",
+      "source_hash": "",
+      "status": "pending_source"
+    },
+    "video:fEHrTSWJ5a0": {
+      "prompt_version": "academic-hub-v1",
+      "source_hash": "",
+      "status": "pending_source"
+    },
+    "video:hSgHmk2XsRs": {
+      "prompt_version": "academic-hub-v1",
+      "source_hash": "",
+      "status": "pending_source"
+    },
+    "video:iF-PHu-JvEA": {
+      "prompt_version": "academic-hub-v1",
+      "source_hash": "",
+      "status": "pending_source"
+    },
+    "video:jGifjyqq0c8": {
+      "prompt_version": "academic-hub-v1",
+      "source_hash": "",
+      "status": "pending_source"
+    },
+    "video:jcBDSLSeud4": {
+      "prompt_version": "academic-hub-v1",
+      "source_hash": "",
+      "status": "pending_source"
+    },
+    "video:lOn3FJXJRFs": {
+      "prompt_version": "academic-hub-v1",
+      "source_hash": "",
+      "status": "pending_source"
+    },
+    "video:laqzHd471yc": {
+      "prompt_version": "academic-hub-v1",
+      "source_hash": "",
+      "status": "pending_source"
+    },
+    "video:lvRv-saghrs": {
+      "prompt_version": "academic-hub-v1",
+      "source_hash": "",
+      "status": "pending_source"
+    },
+    "video:mEv5voaY0Xs": {
+      "prompt_version": "academic-hub-v1",
+      "source_hash": "",
+      "status": "pending_source"
+    },
+    "video:mLwPoVwkf98": {
+      "prompt_version": "academic-hub-v1",
+      "source_hash": "",
+      "status": "pending_source"
+    },
+    "video:npTB0FTcGew": {
+      "prompt_version": "academic-hub-v1",
+      "source_hash": "",
+      "status": "pending_source"
+    },
+    "video:oEXrFW40UB4": {
+      "prompt_version": "academic-hub-v1",
+      "source_hash": "",
+      "status": "pending_source"
+    },
+    "video:oIfAg7vlMUQ": {
+      "prompt_version": "academic-hub-v1",
+      "source_hash": "",
+      "status": "pending_source"
+    },
+    "video:tX4xwubsO4k": {
+      "prompt_version": "academic-hub-v1",
+      "source_hash": "",
+      "status": "pending_source"
+    },
+    "video:tZ9KFQOA6NM": {
+      "prompt_version": "academic-hub-v1",
+      "source_hash": "",
+      "status": "pending_source"
+    },
+    "video:u431kfsFmPA": {
+      "prompt_version": "academic-hub-v1",
+      "source_hash": "",
+      "status": "pending_source"
+    },
+    "video:vCq4YLbIxXM": {
+      "prompt_version": "academic-hub-v1",
+      "source_hash": "",
+      "status": "pending_source"
+    },
+    "video:w51J_h2zntc": {
+      "prompt_version": "academic-hub-v1",
+      "source_hash": "",
+      "status": "pending_source"
+    },
+    "video:xa6Hvah9FOo": {
+      "prompt_version": "academic-hub-v1",
+      "source_hash": "",
+      "status": "pending_source"
+    },
+    "video:xlmN6hhQIZM": {
+      "prompt_version": "academic-hub-v1",
+      "source_hash": "",
+      "status": "pending_source"
+    },
+    "video:y0H6q1nOWYk": {
+      "prompt_version": "academic-hub-v1",
+      "source_hash": "",
+      "status": "pending_source"
+    },
+    "video:yHLm7XH5lw8": {
+      "prompt_version": "academic-hub-v1",
+      "source_hash": "",
+      "status": "pending_source"
+    },
+    "video:yQ3P4oO4pZw": {
+      "prompt_version": "academic-hub-v1",
+      "source_hash": "",
+      "status": "pending_source"
+    }
+  },
   "schema_version": 1
 }
