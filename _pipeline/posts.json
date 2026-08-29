@@ -2337,6 +2337,7 @@
       "wordpress_id": 904090
     },
     "904092": {
+      "error_detail": "unsafe or disclosed generation text",
       "error_type": "ValueError",
       "source_hash": "399e99bf4ac62a1e52f12e7a5ad89144c8b51b9e459f85a25b982d52aa39e3f6",
       "status": "generation_failed",
@@ -2715,6 +2716,7 @@
       "wordpress_id": 904143
     },
     "904152": {
+      "error_detail": "unsafe or disclosed generation text",
       "error_type": "ValueError",
       "source_hash": "8242efca21402a28e4647567dad35433c2b67d52b2ea3f8e94280aab6f1429d7",
       "status": "generation_failed",
@@ -3215,6 +3217,7 @@
       "wordpress_id": 904237
     },
     "904245": {
+      "error_detail": "unsafe or disclosed generation text",
       "error_type": "ValueError",
       "source_hash": "30e7c8a823fdc78bc037026a5285ff55412700c58cae7895ded71dfea91d70b1",
       "status": "generation_failed",
