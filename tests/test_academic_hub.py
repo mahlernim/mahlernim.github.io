@@ -7,6 +7,7 @@ from pathlib import Path
 import pytest
 
 import build
+from scripts.generate_summaries import needs_generation
 from scripts.content_model import THEMES, source_hash, validate_summary
 from scripts.fetch_youtube import _clean_caption, fetch_gemini_video_evidence, fetch_videos
 
@@ -30,6 +31,13 @@ def test_summary_schema_rejects_unknown_theme_and_wrong_point_count():
     assert validate_summary(summary) == summary
     summary["theme_id"] = "invented"
     with pytest.raises(ValueError):
+        validate_summary(summary)
+
+
+def test_summary_schema_rejects_stray_thai_characters():
+    summary = valid_summary()
+    summary["ko"]["overview"] += " ห"
+    with pytest.raises(ValueError, match="Thai"):
         validate_summary(summary)
     summary = valid_summary()
     summary["ko"]["key_points"].pop()
@@ -103,6 +111,12 @@ def test_pending_source_does_not_replace_ready_record():
     if candidate["status"] == "ready":
         output["video:abc"] = candidate
     assert output["video:abc"] == ready
+
+
+def test_pending_items_are_retried_without_rewriting_ready_content():
+    item = {"source_hash": "same"}
+    assert needs_generation({"status": "pending_source", "source_hash": "same"}, item)
+    assert not needs_generation({"status": "ready", "source_hash": "same"}, item)
 
 
 def test_gemini_video_evidence_is_optional(monkeypatch):

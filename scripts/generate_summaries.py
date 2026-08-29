@@ -40,7 +40,8 @@ researchers, and advanced students. Do not add promotional language, clinical ad
 unsupported numbers, invented methods or results, or claims about an author's individual
 contribution. The research_context field must be a neutral thematic connection to Sangzin
 Ahn's portfolio, never a contributor-role claim. Mention source limitations explicitly.
-Choose exactly one allowed theme."""
+Choose exactly one allowed theme. Use only standard Korean and English characters. Do not
+emit stray characters from unrelated writing systems."""
 
 
 def build_user_prompt(kind, item, source_text):
@@ -58,27 +59,37 @@ Primary source text:\n{source_text}
 
 
 def generate(client, kind, item, source_text, effort):
-    completion = client.chat.completions.create(
-        model=MODEL_ID,
-        reasoning_effort=effort,
-        messages=[
-            {"role": "system", "content": SYSTEM_PROMPT},
-            {"role": "user", "content": build_user_prompt(kind, item, source_text)},
-        ],
-        response_format={
-            "type": "json_schema",
-            "json_schema": {
-                "name": "academic_content_summary",
-                "strict": True,
-                "schema": SUMMARY_JSON_SCHEMA,
-            }
-        },
-    )
-    return validate_summary(json.loads(completion.choices[0].message.content))
+    last_error = None
+    for _attempt in range(2):
+        completion = client.chat.completions.create(
+            model=MODEL_ID,
+            reasoning_effort=effort,
+            messages=[
+                {"role": "system", "content": SYSTEM_PROMPT},
+                {"role": "user", "content": build_user_prompt(kind, item, source_text)},
+            ],
+            response_format={
+                "type": "json_schema",
+                "json_schema": {
+                    "name": "academic_content_summary",
+                    "strict": True,
+                    "schema": SUMMARY_JSON_SCHEMA,
+                }
+            },
+        )
+        try:
+            return validate_summary(json.loads(completion.choices[0].message.content))
+        except (json.JSONDecodeError, ValueError) as exc:
+            last_error = exc
+    raise last_error
 
 
 def needs_generation(existing, item):
-    return not existing or existing.get("source_hash") != item.get("source_hash")
+    return (
+        not existing
+        or existing.get("status") != "ready"
+        or existing.get("source_hash") != item.get("source_hash")
+    )
 
 
 def run(mode, effort):
