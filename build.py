@@ -97,6 +97,8 @@ def build_site(offline=False):
     content = load_json(PIPELINE / "generated_content.json", {"schema_version": 1, "items": {}})
     posts = list(load_json(PIPELINE / "posts.json", {"items": {}}).get("items", {}).values())
     posts = [post for post in posts if post.get("status") == "ready"]
+    if len(posts) != 50:
+        posts = []
     posts.sort(key=lambda item: item.get("published_at", ""), reverse=True)
     env = environment()
 

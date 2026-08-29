@@ -125,6 +125,17 @@ def test_pages_config_excludes_internal_data():
     assert "data" in config
 
 
+def test_partial_post_collection_is_not_published(monkeypatch, tmp_path):
+    monkeypatch.setattr(build, "ROOT", tmp_path)
+    monkeypatch.setattr(build, "DATA", ROOT / "data")
+    monkeypatch.setattr(build, "PIPELINE", tmp_path / "_pipeline")
+    monkeypatch.setattr(build, "TEMPLATES", ROOT / "templates")
+    (tmp_path / "_pipeline").mkdir()
+    (tmp_path / "_pipeline" / "posts.json").write_text(json.dumps({"items": {"1": {"status": "ready", "wordpress_id": 1, "published_at": "2024-01-01", "title": "Partial"}}}), encoding="utf-8")
+    build.build_site(offline=True)
+    assert "Partial" not in (tmp_path / "posts" / "index.html").read_text(encoding="utf-8")
+
+
 def test_video_discovery_deduplicates_and_preserves_existing_fields(monkeypatch, tmp_path):
     class FakeYDL:
         def __init__(self, _options):
