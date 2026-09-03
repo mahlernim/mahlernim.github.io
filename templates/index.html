@@ -9,5 +9,5 @@
 <section><div class="section-heading"><h2>글 <span>Posts</span></h2><a href="/posts/">전체</a></div>{% include "post_list.html" %}</section>
 <section><div class="section-heading"><h2>영상 <span>Videos</span></h2><a href="/videos/">전체</a></div><div class="card-grid">{% for video in videos %}{% include "video_card.html" %}{% endfor %}</div></section>
 <section><div class="section-heading"><h2>논문 <span>Publications</span></h2><a href="/publications/">전체</a></div><div class="stack">{% for publication in publications %}{% include "publication_card.html" %}{% endfor %}</div></section>
-<section><div class="section-heading"><h2>프로젝트 <span>Projects</span></h2><a href="/projects/">전체</a></div><div class="project-list">{% for project in projects %}<article><h3><a href="{{ project.url }}">{{ project.name }}</a></h3><p>{{ project.description }}</p></article>{% endfor %}</div></section>
+<section><div class="section-heading"><h2>프로젝트 <span>Projects</span></h2><a href="/projects/">전체</a></div><div class="project-list">{% for project in projects %}<article><h3><a href="{{ project.url }}">{{ project.name }}</a></h3><p>{{ project.description }}</p>{% include "project_links.html" %}</article>{% endfor %}</div></section>
 {% endblock %}

@@ -43,7 +43,17 @@ AUTHOR = {
 
 PROJECTS = [
     {"name": "Google Timeline Visualizer", "url": "/google-timeline-visualizer/", "description": "위치 파일을 브라우저 밖으로 전송하지 않고 Google 지도 타임라인의 이동 기록을 애니메이션으로 시각화하는 도구입니다."},
-    {"name": "PDF to NotebookLM", "url": "https://github.com/mahlernim/chrome-pdf-to-notebooklm", "description": "PDF와 웹페이지를 NotebookLM에 추가하고 결과물을 만드는 Chrome 확장 프로그램입니다."},
+    {
+        "name": "ScholarRelay",
+        "url": "https://chromewebstore.google.com/detail/epopghhfmpokhbalmnfcopmplffphdbb",
+        "description": "PDF·논문·웹페이지를 Gemini Notebook(구 NotebookLM)에 추가하고, 노트북 정리와 오디오·영상·퀴즈 등 결과물 생성을 한 번에 진행하는 Chrome 확장 프로그램입니다.",
+        "details": "논문 제목 자동 인식, 기존 컬렉션 선택, 로컬 PDF 업로드를 지원합니다.",
+        "links": [
+            {"label": "Chrome 웹 스토어에서 설치", "url": "https://chromewebstore.google.com/detail/epopghhfmpokhbalmnfcopmplffphdbb"},
+            {"label": "GitHub", "url": "https://github.com/mahlernim/scholar-relay"},
+            {"label": "개발 과정", "url": "https://github.com/mahlernim/scholar-relay/blob/main/docs/DEVELOPMENT.md"},
+        ],
+    },
     {"name": "Memori", "url": "https://memori.co.kr/", "description": "의학과 학습을 위한 암기법과 기억 단서를 모으는 커뮤니티입니다."},
     {"name": "Sakang", "url": "https://sakang.mahler83.net/", "description": "텍스트 정리, 임상 계산, 문서 및 교육 기록을 위한 소규모 도구 모음입니다."},
     {"name": "EduKMA", "url": "https://edukma.mahler83.net/", "description": "국내 온라인 보수교육 과정을 찾는 서비스입니다."},
