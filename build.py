@@ -42,7 +42,7 @@ AUTHOR = {
 }
 
 PROJECTS = [
-    {"name": "똑똑 자가검침 AI", "url": "/ttokttok/", "description": "과거 가스 사용량과 최근 계량기 기록을 분석해 오늘의 검침값을 자동으로 추정하는 Android 앱입니다. 우리 집 사용 패턴을 반영한 AI 추정부터 검침 알림과 제출까지 한곳에서 관리합니다."},
+    {"name": "똑똑 자가검침 AI", "url": "/ttokttok/", "description": "작년 사용 흐름과 최근 계량기 기록을 함께 읽어 오늘의 누적 지침을 추정하고, 검침 기간 마지막 날 조건을 확인해 자가검침값을 자동으로 제출하는 Android 앱입니다."},
     {"name": "Google Timeline Visualizer", "url": "/google-timeline-visualizer/", "description": "위치 파일을 브라우저 밖으로 전송하지 않고 Google 지도 타임라인의 이동 기록을 애니메이션으로 시각화하는 도구입니다."},
     {
         "name": "ScholarRelay",
