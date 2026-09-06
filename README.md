@@ -40,16 +40,18 @@ directly. The offline build preserves them and includes the route in the
 project listings and sitemap.
 
 Its screenshots and icon come from the MIT-licensed
-[gas-self-meter-ai project](https://github.com/mahlernim/gas-self-meter-ai).
-Screenshots contain fictional app data. Support copy was checked against
-the public main README on 2026-09-06 and should be rechecked for future edits.
-The source license is retained in `ttokttok/assets/LICENSE-app.txt`.
+[gas-self-meter-ai project](https://github.com/mahlernim/gas-self-meter-ai),
+captured in the app's demo mode. Provider support copy was checked against
+`Providers.kt` and `GasappBackground.kt` on 2026-09-06 and should be rechecked
+whenever the app adds a connection or automatic submission. The source license
+is retained in `ttokttok/assets/LICENSE-app.txt`.
 
-The 20-second `demo.mp4` illustrates the workflow with synthetic values.
-It is not an actual submission recording. Rebuild it, its poster and social
-preview with `node scripts/render_ttokttok_demo.cjs` using Playwright, Chrome
-and ffmpeg. `PLAYWRIGHT_MODULE` and `BROWSER_CHANNEL` optionally select an
-existing runtime. Media generation is manual, outside the daily content job.
+The 20-second `demo.mp4` walks through four real app screens —
+`meter.png`, `submission.png`, `alerts.png` and `history.png` in
+`ttokttok/assets`. Rebuild it, its poster and the social preview with
+`python scripts/render_ttokttok_demo.py`, which needs Pillow, the Malgun
+Gothic fonts and ffmpeg on PATH. Replace the screenshots first when the app's
+screens change. Media generation is manual, outside the daily content job.
 The page has no login, submission API, analytics or signup form. Enrollment
 links point to Google Groups and Google Play.
 
