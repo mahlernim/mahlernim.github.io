@@ -33,6 +33,26 @@ Mirrors content from `ahn-lab.org` and automatically updates publications from P
 3. Open `website/index.html` in your browser.
 
 ## Deployment
+
+The standalone app landing page lives in `ttokttok/index.html` and
+`ttokttok/style.css` at `https://ahn-lab.org/ttokttok/`. Edit those files
+directly. The offline build preserves them and includes the route in the
+project listings and sitemap.
+
+Its screenshots and icon come from the MIT-licensed
+[gas-self-meter-ai project](https://github.com/mahlernim/gas-self-meter-ai).
+Screenshots contain fictional app data. Support copy was checked against
+the public main README on 2026-09-06 and should be rechecked for future edits.
+The source license is retained in `ttokttok/assets/LICENSE-app.txt`.
+
+The 20-second `demo.mp4` illustrates the workflow with synthetic values.
+It is not an actual submission recording. Rebuild it, its poster and social
+preview with `node scripts/render_ttokttok_demo.cjs` using Playwright, Chrome
+and ffmpeg. `PLAYWRIGHT_MODULE` and `BROWSER_CHANNEL` optionally select an
+existing runtime. Media generation is manual, outside the daily content job.
+The page has no login, submission API, analytics or signup form. Enrollment
+links point to Google Groups and Google Play.
+
 This repository is configured to deploy via **GitHub Pages**.
 The `update.yml` workflow runs weekly to regenerate the site with fresh data.
 
