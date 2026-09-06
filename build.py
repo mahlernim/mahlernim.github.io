@@ -42,7 +42,7 @@ AUTHOR = {
 }
 
 PROJECTS = [
-    {"name": "똑똑 자가검침 AI", "url": "/ttokttok/", "description": "과거 사용량과 최근 실측으로 도시가스 지침을 추정하고, 지원 공급사에서 조건에 맞춰 자가검침 제출을 자동화하는 Android 앱입니다."},
+    {"name": "똑똑 자가검침 AI", "url": "/ttokttok/", "description": "도시가스 이력 조회와 검침값 제출을 한곳에서 관리하는 Android 앱입니다. 부산도시가스는 마지막 날 자동 제출도 선택할 수 있습니다."},
     {"name": "Google Timeline Visualizer", "url": "/google-timeline-visualizer/", "description": "위치 파일을 브라우저 밖으로 전송하지 않고 Google 지도 타임라인의 이동 기록을 애니메이션으로 시각화하는 도구입니다."},
     {
         "name": "ScholarRelay",
