@@ -42,6 +42,7 @@ AUTHOR = {
 }
 
 PROJECTS = [
+    {"name": "똑똑 자가검침 AI", "url": "/ttokttok/", "description": "과거 사용량과 최근 실측으로 도시가스 지침을 추정하고, 지원 공급사에서 조건에 맞춰 자가검침 제출을 자동화하는 Android 앱입니다."},
     {"name": "Google Timeline Visualizer", "url": "/google-timeline-visualizer/", "description": "위치 파일을 브라우저 밖으로 전송하지 않고 Google 지도 타임라인의 이동 기록을 애니메이션으로 시각화하는 도구입니다."},
     {
         "name": "ScholarRelay",
@@ -157,7 +158,7 @@ def build_site(offline=False):
 
 
 def write_sitemap(videos, publications, posts):
-    routes = [(route, "") for route in ["/", "/posts/", "/videos/", "/publications/", "/projects/", "/google-timeline-visualizer/"]]
+    routes = [(route, "") for route in ["/", "/posts/", "/videos/", "/publications/", "/projects/", "/google-timeline-visualizer/", "/ttokttok/"]]
     routes += [(f"/posts/{item['wordpress_id']}/", item.get("original_modified_at", "")[:10]) for item in posts]
     routes += [(f"/videos/{item['video_id']}/", item.get("upload_date", "")[:10]) for item in videos]
     routes += [(f"/publications/{item['pmid']}/", "") for item in publications]

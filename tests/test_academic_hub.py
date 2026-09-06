@@ -137,7 +137,8 @@ def test_sitemap_uses_source_dates_and_preserves_route_count():
     route = f"https://ahn-lab.org/posts/{post['wordpress_id']}/"
     entry = sitemap.split(f"<loc>{route}</loc>", 1)[1].split("</url>", 1)[0]
     assert f"<lastmod>{post['original_modified_at'][:10]}</lastmod>" in entry
-    assert sitemap.count("<url>") == 164
+    assert sitemap.count("<url>") == 165
+    assert "<loc>https://ahn-lab.org/ttokttok/</loc>" in sitemap
     assert "build_year" not in sitemap
 
 
