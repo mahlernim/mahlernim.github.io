@@ -2,6 +2,7 @@ import copy
 import json
 import sys
 import types
+import xml.etree.ElementTree as ET
 from pathlib import Path
 
 import pytest
@@ -130,14 +131,35 @@ def test_index_pages_have_distinct_descriptions():
     assert len(set(descriptions)) == len(pages)
 
 
-def test_sitemap_uses_source_dates_and_preserves_route_count():
+@pytest.mark.parametrize("extra_publication", [False, True])
+def test_sitemap_uses_source_dates_and_preserves_routes(monkeypatch, tmp_path, extra_publication):
+    data = tmp_path / "data"
+    data.mkdir()
+    videos = json.loads((ROOT / "data" / "videos_cache.json").read_text(encoding="utf-8"))
+    publications = json.loads((ROOT / "data" / "publications_cache.json").read_text(encoding="utf-8"))
+    if extra_publication:
+        publications["99999999"] = {**next(iter(publications.values())), "pmid": "99999999"}
+    for name, records in [("videos", videos), ("publications", publications)]:
+        (data / f"{name}_cache.json").write_text(json.dumps(records), encoding="utf-8")
+    monkeypatch.setattr(build, "ROOT", tmp_path)
+    monkeypatch.setattr(build, "DATA", data)
     build.build_site(offline=True)
-    sitemap = (ROOT / "sitemap.xml").read_text(encoding="utf-8")
+    sitemap = (tmp_path / "sitemap.xml").read_text(encoding="utf-8")
     post = next(iter(json.loads((ROOT / "_pipeline" / "posts.json").read_text(encoding="utf-8"))["items"].values()))
     route = f"https://ahn-lab.org/posts/{post['wordpress_id']}/"
     entry = sitemap.split(f"<loc>{route}</loc>", 1)[1].split("</url>", 1)[0]
     assert f"<lastmod>{post['original_modified_at'][:10]}</lastmod>" in entry
-    assert sitemap.count("<url>") == 165
+    posts = json.loads((ROOT / "_pipeline" / "posts.json").read_text(encoding="utf-8"))["items"].values()
+    expected = {f"https://ahn-lab.org{path}" for path in [
+        "/", "/posts/", "/videos/", "/publications/", "/projects/",
+        "/google-timeline-visualizer/", "/ttokttok/",
+    ]}
+    expected.update(f"https://ahn-lab.org/posts/{item['wordpress_id']}/" for item in posts)
+    expected.update(f"https://ahn-lab.org/videos/{item['video_id']}/" for item in videos.values())
+    expected.update(f"https://ahn-lab.org/publications/{item['pmid']}/" for item in publications.values())
+    locations = [node.text for node in ET.fromstring(sitemap).findall("{*}url/{*}loc")]
+    assert set(locations) == expected
+    assert len(locations) == len(set(locations)), "Duplicate sitemap URLs"
     assert "<loc>https://ahn-lab.org/ttokttok/</loc>" in sitemap
     assert "build_year" not in sitemap
 
