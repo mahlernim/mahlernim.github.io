@@ -152,7 +152,7 @@ def test_sitemap_uses_source_dates_and_preserves_routes(monkeypatch, tmp_path, e
     posts = json.loads((ROOT / "_pipeline" / "posts.json").read_text(encoding="utf-8"))["items"].values()
     expected = {f"https://ahn-lab.org{path}" for path in [
         "/", "/posts/", "/videos/", "/publications/", "/projects/",
-        "/google-timeline-visualizer/", "/ttokttok/",
+        "/google-timeline-visualizer/", "/ttokttok/", "/scholar-relay/",
     ]}
     expected.update(f"https://ahn-lab.org/posts/{item['wordpress_id']}/" for item in posts)
     expected.update(f"https://ahn-lab.org/videos/{item['video_id']}/" for item in videos.values())
@@ -161,6 +161,7 @@ def test_sitemap_uses_source_dates_and_preserves_routes(monkeypatch, tmp_path, e
     assert set(locations) == expected
     assert len(locations) == len(set(locations)), "Duplicate sitemap URLs"
     assert "<loc>https://ahn-lab.org/ttokttok/</loc>" in sitemap
+    assert "<loc>https://ahn-lab.org/scholar-relay/</loc>" in sitemap
     assert "build_year" not in sitemap
 
 
