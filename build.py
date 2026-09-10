@@ -46,9 +46,9 @@ PROJECTS = [
     {"name": "Google Timeline Visualizer", "url": "/google-timeline-visualizer/", "description": "위치 파일을 브라우저 밖으로 전송하지 않고 Google 지도 타임라인의 이동 기록을 애니메이션으로 시각화하는 도구입니다."},
     {
         "name": "ScholarRelay",
-        "url": "https://chromewebstore.google.com/detail/epopghhfmpokhbalmnfcopmplffphdbb",
-        "description": "PDF·논문·웹페이지를 Gemini Notebook(구 NotebookLM)에 추가하고, 노트북 정리와 오디오·영상·퀴즈 등 결과물 생성을 한 번에 진행하는 Chrome 확장 프로그램입니다.",
-        "details": "논문 제목 자동 인식, 기존 컬렉션 선택, 로컬 PDF 업로드를 지원합니다.",
+        "url": "/scholar-relay/",
+        "description": "한 번 저장한 설정을 여러 PDF, 논문, 웹페이지에 적용하고 Gemini Notebook 학습 자료 생성을 자동화하는 Chrome 확장 프로그램입니다.",
+        "details": "논문 대기열, 같은 노트북에서 이어지는 PDF 복구, 오디오·영상·퀴즈·플래시카드 생성을 지원합니다.",
         "links": [
             {"label": "Chrome 웹 스토어에서 설치", "url": "https://chromewebstore.google.com/detail/epopghhfmpokhbalmnfcopmplffphdbb"},
             {"label": "GitHub", "url": "https://github.com/mahlernim/scholar-relay"},
@@ -158,7 +158,7 @@ def build_site(offline=False):
 
 
 def write_sitemap(videos, publications, posts):
-    routes = [(route, "") for route in ["/", "/posts/", "/videos/", "/publications/", "/projects/", "/google-timeline-visualizer/", "/ttokttok/"]]
+    routes = [(route, "") for route in ["/", "/posts/", "/videos/", "/publications/", "/projects/", "/google-timeline-visualizer/", "/ttokttok/", "/scholar-relay/"]]
     routes += [(f"/posts/{item['wordpress_id']}/", item.get("original_modified_at", "")[:10]) for item in posts]
     routes += [(f"/videos/{item['video_id']}/", item.get("upload_date", "")[:10]) for item in videos]
     routes += [(f"/publications/{item['pmid']}/", "") for item in publications]
