@@ -75,6 +75,23 @@ def test_offline_build_preserves_support_files_and_generates_routes():
     assert before == {name: (ROOT / name).read_bytes() for name in protected}
 
 
+def test_scholar_relay_landing_is_complete_in_all_supported_languages():
+    landing = ROOT / "scholar-relay"
+    html = (landing / "index.html").read_text(encoding="utf-8")
+    script = (landing / "app.js").read_text(encoding="utf-8")
+    assert 'class="workflow-visual"' in html
+    assert "A compact view of the repeatable workflow" not in html
+    for locale in ["en", "ko", "ja", "es", "fr", "de", "pt-BR", "zh-CN"]:
+        assert f"{locale}:" in script or f"'{locale}':" in script
+        assert (landing / "assets" / "screenshots" / locale / "workflow.png").is_file()
+        assert (landing / "assets" / "screenshots" / locale / "settings.png").is_file()
+    for official_term in [
+        "AI 오디오 오버뷰", "音声解説", "Resumen de audio", "Résumé audio",
+        "Audio-Zusammenfassung", "Resumo em Áudio", "音频概览",
+    ]:
+        assert official_term in script
+
+
 def test_generated_pages_have_canonical_and_no_secret_marker():
     build.build_site(offline=True)
     pages = [ROOT / "index.html", ROOT / "videos" / "index.html", ROOT / "projects" / "index.html"]
