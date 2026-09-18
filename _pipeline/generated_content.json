@@ -1439,6 +1439,39 @@
         "theme_id": "medical-ai-data-science"
       }
     },
+    "video:Gc4c2vu1tS8": {
+      "generated_at": "2026-09-18T04:45:40+00:00",
+      "model": "gpt-5.6-luna",
+      "prompt_version": "academic-hub-v2",
+      "reasoning_effort": "medium",
+      "source_hash": "a605e0b08a9b8d07e2ddd26aa5ccfbf3d55be5544d567391e2c91df9fe8ec3fd",
+      "status": "ready",
+      "summary": {
+        "en": {
+          "audience": "Medical AI and data science researchers, machine learning engineers, software developers, NLP practitioners, and advanced learners interested in model routing and structured generation",
+          "key_points": [
+            "Where conventional large language models are described as System 2 models that generate free-form text token by token, Jev is designed for immediate and deterministic structured judgment.",
+            "Jev's TypeSafe primitives include Choice, which selects from predefined options and returns choices, probabilities, and confidence; Score, which evaluates an input against a rubric and returns a score distribution and confidence; and Noul, which evaluates whether a statement is true or false as a probability from 0.0 to 1.0. Noul does not return a separate confidence value.",
+            "Multiple questions can be batched in one API request and evaluated in parallel. Billing is based only on input tokens, while output tokens are free. The video links these features to a proposed routing strategy in which Jev handles high confidence queries and lower confidence queries are sent to reasoning intensive models.‌"
+          ],
+          "overview": "The video presents Jev, developed by TypeSafe AI, as a System 1 model designed for structured judgment and classification, and examines its performance on Korean and English benchmarks, medical questions, and cascaded configurations combining System 1 and System 2 models.",
+          "research_context": "The topic has a neutral thematic connection to Sangzin Ahn's portfolio through its focus on structured model outputs, medical benchmark evaluation, and routing strategies that balance cost and accuracy in medical AI and data science.",
+          "scope_note": "In the 100 question preliminary evaluation, Jev achieved 96 percent in Korean and 97 percent in English on Belebele, and 76 percent in Korean and 80 percent in English on PAWS X. In the full medical benchmark runs, results for KorMedMCQA with 435 questions were 86.9 percent for Jev, 92.6 percent for standalone Luna, 97.7 percent for Luna with maximum reasoning, 90.3 percent for the Jev to Luna cascade, and 92.9 percent for the maximum reasoning cascade. On MedQA with 1273 questions, the corresponding results were 87.7 percent, 86.7 percent, 95.6 percent, 88.8 percent, and 94.0 percent. The preliminary 100 question evaluations were reported to have an uncertainty of approximately plus or minus 8 percentage points, and a performance gap was observed between Jev and reasoning intensive models on Korean medical questions. These findings should not be generalized to standalone Jev use for complex, high stakes Korean medical tasks. Further testing of cost performance tradeoffs across cascades is ongoing."
+        },
+        "ko": {
+          "audience": "의료 AI 및 데이터과학 연구자, 머신러닝 엔지니어, 소프트웨어 개발자, 자연어처리 실무자와 모델 라우팅 및 구조화 생성에 관심 있는 고급 학습자",
+          "key_points": [
+            "일반적인 대규모 언어 모델이 토큰 단위로 자유 형식의 텍스트를 생성하는 System 2 모델로 설명되는 반면, Jev는 즉각적이고 결정론적인 구조화 판단을 목표로 한다.",
+            "Jev의 TypeSafe primitives에는 사전 정의된 선택지와 확률 및 신뢰도를 반환하는 Choice, 기준표에 따른 점수와 점수 분포 및 신뢰도를 반환하는 Score, 명제의 참 또는 거짓을 0.0에서 1.0 사이의 확률로 평가하는 Noul이 포함된다. Noul은 별도의 신뢰도 값을 반환하지 않는다.",
+            "여러 질문을 하나의 API 요청으로 묶어 병렬 평가할 수 있으며, 입력 토큰에만 요금이 부과되고 출력 토큰은 무료라는 실행 및 과금 방식이 제시된다. 이는 처리 비용과 지연을 고려한 모델 라우팅에 활용될 수 있다는 가설로 연결된다。高 confidence 질문은 Jev가 처리하고 낮은 confidence 질문은 추론 중심 모델로 보내는 연쇄 구성이 제안되었다.‌"
+          ],
+          "overview": "이 영상은 TypeSafe AI가 개발한 Jev를 구조화된 판단과 분류에 특화된 System 1 모델로 소개하고, 한국어와 영어 벤치마크 및 의료 질문에서의 성능과 System 1과 System 2를 결합한 모델 연쇄 구성을 검토한다.",
+          "research_context": "이 내용은 의료 AI 및 데이터과학 분야에서 구조화된 모델 출력, 의료 벤치마크 평가, 비용과 정확도의 균형을 고려한 모델 라우팅을 탐색하는 Sangzin Ahn의 포트폴리오 주제와 중립적으로 연결된다.",
+          "scope_note": "100문항 예비 평가에서 Jev의 Belebele 정확도는 한국어 96퍼센트, 영어 97퍼센트였고, PAWS X 정확도는 한국어 76퍼센트, 영어 80퍼센트였다. 의료 벤치마크 전체 실행에서는 KorMedMCQA 435문항에서 Jev 86.9퍼센트, Luna 단독 92.6퍼센트, Luna 최대 추론 97.7퍼센트, Jev에서 Luna로 연결한 연쇄 90.3퍼센트, 최대 추론 연쇄 92.9퍼센트가 보고되었다. MedQA 1273문항에서는 각각 87.7퍼센트, 86.7퍼센트, 95.6퍼센트, 88.8퍼센트, 94.0퍼센트였다. 100문항 예비 평가의 불확실성은 약 플러스 또는 마이너스 8퍼센트포인트로 제시되었고, 한국어 의료 문제에서 Jev와 고강도 추론 모델 사이에 차이가 관찰되었다. 따라서 복잡하고 위험도가 높은 한국어 의료 과제에 Jev를 단독 적용하는 결과로 일반화하기 어렵다. 모델 연쇄의 비용과 성능 절충은 추가 검증이 진행 중이다."
+        },
+        "theme_id": "medical-ai-data-science"
+      }
+    },
     "video:Gfb3iAh3nnI": {
       "generated_at": "2026-08-29T03:37:10+00:00",
       "model": "gpt-5.6-luna",
