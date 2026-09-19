@@ -8,3 +8,5 @@ exclude:
   - build.py
   - requirements.txt
   - README.md
+  - web
+  - docs
