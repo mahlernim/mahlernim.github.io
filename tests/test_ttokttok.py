@@ -1,5 +1,4 @@
 from pathlib import Path
-from bs4 import BeautifulSoup
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -12,9 +11,9 @@ def test_landing_keeps_android_install_visible_and_links_to_the_local_web_app():
     assert 'href="https://play.google.com/apps/testing/dev.mahlernim.gasselfmeter"' in html
     assert 'href="https://groups.google.com/g/gas-self-meter-ai"' in html
     assert html.count('href="app/"') >= 3
-    mobile = BeautifulSoup(html, "html.parser").select_one(".sticky-cta")
-    assert mobile.select_one('a[href="#start"]').get_text() == "Android 앱 · 권장"
-    assert mobile.select_one('a[href="app/"]').get_text() == "웹에서 시작하기"
+    mobile = html.split('<div class="sticky-cta"', 1)[1].split('</div>', 1)[0]
+    assert 'href="#start">Android 앱 · 권장</a>' in mobile
+    assert 'href="app/">웹에서 시작하기</a>' in mobile
     assert 'class="nav-cta" href="#start">Android 앱 · 권장' in html
 
 
