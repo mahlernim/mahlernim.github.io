@@ -16,3 +16,8 @@ _pipeline/*
 !_pipeline/generated_content.json
 !_pipeline/posts.json
 !_pipeline/wordpress_sources.json
+web/ttokttok/node_modules/
+web/ttokttok/test-results/
+web/ttokttok/test-results-*/
+web/ttokttok/playwright-report/
+node_modules/.vite/

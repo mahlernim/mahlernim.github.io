@@ -1,0 +1,10 @@
+web/ttokttok/** text eol=lf
+ttokttok/app/*.html text eol=lf
+ttokttok/app/*.js text eol=lf
+ttokttok/app/*.json text eol=lf
+ttokttok/app/*.txt text eol=lf
+ttokttok/app/*.webmanifest text eol=lf
+ttokttok/app/assets/*.js text eol=lf
+ttokttok/app/assets/*.css text eol=lf
+# Calendar interchange requires CRLF, including on Linux builds.
+ttokttok/app/calendar/*.ics -text whitespace=cr-at-eol,-blank-at-eol
