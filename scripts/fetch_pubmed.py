@@ -57,6 +57,28 @@ def map_category(types):
     if "Published Erratum" in types: return "Erratum"
     return "Original Article"
 
+
+def publication_title(element):
+    """Keep mixed XML text, including tails and scientific sub/superscripts."""
+    if element is None:
+        return ""
+    subscript = str.maketrans("0123456789+-=()", "₀₁₂₃₄₅₆₇₈₉₊₋₌₍₎")
+    superscript = str.maketrans("0123456789+-=()", "⁰¹²³⁴⁵⁶⁷⁸⁹⁺⁻⁼⁽⁾")
+
+    def text(node):
+        parts = [node.text or ""]
+        for child in node:
+            content = text(child)
+            tag = child.tag.rsplit("}", 1)[-1]
+            if tag == "sub":
+                content = content.translate(subscript)
+            elif tag == "sup":
+                content = content.translate(superscript)
+            parts.extend([content, child.tail or ""])
+        return "".join(parts)
+
+    return " ".join(text(element).split())
+
 def fetch_details_with_cache(ids):
     cache = load_cache()
     
@@ -102,7 +124,7 @@ def fetch_details(ids):
         
         for article in root.findall(".//PubmedArticle"):
             # ... (extraction logic) ...
-            title = article.findtext(".//ArticleTitle")
+            title = publication_title(article.find(".//ArticleTitle"))
             abstract_parts = []
             for abstract in article.findall(".//Abstract/AbstractText"):
                 label = abstract.get("Label")

@@ -160,7 +160,7 @@ def build_site(offline=False):
     for item in publications:
         item["generated"] = summary_for(content, f"publication:{item['pmid']}")
 
-    render(env, "index.html", ROOT / "index.html", page="home", posts=posts[:5], videos=videos[:3], publications=publications[:6], projects=PROJECTS[:5])
+    render(env, "index.html", ROOT / "index.html", page="home", posts=posts[:5], videos=videos[:3], publications=publications[:6], projects=PROJECTS[:8])
     render(env, "posts.html", ROOT / "posts" / "index.html", page="posts", posts=posts)
     for item in posts:
         render(env, "post_detail.html", ROOT / "posts" / str(item["wordpress_id"]) / "index.html", page="posts", post=item)
@@ -175,7 +175,7 @@ def build_site(offline=False):
 
 
 def write_sitemap(videos, publications, posts):
-    routes = [(route, "") for route in ["/", "/posts/", "/videos/", "/publications/", "/projects/", "/google-timeline-visualizer/", "/ttokttok/", "/scholar-relay/"]]
+    routes = [(route, "") for route in ["/", "/posts/", "/videos/", "/publications/", "/projects/", "/google-timeline-visualizer/", "/ttokttok/", "/scholar-relay/", "/jev-korean-benchmark/"]]
     routes += [(f"/posts/{item['wordpress_id']}/", item.get("original_modified_at", "")[:10]) for item in posts]
     routes += [(f"/videos/{item['video_id']}/", item.get("upload_date", "")[:10]) for item in videos]
     routes += [(f"/publications/{item['pmid']}/", "") for item in publications]
