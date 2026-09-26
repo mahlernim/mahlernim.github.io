@@ -42,8 +42,15 @@ AUTHOR = {
 }
 
 PROJECTS = [
-    {"name": "똑똑 자가검침 AI", "url": "/ttokttok/", "description": "작년 사용 흐름과 최근 계량기 기록을 함께 읽어 오늘의 누적 지침을 추정하고, 검침 기간 마지막 날 조건을 확인해 자가검침값을 자동으로 제출하는 Android 앱입니다."},
-    {"name": "Google Timeline Visualizer", "url": "/google-timeline-visualizer/", "description": "위치 파일을 브라우저 밖으로 전송하지 않고 Google 지도 타임라인의 이동 기록을 애니메이션으로 시각화하는 도구입니다."},
+    {
+        "name": "Jev 한국어·의학 문항 평가",
+        "url": "https://ahn-lab.org/jev-korean-benchmark/",
+        "description": "TypeSafe Jev의 한국어 이해와 의학 문항 응답을 공개 데이터셋의 100문항 표본으로 살펴보고, 정확도·응답 시간·비용과 재현 자료를 공개했습니다.",
+        "links": [
+            {"label": "소개 영상", "url": "/videos/Gc4c2vu1tS8/"},
+            {"label": "코드와 데이터", "url": "https://github.com/mahlernim/jev-korean-benchmark"},
+        ],
+    },
     {
         "name": "ScholarRelay",
         "url": "/scholar-relay/",
@@ -55,6 +62,16 @@ PROJECTS = [
             {"label": "개발 과정", "url": "https://github.com/mahlernim/scholar-relay/blob/main/docs/DEVELOPMENT.md"},
         ],
     },
+    {
+        "name": "Agent Quota Monitor",
+        "url": "https://github.com/mahlernim/agent-quota-monitor-windows",
+        "description": "여러 AI 구독 서비스의 사용량과 초기화 시점을 한눈에 확인하는 Windows 도구입니다.",
+        "links": [
+            {"label": "Windows 다운로드", "url": "https://github.com/mahlernim/agent-quota-monitor-windows/releases/latest"},
+        ],
+    },
+    {"name": "똑똑 자가검침 AI", "url": "/ttokttok/", "description": "도시가스 사용량 추정부터 검침값 확인과 제출까지, 자가검침 과정을 자동화하는 도구입니다."},
+    {"name": "Google Timeline Visualizer", "url": "/google-timeline-visualizer/", "description": "위치 파일을 브라우저 밖으로 전송하지 않고 Google 지도 타임라인의 이동 기록을 애니메이션으로 시각화하는 도구입니다."},
     {"name": "Memori", "url": "https://memori.co.kr/", "description": "의학과 학습을 위한 암기법과 기억 단서를 모으는 커뮤니티입니다."},
     {"name": "Sakang", "url": "https://sakang.mahler83.net/", "description": "텍스트 정리, 임상 계산, 문서 및 교육 기록을 위한 소규모 도구 모음입니다."},
     {"name": "EduKMA", "url": "https://edukma.mahler83.net/", "description": "국내 온라인 보수교육 과정을 찾는 서비스입니다."},

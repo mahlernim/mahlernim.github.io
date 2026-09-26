@@ -285,7 +285,7 @@ def test_project_descriptions_are_korean_on_home_and_project_pages():
     for path in [ROOT / "index.html", ROOT / "projects" / "index.html"]:
         page = path.read_text(encoding="utf-8")
         assert "위치 파일을 브라우저 밖으로 전송하지 않고" in page
-        assert "의학과 학습을 위한 암기법과 기억 단서를 모으는 커뮤니티입니다." in page
+        assert "여러 AI 구독 서비스의 사용량과 초기화 시점을 한눈에 확인하는 Windows 도구입니다." in page
         assert "Turns a Google Maps Timeline export" not in page
 
 
