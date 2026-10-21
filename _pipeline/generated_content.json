@@ -1802,6 +1802,11 @@
         "theme_id": "medical-ai-data-science"
       }
     },
+    "video:V0UvWF3Oo_k": {
+      "prompt_version": "academic-hub-v2",
+      "source_hash": "",
+      "status": "pending_source"
+    },
     "video:VNyl7MWCenc": {
       "generated_at": "2026-08-29T03:42:29+00:00",
       "model": "gpt-5.6-luna",
