@@ -61,7 +61,8 @@ recommended on every device, alongside the browser workspace.
 `web/ttokttok` contains the TypeScript source for `/ttokttok/app/`. Its generated
 static output is committed under `ttokttok/app` for the existing GitHub Pages
 deployment. Source, dependencies, tests and developer documentation are excluded
-from Pages. Node.js 24 is used in CI.
+from Pages. Use Node.js 24.22.1 or a newer 24.x release for development. CI checks
+for the latest 24.x release at or above that security baseline.
 
 ```sh
 cd web/ttokttok
