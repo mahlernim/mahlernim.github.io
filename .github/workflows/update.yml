@@ -38,7 +38,7 @@ jobs:
       GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
     steps:
       - uses: actions/checkout@v7.0.1
-      - uses: actions/setup-python@v7.0.0
+      - uses: actions/setup-python@v7.1.0
         with:
           python-version: "3.12"
           cache: pip
@@ -63,7 +63,7 @@ jobs:
         run: python -m scripts.generate_summaries --mode acceptance --effort "${{ inputs.effort }}"
       - name: Upload acceptance samples
         if: github.event_name == 'workflow_dispatch' && inputs.mode == 'acceptance'
-        uses: actions/upload-artifact@v7.0.1
+        uses: actions/upload-artifact@v7.0.2
         with:
           name: acceptance-${{ inputs.effort }}
           path: data/acceptance_samples.json
