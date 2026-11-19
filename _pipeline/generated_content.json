@@ -1813,9 +1813,37 @@
       }
     },
     "video:V0UvWF3Oo_k": {
+      "generated_at": "2026-11-19T10:47:09+00:00",
+      "model": "gpt-5.6-luna",
       "prompt_version": "academic-hub-v2",
-      "source_hash": "",
-      "status": "pending_source"
+      "reasoning_effort": "medium",
+      "source_hash": "de955c595a0061260135b4f0ff7bbdb97e48cd700a9daded5037d26513eda2c8",
+      "status": "ready",
+      "summary": {
+        "en": {
+          "audience": "Researchers and manuscript authors who use LLM agents for final stage academic editing, proofreading, factual checking, and submission preparation.",
+          "key_points": [
+            "Near completion, the speaker asks the LLM to generate a printable review PDF, prints it, and marks wording, formatting, tables, figures, and questions with a red pen. The video also recommends placing figures and tables near their relevant text rather than at the end of the document during review.",
+            "The workspace is used mainly with the Opus 4.6 model at Medium or High reasoning effort, while other model and effort options are also visible.",
+            "At the planning stage, the LLM converts typed review notes into a separate markdown revision plan. Direct edits, judgment dependent discussion points, and factual verification questions are separated. After the discussion is resolved, the agreed revisions are applied in one pass, followed by another printable PDF and another review cycle. This is presented as the speaker's personal workflow. The preference for typing rather than dictation is also described as a personal preference, not as a validated rule."
+          ],
+          "overview": "This video presents a practical workflow that combines a large language model agent workspace with printed, handwritten manuscript annotation for final academic editing and proofreading. The central approach is to organize feedback into a structured revision plan, resolve discussion points and factual checks, and then apply the agreed changes in a single pass rather than editing the manuscript immediately.",
+          "research_context": "The topic has a thematic connection to Sangzin Ahn's portfolio through medical examination question benchmarks, LLM evaluation, data validation, and AI assisted research workflows for manuscript quality control.",
+          "scope_note": "This source is a video describing a practical workflow and personal experience, not a report of an empirical study. It does not systematically evaluate the effectiveness of the prompting methods or input preferences, and it does not fully specify the software platform, custom scripts, complete manuscript, or validation procedures. Factual items visible in the workspace, including legal and regulatory details, citation requirements, and dataset error counts, require external verification. The speaker states that adding a pacing phrase only feels helpful subjectively and that there is no evidence that it improves results."
+        },
+        "ko": {
+          "audience": "LLM 에이전트를 활용하여 학술 논문의 최종 수정, 교정, 사실 확인 및 투고 준비를 수행하려는 연구자와 원고 작성자.",
+          "key_points": [
+            "원고 완성 단계에서 LLM에게 검토용 PDF를 만들게 한 뒤, 이를 인쇄하여 문장 표현, 서식, 표와 그림, 의문점을 빨간 펜으로 표시한다. 검토용 문서에는 표와 그림을 문서 끝이 아니라 관련 본문 위치에 배치하는 방안도 제시된다.",
+            "LLM은 주로 Opus 4.6 모델과 Medium 또는 High reasoning effort 설정으로 사용되며, 작업공간에는 다른 모델과 설정 선택지도 표시된다.",
+            "초기 단계에서는 입력된 교정 메모를 바탕으로 별도의 markdown 파일에 수정 계획을 작성한다. 직접 수정할 항목과 판단이 필요한 논의 항목, 사실 확인 질문을 구분하고, 논의가 끝난 뒤 모든 합의 사항을 한 번에 적용한다. 이후 새 PDF를 만들어 다시 인쇄하고 추가 검토를 진행한다. 이는 영상에서 반복적으로 제시된 개인적 workflow이다. 스트립트 대신 타이핑을 선호한다는 점도 화자의 개인적 선호로 설명된다. 음성 입력보다 타이핑을 선호하는 방식 역시 검증된 원칙으로 제시되지는 않는다."
+          ],
+          "overview": "이 영상은 대규모 언어 모델 에이전트 작업공간과 인쇄 원고의 수기 교정을 결합하여 학술 논문의 최종 수정과 교정을 수행하는 실무 workflow를 설명한다. 핵심 방식은 원고를 즉시 수정하기보다 검토 내용을 구조화된 수정 계획으로 정리하고, 논의와 사실 확인을 마친 뒤 합의된 변경 사항을 한 번에 적용하는 것이다.",
+          "research_context": "이 주제는 의료 시험 문항 벤치마크와 LLM 평가 원고를 대상으로 한 데이터 검증, 문서 품질 관리, AI 보조 연구 workflow라는 측면에서 Sangzin Ahn의 포트폴리오와 주제적으로 연결된다.",
+          "scope_note": "이 내용은 연구 결과를 보고하는 논문이 아니라 영상에서 설명된 실무 workflow와 개인적 경험을 요약한 것이다. 영상은 추천 방식이나 입력 습관의 효과를 체계적으로 평가하지 않으며, 정확한 소프트웨어 플랫폼, 사용자 정의 스크립트, 전체 원고 내용과 검증 절차를 충분히 설명하지 않는다. 영상에 표시된 법률 및 규정, 인용 기준, 데이터 오류 수와 같은 사실 항목은 외부 확인이 필요하다. 화자는 응답 말미에 특정 문구를 추가하면 결과가 더 좋아지는 것처럼 느껴진다고 했지만, 실제 효과를 뒷받침하는 증거는 없다고 명시했다."
+        },
+        "theme_id": "medical-ai-data-science"
+      }
     },
     "video:VNyl7MWCenc": {
       "generated_at": "2026-08-29T03:42:29+00:00",
