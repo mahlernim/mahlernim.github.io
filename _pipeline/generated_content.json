@@ -1275,9 +1275,37 @@
       }
     },
     "video:CrDKYiGt3y4": {
+      "generated_at": "2026-11-19T11:10:20+00:00",
+      "model": "gpt-5.6-luna",
       "prompt_version": "academic-hub-v2",
-      "source_hash": "",
-      "status": "pending_source"
+      "reasoning_effort": "medium",
+      "source_hash": "14f1acc9dbcec27c77f1b52856a73c3ddf07967aac6487adf05a0639a4d366ba",
+      "status": "ready",
+      "summary": {
+        "en": {
+          "audience": "The material is intended for national R&D researchers, research evaluators and peer reviewers, and research and ethics personnel at universities and public research institutions. The guide applies broadly across national R&D, while the video mentions medical data as an example of sensitive information.",
+          "key_points": [
+            "AI is limited to supporting tasks such as summarization, translation, grammar correction, coding assistance, and data cleaning, and cannot receive authorship. Researchers are expected to uphold accountability, honesty, objectivity, and transparency, while maintaining sufficient understanding and control of AI use and outputs throughout the research lifecycle.",
+            "Researchers should recognize technical and ethical limitations and verify factual accuracy, logical validity, and the existence and accuracy of references. Institutions should provide guidance, training, secure internal AI environments, and procedures for responding to ethical violations.",
+            "Researchers should record the tool name, model, exact version, period of use, purpose, and scope of AI use, and should be able to explain how outputs were derived. National laws, institutional rules, and journal policies must be followed, although disclosure requirements vary by journal. The guide presents a researcher self-check form for use before and after research."
+          ],
+          "overview": "This video presents and comments on the National R&D AI Research Ethics Guide and its Explanatory Guide, issued on September 20, 2026, by the South Korean Ministry of Science and ICT and the Korea Institute of S&T Evaluation and Planning. The documents frame AI as an auxiliary tool for improving research efficiency and require human researchers to retain final responsibility and control over research outputs.",
+          "research_context": "The topic is thematically connected to medical AI and data science through its focus on verifiability, data security, privacy protection, reproducibility, and transparent disclosure of generative AI use in research.",
+          "scope_note": "This summary reflects both the guide and explanatory material as presented in the video, together with the speaker's interpretations and personal examples. The cited literature, statistics, and cases were not independently verified here. Some discussion of inequality and future publishing procedures is explicitly presented as the speaker's opinion or speculation. The guide identifies hallucinations, output variability, security and privacy exposure, copyright uncertainty, researcher dependence, and disparities in research capability as major limitations and risks of generative AI."
+        },
+        "ko": {
+          "audience": "국가연구개발 연구자, 연구 평가자와 동료심사자, 대학과 공공연구기관의 연구 및 윤리 담당자에게 해당한다. 가이드는 모든 국가연구개발 분야를 대상으로 하며, 영상에서는 의료 데이터가 민감정보의 한 예로 언급된다.",
+          "key_points": [
+            "AI는 요약, 번역, 문법 교정, 코딩 지원, 데이터 정리 등의 보조 역할로 제한되며 저자성을 인정받을 수 없다. 연구자는 책무성, 정직성, 객관성, 투명성을 지켜야 하며, AI 사용 과정과 산출물을 연구 전 단계에서 충분히 이해하고 통제해야 한다.",
+            "연구자는 AI의 기술적 및 윤리적 한계를 인식하고 결과의 사실성, 논리성, 참고문헌의 존재와 정확성을 검증해야 한다. 기관은 지침과 교육, 안전한 내부 AI 환경, 윤리 위반 대응 절차를 마련해야 한다.",
+            "AI 도구명, 모델, 정확한 버전, 사용 기간, 사용 목적과 범위를 기록하고 연구 결과의 도출 과정을 설명할 수 있어야 한다. 국가 법령, 기관 규정, 학술지 정책을 준수해야 하며, 학술지별 AI 공개 요건은 다를 수 있다. 가이드는 연구 전후에 연구자 자기점검표를 활용하도록 제시한다́ح."
+          ],
+          "overview": "이 영상은 2026년 9월 20일 과학기술정보통신부와 한국과학기술기획평가원이 발행한 국가연구개발 AI 연구윤리 가이드와 해설서를 소개하고 논평한다. 가이드는 국가연구개발에서 AI를 연구 효율을 높이는 보조 도구로만 사용하고, 인간 연구자가 결과에 대한 최종 책임과 통제권을 유지해야 한다고 제시한다.",
+          "research_context": "의료 AI와 데이터과학 연구에서 생성형 AI의 검증 가능성, 데이터 보안, 개인정보 보호, 재현성, 투명한 사용 공개를 이해하기 위한 연구윤리 주제와 연결된다.",
+          "scope_note": "이 요약은 영상에서 제시한 가이드와 해설서의 내용, 발표자의 해석과 개인적 사례를 함께 반영한다. 영상에 인용된 문헌, 통계, 사례를 독립적으로 검증한 결과가 아니며, 불평등과 향후 출판 절차 등에 관한 일부 내용은 발표자의 견해 또는 추측이다. 가이드는 생성형 AI의 환각, 결과 변동성, 보안과 개인정보 노출, 저작권, 연구자 의존성 및 연구 역량 격차를 주요 한계와 위험으로 제시한다."
+        },
+        "theme_id": "medical-ai-data-science"
+      }
     },
     "video:FLaF5QQDiT8": {
       "generated_at": "2026-08-29T03:34:10+00:00",
@@ -1610,9 +1638,37 @@
       }
     },
     "video:KFuZADJ7Bkk": {
+      "generated_at": "2026-11-19T11:11:22+00:00",
+      "model": "gpt-5.6-luna",
       "prompt_version": "academic-hub-v2",
-      "source_hash": "",
-      "status": "pending_source"
+      "reasoning_effort": "medium",
+      "source_hash": "140609b87a405947c9f243783f7341754f64d396eb617127f6684742f26415b3",
+      "status": "ready",
+      "summary": {
+        "en": {
+          "audience": "The intended audience includes individuals, lecture attendees, general and professional users concerned about the security, privacy, and control implications of AI assistants and proactive AI agents, as well as people adopting AI tools in daily life and work.",
+          "key_points": [
+            "Avoiding AI does not eliminate risk. The presentation argues that AI literacy and hands-on experience may help people recognize and respond to AI-enabled fraud and phishing.",
+            "To learn about risks, users should not grant all permissions at once. They should begin with conservative settings and small, reversible tasks, verify results and processes, expand delegation gradually, and incorporate lessons from trial and error into later rules.",
+            "Experience with AI is described as potentially helping users detect abnormal behavior earlier, stop or revoke permissions, and recover with available records and backups. The presentation also states that using AI does not guarantee complete understanding of all risks."
+          ],
+          "overview": "The video frames the use of AI assistants and proactive AI agents as a comparison of risks and benefits rather than a choice between danger and no danger. It considers possible losses from granting access to personal information and accounts, ways to reduce risk, and how benefits change with user experience and delegation scope.",
+          "research_context": "The topic has a neutral thematic connection to education and public health through AI literacy, gradual permission delegation, asynchronous human-AI collaboration, and collective learning from failures involving new technologies.",
+          "scope_note": "The discussion is a conceptual presentation supported by personal experimentation. The couple's several-week trial involving schedule management and an engine-oil replacement workflow was an anecdotal example with pre-agreed family permissions, not a formal study. Claims about defensive benefits of AI, future changes in social risk perception, and emerging permission norms are presented as the speaker's opinions, expectations, or possibilities rather than established empirical findings. The source also notes that expanding authority without verification may increase risk and that use alone does not ensure risk understanding."
+        },
+        "ko": {
+          "audience": "AI 비서와 선제적 AI 에이전트의 보안, 개인정보, 통제 문제를 탐색하는 개인, 강의 참석자, 일반 사용자와 전문 사용자, 그리고 일상과 업무에서 AI 도구를 도입하는 사람을 대상으로 한다.",
+          "key_points": [
+            "AI를 전혀 사용하지 않는다고 위험이 사라지는 것은 아니다. AI를 사용한 사기와 피싱에 대응하려면 AI 리터러시와 실제 사용 경험이 도움이 될 수 있다는 주장이 제시된다.",
+            "위험을 학습하기 위해 모든 권한을 한꺼번에 부여하지 말고, 보수적인 설정과 작고 되돌릴 수 있는 작업부터 시작해야 한다. 결과와 작업 과정을 확인한 뒤 위임 범위를 점진적으로 넓이고, 시행착오를 다음 규칙에 반영하는 방식이 권장된다.",
+            "사용 경험이 있는 사람은 비정상적 행동을 더 일찍 발견하고 권한을 중지하거나 회수하며, 기록과 백업을 활용해 복구할 가능성이 높다고 설명된다. 다만 AI를 사용한다고 해서 모든 위험을 충분히 이해하게 되는 것은 아니다라고 명시한다да?"
+          ],
+          "overview": "이 영상은 AI 비서와 선제적 AI 에이전트의 사용을 위험 회피 여부가 아니라 위험과 편익의 비교 문제로 설명한다. 개인 정보와 계정 접근 권한을 부여할 때 발생할 수 있는 손실, 위험을 줄이는 방법, 사용 경험과 위임 범위에 따른 편익의 변화를 함께 다룬다.",
+          "research_context": "AI 리터러시, 점진적 권한 위임, 인간과 AI의 비동기 협업, 그리고 새로운 기술의 실패 사례를 통한 집단 학습이라는 교육 및 공중보건 주제와 연결된다.",
+          "scope_note": "영상의 논의는 발표와 개인적 실험에 기반한 개념적 설명이다. 부부가 여러 주 동안 수행한 일정 관리와 차량 엔진오일 교체 예약 관련 협업은 사전에 가족 권한을 설정한 일화적 사례이며 공식 연구가 아니다. AI 사용의 방어적 이점, 사회적 위험 인식의 변화, 미래의 권한 규범에 관한 내용은 확립된 경험적 결과가 아니라 발표자의 의견, 기대, 가능성으로 제시된다. 권한을 확인 없이 넓히면 위험이 커질 수 있으며, 사용만으로 위험 이해가 보장되지 않는다는 한계도 제시된다."
+        },
+        "theme_id": "education-public-health"
+      }
     },
     "video:KeLmEv3Mzvk": {
       "generated_at": "2026-08-29T03:39:29+00:00",
@@ -2539,9 +2595,37 @@
       }
     },
     "video:n_2cfdt8j3A": {
+      "generated_at": "2026-11-19T11:13:07+00:00",
+      "model": "gpt-5.6-luna",
       "prompt_version": "academic-hub-v2",
-      "source_hash": "",
-      "status": "pending_source"
+      "reasoning_effort": "medium",
+      "source_hash": "918c581653cc6d6d9dcc77464fda688067e35c2f8cdeca09dbd2079e15bfd0f7",
+      "status": "ready",
+      "summary": {
+        "en": {
+          "audience": "The intended audience includes researchers and research students using AI agents for data collection, statistical analysis, visualization, literature management, manuscript writing, and auditing, as well as medical education stakeholders using large language models as feedback tools for learning.",
+          "key_points": [
+            "Agents should be instructed to inspect the workspace, map file roles, and ask clarifying questions before acting, because they may otherwise guess or force judgments from incomplete information.",
+            "README.md is used for a human-readable project overview and status, whereas AGENTS.md records operating principles and file locations for agents. Tasks are organized by stages, with exploration of multiple methods followed by an interim report and convergence.",
+            "Before execution, users should define the purpose, audience, deliverables, reproducibility requirements, completion checks, and unresolved items. At branching points that may change research direction, the agent should provide recommendations, alternatives, rationale, expected impact, and explicit uncertainty. Goal mode and scheduled tasks can support repeated multistep work and monitoring, but may consume additional resources and tokens. Multiple chatbots can be used for review, while the final decision remains human."
+          ],
+          "overview": "This video describes a practical workflow for using AI coding and workspace agents across the research lifecycle. It covers project workspaces, README.md and AGENTS.md, staged folder structures, planning and goal modes, scheduled tasks, small pilot runs, uncertainty labeling, multi-chatbot review, reference and manuscript audits, figure review, and reusable workflow skills and automation. The methods are presented as personal experience and problem-avoidance guidance rather than universal standards.",
+          "research_context": "The material has a neutral thematic connection to medical AI and data science through its treatment of research agents, data analysis, reproducible workspace organization, and manuscript auditing.",
+          "scope_note": "The primary source is a practical lecture video identified by a title slide dated November 16, 2026. It also discusses METR data, an Anthropic study of 50 agricultural experts, and a survey of researchers in a Claude support program. These sources have stated limitations, including reduced reliability for METR measurements above 16 hours, a hypothetical task and small non-AI control group in the agricultural study, and a selective survey population. METR projections beyond its reliable task range and informal estimates above 24 hours are extrapolations. The video's recommendations are experiential rather than established universal best practices. Broader access to email, files, or cloud storage may increase usefulness but also increases the potential harm from errors. Sycophancy, confirmation bias, automation bias, forced judgments under uncertainty, and covert influence on expert decisions are identified as important risks."
+        },
+        "ko": {
+          "audience": "AI 에이전트를 이용해 자료 수집, 통계 분석, 시각화, 문헌 관리, 원고 작성 및 검토를 수행하는 연구자와 연구 학생, 그리고 의학 학습에서 대규모 언어 모델을 피드백 도구로 활용하려는 의학교육 관계자를 대상으로 한다.",
+          "key_points": [
+            "에이전트가 작업을 시작하기 전에 폴더와 파일의 역할을 파악하고 질문하도록 명시해야 하며, 에이전트는 불완전한 정보에서 추정하거나 판단을 강행할 수 있다.",
+            "README.md는 사람이 읽는 프로젝트 개요와 진행 상황을, AGENTS.md는 에이전트가 따를 운영 원칙과 파일 위치를 기록하는 용도로 구분한다. 작업은 단계별 폴더에서 여러 방법을 탐색한 뒤 중간 보고서와 결론으로 수렴하도록 구성한다.",
+            "실행 전에는 목적, 대상 독자, 산출물, 재현성, 검증 기준, 미확인 항목을 정의하고, 연구 방향을 바꾸는 분기점에서는 권고안과 대안, 근거, 예상 영향 및 현재 자료로 판단할 수 없는 점을 명시하도록 한다. 목표 모드와 예약 작업은 반복적인 다단계 작업과 정기 점검에 사용할 수 있지만 자원과 토큰을 더 소모할 수 있다. 필요하면 여러 챗봇의 검토를 이용하되 최종 판단은 사람이 내린다."
+          ],
+          "overview": "이 영상은 연구 전 과정에서 AI 코딩 및 작업공간 에이전트를 활용하는 실무 흐름을 설명한다. 주요 내용은 프로젝트 작업공간과 README.md 및 AGENTS.md 설정, 단계별 폴더 구성, 계획 및 목표 모드, 예약 작업, 소규모 파일럿, 불확실성 표시, 다중 챗봇 검토, 참고문헌과 원고 및 그림 감사, 반복 작업의 Skill化 및 자동화이다. 영상은 이러한 방법을 보편적 표준이 아니라 개인적 사용 경험과 문제 회피를 위한 지침으로 제시한다.",
+          "research_context": "이 내용은 연구용 AI 에이전트, 데이터 분석, 재현 가능한 작업공간 관리, 원고 감사가 연결되는 의료 AI 및 데이터과학 주제와 중립적으로 연관된다.",
+          "scope_note": "주요 근거는 2026년 11월 16일 제목 슬라이드가 제시된 강의 영상의 실무 설명과 사례이다. METR 자료, 농업 전문가 50명을 대상으로 한 Anthropic 연구, Claude 연구 지원 프로그램 설문이 함께 언급되지만, 각각 장시간 과제 측정의 신뢰도 저하, 가상 과제와 소규모 비AI 대조군, 특정 지원 프로그램 참여자 표본이라는 제한이 있다. METR의 16시간 초과 측정은 신뢰성이 낮고, 2030년 전망 및 24시간 초과 능력에 관한 언급은 비공식적 외삽이다. 영상의 지침 자체도 검증된 보편적 모범 사례가 아니라 경험적 제안이며, 넓은 계정 및 파일 권한은 유용성을 높이는 동시에 오류의 피해를 확대할 수 있다. AI의 아첨, 확증 편향, 자동화 편향, 불확실한 자료에 대한 강제적 판단과 전문가 판단의 은밀한 유도 가능성도 주요 위험으로 제시된다."
+        },
+        "theme_id": "medical-ai-data-science"
+      }
     },
     "video:npTB0FTcGew": {
       "generated_at": "2026-08-29T03:54:40+00:00",
