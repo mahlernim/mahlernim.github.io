@@ -17,7 +17,7 @@ PLAYLIST_ID = "PL0TnWnPQhDj2-TOwiz_ZhY2Sdurimss2Q"
 VIDEO_URL = f"https://www.youtube.com/playlist?list={PLAYLIST_ID}"
 ROOT = Path(__file__).resolve().parents[1]
 CACHE_FILE = ROOT / "data" / "videos_cache.json"
-GEMINI_VIDEO_MODEL = "gemini-3.7-flash"
+GEMINI_VIDEO_MODEL = "gemini-4-hydrogen"
 
 
 def _verified_upload_date(info):
