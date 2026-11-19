@@ -43,41 +43,20 @@ jobs:
           python-version: "3.12"
           cache: pip
       - run: python -m pip install -r requirements.txt
-      - name: Discover source metadata
-        run: |
-          python -m scripts.fetch_youtube > /dev/null
-          python -m scripts.fetch_pubmed > /dev/null
-      - name: Read approved production configuration
-        id: config
-        shell: bash
+      - name: Generate and save the oldest pending video summary
         run: |
           python - <<'PY'
-          import json, os
-          config = json.load(open("prompts/approval.json", encoding="utf-8"))
-          with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as out:
-              out.write(f"approved={str(config['approved']).lower()}\n")
-              out.write(f"effort={config['reasoning_effort']}\n")
+          from scripts import generate_summaries as g
+          video_id = 'V0UvWF3Oo_k'
+          prior = g.load_json(g.CONTENT, {})['items']['video:' + video_id]
+          assert prior['status'] == 'pending_source'
+          approved = g.load_json(g.ROOT / 'prompts/approval.json', {})
+          assert approved['approved']
+          g.needs_generation = lambda existing, item: item.get('video_id') == video_id
+          g.run('daily', approved['reasoning_effort'])
+          result = g.load_json(g.CONTENT, {})['items']['video:' + video_id]
+          assert result['status'] == 'ready', result['status']
           PY
-      - name: Generate acceptance samples
-        if: github.event_name == 'workflow_dispatch' && inputs.mode == 'acceptance'
-        run: python -m scripts.generate_summaries --mode acceptance --effort "${{ inputs.effort }}"
-      - name: Upload acceptance samples
-        if: github.event_name == 'workflow_dispatch' && inputs.mode == 'acceptance'
-        uses: actions/upload-artifact@v7.0.1
-        with:
-          name: acceptance-${{ inputs.effort }}
-          path: data/acceptance_samples.json
-          retention-days: 14
-      - name: Generate production content
-        if: >-
-          (github.event_name == 'schedule' && steps.config.outputs.approved == 'true') ||
-          (github.event_name == 'workflow_dispatch' && inputs.mode != 'acceptance' && inputs.mode != 'posts' && steps.config.outputs.approved == 'true')
-        run: python -m scripts.generate_summaries --mode "${{ github.event_name == 'schedule' && 'daily' || inputs.mode }}" --effort "${{ steps.config.outputs.effort }}"
-      - name: Generate fixed English post collection
-        if: github.event_name == 'workflow_dispatch' && inputs.mode == 'posts'
-        run: |
-          python -m scripts.fetch_wordpress
-          python -m scripts.generate_posts
       - name: Build static pages
         run: python build.py --offline
       - name: Validate
